@@ -1,8 +1,7 @@
 name = "the-jimbo77com-nxt"
+pages_build_output_dir = ".next"
 compatibility_date = "2025-01-01"
+compatibility_flags = ["nodejs_compat"]
 
-[build]
-command = "npm run build"
-
-[[pages]]
-binding = "ASSETS"
+[vars]
+NODE_ENV = "production"
