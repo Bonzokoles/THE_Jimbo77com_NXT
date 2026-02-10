@@ -1,0 +1,286 @@
+{
+    "navigation": {
+        "home": "Start",
+        "projects": "Projekty",
+        "experience": "Doświadczenie",
+        "skills": "Umiejętności",
+        "achievements": "Osiągnięcia",
+        "blog": "Blog",
+        "gallery": "Galeria",
+        "contact": "Kontakt",
+        "menu": {
+            "achievements": "Osiągnięcia",
+            "achievementsDesc": "Certyfikaty, nagrody i kamienie milowe",
+            "skills": "Umiejętności",
+            "skillsDesc": "Technologie i narzędzia, z którymi pracuję",
+            "experience": "Doświadczenie",
+            "experienceDesc": "Moja zawodowa droga i rozwój",
+            "projects": "Projekty",
+            "projectsDesc": "Portfolio moich prac",
+            "blog": "Blog",
+            "blogDesc": "Przemyślenia i eksploracje techniczne",
+            "gallery": "Galeria",
+            "galleryDesc": "Wizualne archiwum mediów i projektów"
+        }
+    },
+    "hero": {
+        "greeting": "Witaj w mojej przestrzeni cyfrowej",
+        "subtitle": "Full Stack Developer • Inżynier AI • Data Scientist",
+        "cta": {
+            "primary": "Zobacz Projekty",
+            "secondary": "Skontaktuj się"
+        },
+        "badge": "Otwarty na możliwości",
+        "scroll": "Przewiń w dół",
+        "role": "Kreatywny Developer",
+        "description": "Tworzę wciągające doświadczenia cyfrowe na styku <span class='text-primary font-semibold'>AI</span>, <span class='text-secondary font-semibold'>Designu</span> i <span class='text-accent font-semibold'>Wydajności</span>."
+    },
+    "about": {
+        "title": "O mnie",
+        "subtitle": "Tech Explorer i Problem Solver",
+        "description": "Pasjonat technologii specjalizujący się w Full Stack Development, Sztucznej Inteligencji i Data Science. Obecnie zagłębiam się w AI Agents i technologię Blockchain.",
+        "stats": {
+            "experience": "Lat Nauki",
+            "projects": "Wykonanych Projektów",
+            "certifications": "Certyfikatów",
+            "competitions": "Konkursów"
+        },
+        "identity": "Połączenie Tożsamości Ustanowione",
+        "architecting": "Projektowanie",
+        "digitalReality": "Cyfrowej Rzeczywistości"
+    },
+    "projects": {
+        "title": "Projekty",
+        "subtitle": "Prezentacja mojej kreatywnej i technicznej pracy",
+        "search": "Szukaj projektów...",
+        "viewAll": "Zobacz Wszystkie Projekty",
+        "viewProject": "Zobacz Projekt",
+        "liveDemo": "Demo na Żywo",
+        "sourceCode": "Kod Źródłowy",
+        "techStack": "Stos Technologiczny",
+        "tools": "Użyte Narzędzia",
+        "highlights": "Najważniejsze",
+        "challenges": "Wyzwania",
+        "status": {
+            "completed": "Ukończony",
+            "ongoing": "W Trakcie",
+            "planned": "Planowany"
+        },
+        "filters": {
+            "all": "Wszystkie",
+            "ongoing": "W Trakcie",
+            "completed": "Ukończone"
+        }
+    },
+    "experience": {
+        "title": "Doświadczenie",
+        "subtitle": "Moja zawodowa droga i rozwój",
+        "present": "Obecnie",
+        "responsibilities": "Obowiązki",
+        "skills": "Użyte Umiejętności",
+        "type": {
+            "full-time": "Pełny etat",
+            "part-time": "Część etatu",
+            "internship": "Staż",
+            "freelance": "Freelance"
+        },
+        "filters": {
+            "all": "Wszystkie",
+            "latest": "Najnowsze",
+            "oldest": "Najstarsze",
+            "ongoing": "Aktualne"
+        },
+        "education": {
+            "title": "Wykształcenie"
+        }
+    },
+    "expertise": {
+        "title": "Główne Kompetencje",
+        "subtitle": "Specjalizacja w nowoczesnych technologiach napędzających współczesne doświadczenia cyfrowe",
+        "dragHint": "Przeciągnij lub przewiń, aby eksplorować"
+    },
+    "skills": {
+        "title": "Umiejętności i Narzędzia",
+        "subtitle": "Technologie i narzędzia, z którymi pracuję",
+        "hard": "Umiejętności Techniczne",
+        "soft": "Umiejętności Miękkie",
+        "technical": "Biegłość Techniczna",
+        "tools": "Narzędzia i Oprogramowanie",
+        "pillars": "Główne Filary",
+        "achievements": "Zweryfikowane Osiągnięcia",
+        "level": {
+            "beginner": "Początkujący",
+            "intermediate": "Średniozaawansowany",
+            "advanced": "Zaawansowany",
+            "expert": "Ekspert"
+        }
+    },
+    "achievements": {
+        "title": "Osiągnięcia",
+        "subtitle": "Certyfikaty, nagrody i kamienie milowe",
+        "search": "Szukaj osiągnięć...",
+        "viewCredential": "Zobacz Certyfikat",
+        "category": {
+            "all": "Wszystkie",
+            "certification": "Certyfikat",
+            "award": "Nagroda",
+            "publication": "Publikacja",
+            "competition": "Konkurs"
+        },
+        "sort": {
+            "newest": "Najnowsze",
+            "oldest": "Najstarsze"
+        },
+        "stats": {
+            "total": "Wszystkie Osiągnięcia",
+            "awards": "Zdobyte Nagrody",
+            "certifications": "Certyfikaty"
+        }
+    },
+    "contact": {
+        "title": "Skontaktuj się",
+        "subtitle": "Zbudujmy razem coś niesamowitego",
+        "form": {
+            "name": "Twoje Imię",
+            "email": "Twój Email",
+            "subject": "Temat",
+            "message": "Twoja Wiadomość",
+            "messagePlaceholder": "Opowiedz mi o swoim projekcie...",
+            "send": "Wyślij Wiadomość",
+            "submit": "WYŚLIJ WIADOMOŚĆ",
+            "sending": "WYSYŁANIE...",
+            "sent": "WYSŁANO!",
+            "success": "Wiadomość wysłana pomyślnie!",
+            "error": "Coś poszło nie tak. Spróbuj ponownie."
+        },
+        "social": {
+            "title": "Połącz się w Social Media"
+        },
+        "faq": {
+            "title": "Często Zadawane Pytania"
+        },
+        "info": {
+            "email": "Email",
+            "phone": "Telefon",
+            "location": "Lokalizacja",
+            "availability": "Otwarty na możliwości"
+        },
+        "hero": {
+            "title": "POROZMAWIAJMY",
+            "subtitle": "Masz pomysł? Zbudujmy razem coś nadzwyczajnego.",
+            "ticker": {
+                "build": "Zbudujmy Coś Niesamowitego · ",
+                "freelance": "Dostępny do Freelance · "
+            }
+        },
+        "faqData": [
+            {
+                "q": "Jaka jest Twoja główna specjalizacja?",
+                "a": "Specjalizuję się w Full Stack Development, Sztucznej Inteligencji i Web3. Tworzę nowoczesne rozwiązania łączące AI, blockchain i web development."
+            },
+            {
+                "q": "Czy jesteś dostępny do współpracy?",
+                "a": "Absolutnie. Jestem otwarty na innowacyjne projekty freelance, staże lub współprace techniczne, które łączą innowację ze strategicznym wykonaniem."
+            },
+            {
+                "q": "Jaki jest Twój typowy tech stack?",
+                "a": "Dla projektów AI używam głównie Pythona z TensorFlow, PyTorch i YOLO. Do aplikacji webowych preferuję Next.js, TypeScript i Tailwind CSS, często integrowane z AI Agents lub Smart Contracts."
+            },
+            {
+                "q": "Czy masz doświadczenie z projektami enterprise?",
+                "a": "Tak, pracowałem jako System Analyst i AI Developer w różnych środowiskach badawczych. Projektowałem wszystko od platform AIoT po systemy detekcji ataków."
+            },
+            {
+                "q": "Jak możemy rozpocząć współpracę?",
+                "a": "Najlepiej użyj formularza kontaktowego powyżej lub napisz bezpośrednio na email. Zazwyczaj odpowiadam w ciągu 24 godzin, aby omówić, jak moje umiejętności mogą wnieść wartość do Twoich inicjatyw."
+            }
+        ]
+    },
+    "footer": {
+        "copyright": "Wszelkie prawa zastrzeżone.",
+        "madeWith": "Stworzone z",
+        "more": "Więcej",
+        "marquee": [
+            "Otwarty na Możliwości",
+            "Frontend Development",
+            "Backend Architecture",
+            "UI/UX Design",
+            "Creative Coding",
+            "Optymalizacja Systemów"
+        ],
+        "cta": {
+            "title": "Pracujmy",
+            "titleHighlight": "Razem",
+            "subtitle": "Masz projekt? Zbudujmy coś nadzwyczajnego, co rozwiązuje realne problemy."
+        }
+    },
+    "ctaSection": {
+        "title": "Zbudujmy Coś",
+        "together": "Razem",
+        "subtitle": "Gotowy na współpracę przy projektach AI, Web Development lub Blockchain? Zróbmy to.",
+        "start": "Rozpocznij Projekt",
+        "work": "Zobacz Moją Pracę",
+        "words": {
+            "amazing": "Niesamowitego",
+            "innovative": "Innowacyjnego",
+            "intelligent": "Inteligentnego",
+            "creative": "Kreatywnego"
+        }
+    },
+    "stats": {
+        "systemStatus": "Status Systemu: Analityka Aktywna",
+        "portfolio": "Portfolio Techniczne",
+        "totalPulse": "Całkowity Puls",
+        "peakActivity": "Szczytowa Aktywność",
+        "dailyAverage": "Średnia Dzienna",
+        "currentSprint": "Aktualny Sprint",
+        "engageFlow": "Przepływ Zaangażowania",
+        "weeklyEffort": "Tygodniowy Wysiłek Kodowania",
+        "processSpeed": "Prędkość Procesu",
+        "avgPerf": "Średnia Wydajność",
+        "latency": "OPÓŹNIENIE: 14MS",
+        "system": "SYSTEM: DARWIN_X64_STABLE",
+        "scanning": "SKANOWANIE_ZASOBÓW_NA_ŻYWO"
+    },
+    "projectHeader": {
+        "title": "Projektowanie Cyfrowej Rzeczywistości",
+        "subtitle": "Wyselekcjonowana prezentacja innowacji technicznych i kreatywnej inżynierii. Eksploracja granic <span class='font-bold text-white'>Sztucznej Inteligencji</span>, Blockchain i immersyjnych doświadczeń webowych."
+    },
+    "common": {
+        "loading": "Ładowanie...",
+        "error": "Coś poszło nie tak",
+        "notFound": "Strona nie znaleziona",
+        "backHome": "Powrót do Startu",
+        "viewMore": "Zobacz Więcej",
+        "readMore": "Czytaj Dalej",
+        "close": "Zamknij",
+        "download": "Pobierz",
+        "share": "Udostępnij"
+    },
+    "blog": {
+        "title": "Myśli i Eksploracje",
+        "subtitle": "Łączenie technicznej złożoności z praktyczną implementacją. Kolekcja przemyśleń o AI, Web3 i Software Engineering.",
+        "search": "Szukaj artykułów...",
+        "readTime": "min czytania",
+        "readMore": "Czytaj Post",
+        "back": "Powrót do Bloga",
+        "noResults": "Nie znaleziono artykułów",
+        "categories": {
+            "all": "Wszystkie",
+            "ai": "AI & ML",
+            "web3": "Blockchain",
+            "coding": "Development",
+            "other": "Insights"
+        }
+    },
+    "gallery": {
+        "title": "Archiwum Wizualne",
+        "subtitle": "Wyselekcjonowana kolekcja najważniejszych momentów projektów, dokumentacji technicznej i kreatywnych eksploracji wizualnych.",
+        "filter": {
+            "all": "Wszystkie Media",
+            "image": "Zdjęcia",
+            "video": "Wideo"
+        },
+        "viewMedia": "Zobacz Media"
+    }
+}
