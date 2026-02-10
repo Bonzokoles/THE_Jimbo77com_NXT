@@ -1,0 +1,8 @@
+name = "the-jimbo77com-nxt"
+compatibility_date = "2025-01-01"
+
+[build]
+command = "npm run build"
+
+[[pages]]
+binding = "ASSETS"
