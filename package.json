@@ -6,10 +6,12 @@
     "private": true,
     "scripts": {
         "dev": "next dev",
-        "build": "opennextjs-cloudflare build",
+        "build": "next build",
+        "build:cloudflare": "opennextjs-cloudflare build",
         "start": "next start",
         "lint": "next lint",
-        "preview": "opennextjs-cloudflare preview"
+        "preview": "opennextjs-cloudflare preview",
+        "deploy": "opennextjs-cloudflare build && wrangler deploy"
     },
     "dependencies": {
         "@headlessui/react": "^2.2.9",
