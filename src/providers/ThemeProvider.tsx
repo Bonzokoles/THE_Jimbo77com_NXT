@@ -1,13 +1,23 @@
 'use client';
 
 import { ThemeProvider as NextThemesProvider } from 'next-themes';
-import { ReactNode } from 'react';
+import { ReactNode, useEffect, useState } from 'react';
 
 interface ThemeProviderProps {
     children: ReactNode;
 }
 
 export function ThemeProvider({ children }: ThemeProviderProps) {
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        setMounted(true);
+    }, []);
+
+    if (!mounted) {
+        return <div className="dark">{children}</div>;
+    }
+
     return (
         <NextThemesProvider
             attribute="class"
