@@ -549,7 +549,7 @@ WAKATIME_API_KEY=your_wakatime_key`
             issuer: 'JIMBO Inc',
             date: '2024-01-01',
             description: '30+ Workers na Cloudflare Edge, 500K+ requests/day, 99.97% uptime.',
-            category: 'project',
+            category: 'award',
         },
         {
             id: 'ach-2',
@@ -557,7 +557,7 @@ WAKATIME_API_KEY=your_wakatime_key`
             issuer: 'JIMBO Inc',
             date: '2024-06-01',
             description: 'Orkiestracja agentow AI: Claude, GPT-4, Bielik, DeepSeek-Coder z intelligent routing.',
-            category: 'project',
+            category: 'recognition',
         },
         {
             id: 'ach-3',
@@ -565,7 +565,7 @@ WAKATIME_API_KEY=your_wakatime_key`
             issuer: 'Meble Pumo',
             date: '2024-03-01',
             description: '5000+ dokumentow w ChromaDB, <2s latency, 95% accuracy w testach A/B.',
-            category: 'project',
+            category: 'recognition',
         },
         {
             id: 'ach-4',
@@ -581,7 +581,7 @@ WAKATIME_API_KEY=your_wakatime_key`
             issuer: 'JIMBO Inc',
             date: '2023-06-01',
             description: 'Electron-based browser z wbudowanym AI copilotem do automatyzacji web.',
-            category: 'project',
+            category: 'award',
         },
     ],
     techStack: [
