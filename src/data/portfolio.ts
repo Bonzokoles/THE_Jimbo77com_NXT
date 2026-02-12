@@ -23,6 +23,24 @@ export const portfolioData: PortfolioData = {
                 username: 'Bonzokoles',
             },
             {
+                platform: 'Twitter',
+                url: 'https://x.com/KarolLisson',
+                icon: 'twitter',
+                username: '@KarolLisson',
+            },
+            {
+                platform: 'Facebook',
+                url: 'https://www.facebook.com/karol.lisson',
+                icon: 'facebook',
+                username: 'karol.lisson',
+            },
+            {
+                platform: 'Reddit',
+                url: 'https://www.reddit.com/user/Background_Music5121/',
+                icon: 'reddit',
+                username: 'Background_Music5121',
+            },
+            {
                 platform: 'Dev.to',
                 url: 'https://dev.to/karol_81a50ed396508bcffd7',
                 icon: 'devto',

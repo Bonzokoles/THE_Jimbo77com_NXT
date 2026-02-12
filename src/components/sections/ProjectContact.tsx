@@ -2,7 +2,7 @@
 
 import React, { ReactElement, ReactNode, useEffect, useRef, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
-import { SiGithub, SiLinkedin, SiX, SiInstagram, SiSpotify, SiDiscord } from 'react-icons/si';
+import { SiGithub, SiLinkedin, SiX, SiInstagram, SiSpotify, SiDiscord, SiReddit, SiFacebook, SiDevdotto } from 'react-icons/si';
 import { MessageCircle, Mail, ArrowUpRight } from 'lucide-react';
 import { twMerge } from 'tailwind-merge';
 import { portfolioData } from '@/data/portfolio';
@@ -46,13 +46,17 @@ export const ProjectContact = () => {
                         <LogoItem key={3} className="bg-black text-white border-zinc-800">
                             <SiX />
                         </LogoItem>,
-                        // Instagram - Gradient-ish (Pink/Orange)
-                        <LogoItem key={4} className="bg-gradient-to-br from-purple-500 to-orange-500 text-white border-purple-500">
-                            <SiInstagram />
+                        // Facebook - Blue
+                        <LogoItem key={4} className="bg-[#1877F2] text-white border-blue-400">
+                            <SiFacebook />
                         </LogoItem>,
-                        // Spotify - Green
-                        <LogoItem key={5} className="bg-[#1DB954] text-white border-green-500">
-                            <SiSpotify />
+                        // Reddit - Orange
+                        <LogoItem key={5} className="bg-[#FF4500] text-white border-orange-500">
+                            <SiReddit />
+                        </LogoItem>,
+                        // Dev.to - Black/White
+                        <LogoItem key={6} className="bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 border-zinc-700 dark:border-zinc-300">
+                            <SiDevdotto />
                         </LogoItem>
                     ]}
                 />
