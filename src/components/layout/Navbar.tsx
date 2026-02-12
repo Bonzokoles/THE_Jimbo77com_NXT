@@ -49,7 +49,7 @@ const useNavItems = () => {
     const t = useTranslations('navigation.menu');
     return [
         {
-            label: "About",
+            label: "O mnie",
             links: [
                 { label: t('achievements'), href: "/achievements", description: t('achievementsDesc') },
                 { label: t('skills'), href: "/skills", description: t('skillsDesc') },

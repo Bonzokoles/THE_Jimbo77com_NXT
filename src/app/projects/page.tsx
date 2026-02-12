@@ -106,7 +106,7 @@ function ProjectListItem({
                                     ? "bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30 dark:border-emerald-500/20"
                                     : "bg-blue-500/15 text-blue-600 dark:text-blue-400 border border-blue-500/30 dark:border-blue-500/20"
                             )}>
-                                {isOngoing ? 'ongoing' : 'done'}
+                                {isOngoing ? 'w trakcie' : 'ukończony'}
                             </span>
                         </div>
                         <p className="text-muted-foreground text-sm sm:text-base truncate max-w-2xl hidden sm:block">
@@ -123,7 +123,7 @@ function ProjectListItem({
                         animate={{ x: isHovered ? -5 : 0, opacity: isHovered ? 1 : 0.4 }}
                         transition={{ duration: 0.3 }}
                     >
-                        <span className="text-sm font-medium text-muted-foreground group-hover:text-foreground transition-colors">view</span>
+                        <span className="text-sm font-medium text-muted-foreground group-hover:text-foreground transition-colors">zobacz</span>
                         <motion.div animate={{ x: isHovered ? 5 : 0 }} transition={{ duration: 0.3 }}>
                             <ArrowRight className={cn("w-5 h-5 transition-colors", isHovered ? (isOngoing ? "text-emerald-500 dark:text-emerald-400" : "text-blue-500 dark:text-blue-400") : "text-muted-foreground")} />
                         </motion.div>
@@ -361,7 +361,7 @@ function FeaturedCard({ project, onClick, index }: { project: Project; onClick: 
                                     "w-2 h-2 rounded-full",
                                     isOngoing ? "bg-emerald-400 animate-pulse" : "bg-blue-400"
                                 )} />
-                                {isOngoing ? 'In Development' : 'Completed'}
+                                {isOngoing ? 'W Rozwoju' : 'Ukończony'}
                             </span>
                         </motion.div>
 
@@ -412,7 +412,7 @@ function FeaturedCard({ project, onClick, index }: { project: Project; onClick: 
                                     whileInView={{ opacity: 1, scale: 1 }}
                                     transition={{ delay: 0.6 }}
                                 >
-                                    +{project.techStack.length - 6} more
+                                    +{project.techStack.length - 6} więcej
                                 </motion.span>
                             )}
                         </div>
@@ -428,7 +428,7 @@ function FeaturedCard({ project, onClick, index }: { project: Project; onClick: 
                             animate={{ x: isHovered ? 8 : 0 }}
                         >
                             <Zap className="w-4 h-4" />
-                            <span>Explore Project</span>
+                            <span>Odkryj Projekt</span>
                             <ArrowRight className={cn(
                                 "w-5 h-5 transition-transform duration-300",
                                 isHovered && "translate-x-2"
@@ -805,10 +805,10 @@ export default function ProjectsPage() {
     const [selectedCategory, setSelectedCategory] = useState('All');
 
     const categories = [
-        { id: 'All', label: 'All Realms', icon: Globe },
-        { id: 'AI & Machine Learning', label: 'Artificial Intelligence', icon: Brain },
-        { id: 'Software Engineering', label: 'Software Architecture', icon: Database },
-        { id: 'More', label: 'More', icon: Layers },
+        { id: 'All', label: 'Wszystkie', icon: Globe },
+        { id: 'AI & Machine Learning', label: 'Sztuczna Inteligencja', icon: Brain },
+        { id: 'Software Engineering', label: 'Architektura Oprogramowania', icon: Database },
+        { id: 'More', label: 'Więcej', icon: Layers },
     ];
 
     const filteredProjects = useMemo(() => {
@@ -856,7 +856,7 @@ export default function ProjectsPage() {
                 >
                     <LogoTimeline
                         items={timelineItems}
-                        title="Technologies & Tools"
+                        title="Technologie i Narzędzia"
                         height="h-[380px] md:h-[480px]"
                         iconSize={18}
                         className="w-full"
@@ -880,7 +880,7 @@ export default function ProjectsPage() {
                             <div className="flex items-center gap-3">
                                 <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
                                 <h2 className="text-sm font-mono uppercase tracking-[0.2em] text-muted-foreground">
-                                    Projects Archive
+                                    Archiwum Projektów
                                 </h2>
                                 <span className="px-2 py-0.5 rounded-md bg-white/5 text-[10px] font-mono text-muted-foreground border border-white/5">
                                     {String(filteredProjects.length).padStart(2, '0')}
@@ -1056,7 +1056,7 @@ export default function ProjectsPage() {
                     filteredProjects.length === 0 && (
                         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-center py-20">
                             <Layers className="w-16 h-16 mx-auto text-white/20 mb-4" />
-                            <p className="text-lg text-white/50">No projects found</p>
+                            <p className="text-lg text-white/50">Nie znaleziono projektów</p>
                         </motion.div>
                     )
                 }

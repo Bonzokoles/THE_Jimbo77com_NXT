@@ -121,7 +121,7 @@ export const Header = () => {
           />
         </div>
         <span className="text-[9px] uppercase tracking-[0.3em] text-neutral-500 font-medium">
-          Scroll
+          Przewiń
         </span>
       </motion.div>
     </div>

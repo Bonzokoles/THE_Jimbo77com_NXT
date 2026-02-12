@@ -138,11 +138,11 @@ export const SoftSkills = () => {
                             transition={{ duration: 0.5, delay: 0.2 }}
                             className="text-[10px] font-mono uppercase tracking-[0.5em] text-primary/80 font-bold block"
                         >
-                            Competency_Matrix // 01
+                            Matryca_Kompetencji // 01
                         </motion.span>
                         <h2 className="text-4xl md:text-7xl font-black italic uppercase tracking-tighter leading-[0.9]">
-                            Strategic<br />
-                            <span className="text-neutral-700 dark:text-muted-foreground font-light not-italic">Directives</span>
+                            Strategiczne<br />
+                            <span className="text-neutral-700 dark:text-muted-foreground font-light not-italic">Dyrektywy</span>
                         </h2>
                     </div>
                     <motion.p
@@ -152,7 +152,7 @@ export const SoftSkills = () => {
                         transition={{ duration: 0.6, delay: 0.3 }}
                         className="max-w-md text-sm text-neutral-800 dark:text-muted-foreground/60 font-mono leading-relaxed"
                     >
-                        Interpersonal capabilities engineered for high-impact leadership and systemic problem solving in complex environments.
+                        Kompetencje interpersonalne zaprojektowane z myślą o przywództwie i systemowym rozwiązywaniu problemów w złożonych środowiskach.
                     </motion.p>
                 </motion.div>
 

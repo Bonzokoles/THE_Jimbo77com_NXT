@@ -55,11 +55,11 @@ export const HardSkills = () => {
                         transition={{ duration: 0.5, delay: 0.2 }}
                         className="text-[10px] font-mono uppercase tracking-[0.5em] text-primary/80 font-bold block"
                     >
-                        Technical_Core // 02
+                        Rdzeń_Techniczny // 02
                     </motion.span>
                     <h2 className="text-4xl md:text-7xl font-black italic uppercase tracking-tighter leading-[0.9]">
-                        Hard<br />
-                        <span className="text-neutral-900 dark:text-white">Capabilities</span>
+                        Twarde<br />
+                        <span className="text-neutral-900 dark:text-white">Kompetencje</span>
                     </h2>
                 </motion.div>
 
@@ -104,7 +104,7 @@ export const HardSkills = () => {
                                                 <div className="flex justify-between items-start">
                                                     <h4 className="text-lg font-bold uppercase tracking-tight text-neutral-900 dark:text-white">{skill.name}</h4>
                                                     <div className="text-[10px] font-mono px-2 py-1 bg-neutral-100 dark:bg-white/5 rounded text-neutral-500 dark:text-neutral-400 uppercase border border-neutral-200 dark:border-white/5">
-                                                        {skill.level || 'Exp'}
+                                                        {skill.level || 'Dośw.'}
                                                     </div>
                                                 </div>
                                                 {/* Progress Bar Background */}
@@ -119,7 +119,7 @@ export const HardSkills = () => {
 
                                                 {/* Skill Description (if any) or Placeholder for spacing */}
                                                 <p className="text-xs text-muted-foreground line-clamp-2">
-                                                    Core competency module active.
+                                                    Moduł kompetencji aktywny.
                                                 </p>
                                             </div>
                                         </motion.div>
