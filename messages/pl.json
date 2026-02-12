@@ -108,6 +108,19 @@
         "tools": "Narzędzia i Oprogramowanie",
         "pillars": "Główne Filary",
         "achievements": "Zweryfikowane Osiągnięcia",
+        "closing": {
+            "engineering": "Precyzyjna inżynieria spotyka nieograniczoną wyobraźnię.",
+            "legacy": "Zbudujmy wspólnie dziedzictwo.",
+            "initProtocol": "> inicjalizacja protokołu: współpraca",
+            "connectionEstablished": "✔ Połączenie bezpieczne.",
+            "analyzingRequirements": "✔ Analiza wymagań projektu.",
+            "verifyingAvailability": "✔ Weryfikacja dostępności... Znaleziono miejsce.",
+            "loadingModules": "✔ Ładowanie modułów projektu.",
+            "actionRequired": "ℹ Wymagana akcja:",
+            "viewPortfolio": "Zobacz portfolio projektów",
+            "readyToBuild": "Gotowy, żeby zbudować coś niezwykłego?",
+            "viewProjectsLink": "[ Zobacz Projekty ]"
+        },
         "level": {
             "beginner": "Początkujący",
             "intermediate": "Średniozaawansowany",

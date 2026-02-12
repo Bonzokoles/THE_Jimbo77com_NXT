@@ -106,10 +106,10 @@ export function LoadingScreen({ onComplete, duration = 3000 }: LoadingScreenProp
     const { resolvedTheme } = useTheme();
 
     const steps = [
-        { text: 'Initializing Neural Network...', icon: Brain },
-        { text: 'Loading Portfolio Data...', icon: Database },
-        { text: 'Compiling 3D Assets...', icon: Box },
-        { text: 'System Ready', icon: Check },
+        { text: 'Inicjalizacja Sieci Neuronowej...', icon: Brain },
+        { text: 'Ładowanie Danych Portfolio...', icon: Database },
+        { text: 'Kompilowanie Zasobów 3D...', icon: Box },
+        { text: 'System Gotowy', icon: Check },
     ];
 
     useEffect(() => {

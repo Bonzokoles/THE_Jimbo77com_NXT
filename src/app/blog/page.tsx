@@ -68,8 +68,8 @@ export default function BlogPage() {
                             className="group flex items-center gap-4 p-1 pl-6 bg-foreground/[0.03] dark:bg-secondary/10 border border-foreground/10 dark:border-border/40 rounded-full hover:border-primary/40 transition-all w-full md:w-auto"
                         >
                             <div className="flex flex-col items-end flex-grow md:flex-grow-0">
-                                <span className="text-[10px] font-mono uppercase tracking-[0.3em] text-muted-foreground group-hover:text-primary transition-colors">Visual Archive</span>
-                                <span className="text-sm font-black uppercase italic tracking-tighter">Explore Gallery</span>
+                                <span className="text-[10px] font-mono uppercase tracking-[0.3em] text-muted-foreground group-hover:text-primary transition-colors">Archiwum Wizualne</span>
+                                <span className="text-sm font-black uppercase italic tracking-tighter">Przeglądaj Galerię</span>
                             </div>
                             <div className="p-4 bg-primary rounded-full text-primary-foreground group-hover:scale-110 transition-transform">
                                 <ImageIcon className="w-5 h-5" />

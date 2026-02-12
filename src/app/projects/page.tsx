@@ -894,7 +894,7 @@ export default function ProjectsPage() {
                                     <Search className="absolute left-3 w-4 h-4 text-muted-foreground group-focus-within:text-primary transition-colors" />
                                     <input
                                         type="text"
-                                        placeholder="Search projects..."
+                                        placeholder="Szukaj projektów..."
                                         value={searchQuery}
                                         onChange={(e) => setSearchQuery(e.target.value)}
                                         className="w-full pl-9 pr-8 py-2.5 bg-transparent text-sm text-foreground placeholder:text-muted-foreground/50 focus:outline-none"
@@ -1043,7 +1043,7 @@ export default function ProjectsPage() {
                                 className="group relative px-8 py-3 rounded-full bg-zinc-900 border border-white/10 text-white font-semibold hover:bg-white/5 transition-all outline-none focus:ring-2 focus:ring-primary/50"
                             >
                                 <span className="relative z-10 flex items-center gap-2">
-                                    {visibleCount < filteredProjects.length ? 'View All Projects' : 'View Less'}
+                                    {visibleCount < filteredProjects.length ? 'Zobacz Wszystkie Projekty' : 'Zobacz Mniej'}
                                     <ArrowRight className={cn("w-4 h-4 transition-transform", visibleCount >= filteredProjects.length && "rotate-180")} />
                                 </span>
                                 <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary/20 to-blue-600/20 opacity-0 group-hover:opacity-100 transition-opacity blur-lg" />

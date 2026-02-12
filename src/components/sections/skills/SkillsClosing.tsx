@@ -97,31 +97,31 @@ export const SkillsClosing = () => {
                 >
                     <div className="w-full max-w-lg">
                         <Terminal>
-                            <TypingAnimation delay={500}>&gt; initializing protocol: collaboration</TypingAnimation>
+                            <TypingAnimation delay={500}>&gt; inicjalizacja protokołu: współpraca</TypingAnimation>
 
                             <AnimatedSpan delay={1500} className="text-green-500">
-                                ✔ Secure connection established.
+                                ✔ Połączenie bezpieczne.
                             </AnimatedSpan>
 
                             <AnimatedSpan delay={2000} className="text-green-500">
-                                ✔ Analyzing project requirements.
+                                ✔ Analiza wymagań projektu.
                             </AnimatedSpan>
 
                             <AnimatedSpan delay={2500} className="text-green-500">
-                                ✔ Verifying availability... Slot found.
+                                ✔ Weryfikacja dostępności... Znaleziono miejsce.
                             </AnimatedSpan>
 
                             <AnimatedSpan delay={3000} className="text-green-500">
-                                ✔ Loading project modules.
+                                ✔ Ładowanie modułów projektu.
                             </AnimatedSpan>
 
                             <AnimatedSpan delay={3500} className="text-blue-500">
-                                <span>ℹ Action Required:</span>
-                                <span className="pl-2">View project portfolio</span>
+                                <span>ℹ Wymagana akcja:</span>
+                                <span className="pl-2">Zobacz portfolio projektów</span>
                             </AnimatedSpan>
 
                             <TypingAnimation delay={4500} className="text-muted-foreground mt-4">
-                                Ready to build something extraordinary?
+                                Gotowy, żeby zbudować coś niezwykłego?
                             </TypingAnimation>
 
                             <motion.div
@@ -134,7 +134,7 @@ export const SkillsClosing = () => {
                                     href="/projects"
                                     className="cursor-pointer inline-flex items-center gap-2 text-white hover:text-white/80 transition-colors font-mono text-sm uppercase tracking-widest border-b-2 border-white/70 pb-0.5 hover:border-white font-semibold"
                                 >
-                                    [ View_Projects ] <MoveRight className="w-4 h-4" />
+                                    [ Zobacz Projekty ] <MoveRight className="w-4 h-4" />
                                 </Link>
                             </motion.div>
                         </Terminal>

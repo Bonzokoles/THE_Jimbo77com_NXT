@@ -197,10 +197,10 @@ function JourneyContent() {
         >
             <div className="space-y-2">
                 <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-                    Changelog from my journey
+                    Dziennik zmian z mojej podróży
                 </h2>
                 <p className="text-muted-foreground max-w-lg">
-                    I've been working on various projects and roles. Here's a timeline of my professional journey.
+                    Pracowałem nad różnymi projektami i rolami. Oto oś czasu mojej drogi zawodowej.
                 </p>
             </div>
 
@@ -294,9 +294,9 @@ function ExperienceContent() {
             <div className="p-4 rounded-2xl bg-primary/10">
                 <Rocket className="w-12 h-12 text-primary" />
             </div>
-            <h3 className="text-2xl font-bold text-foreground">Coming Soon</h3>
+            <h3 className="text-2xl font-bold text-foreground">Już Wkrótce</h3>
             <p className="text-muted-foreground max-w-md">
-                Detailed experience breakdown with project highlights and achievements will be available here soon.
+                Szczegółowy przegląd doświadczeń z wyróżnieniami projektów i osiągnięć będzie dostępny wkrótce.
             </p>
         </motion.div>
     );
@@ -307,9 +307,9 @@ export default function ExperienceTabsSection() {
     const { resolvedTheme } = useTheme();
 
     const tabs = [
-        { id: 'education' as TabType, label: 'Education', icon: <GraduationCap className="w-4 h-4" /> },
-        { id: 'journey' as TabType, label: 'Journey', icon: <Briefcase className="w-4 h-4" /> },
-        { id: 'experience' as TabType, label: 'Experience', icon: <Rocket className="w-4 h-4" /> },
+        { id: 'education' as TabType, label: 'Edukacja', icon: <GraduationCap className="w-4 h-4" /> },
+        { id: 'journey' as TabType, label: 'Podróż', icon: <Briefcase className="w-4 h-4" /> },
+        { id: 'experience' as TabType, label: 'Doświadczenie', icon: <Rocket className="w-4 h-4" /> },
     ];
 
     return (
@@ -326,14 +326,14 @@ export default function ExperienceTabsSection() {
                     {activeTab === 'experience' && <Rocket className="w-8 h-8 text-primary" />}
                 </div>
                 <h3 className="text-2xl font-bold text-center text-foreground capitalize">
-                    {activeTab === 'education' && 'Academic Foundation'}
-                    {activeTab === 'journey' && 'Professional Journey'}
-                    {activeTab === 'experience' && 'Work Experience'}
+                    {activeTab === 'education' && 'Akademickie Fundamenty'}
+                    {activeTab === 'journey' && 'Zawodowa Podróż'}
+                    {activeTab === 'experience' && 'Doświadczenie Zawodowe'}
                 </h3>
                 <p className="text-center text-muted-foreground mt-2 max-w-md mx-auto">
-                    {activeTab === 'education' && 'Building strong foundations through academic excellence'}
-                    {activeTab === 'journey' && 'A timeline of roles, responsibilities, and growth'}
-                    {activeTab === 'experience' && 'Detailed breakdown of professional experiences'}
+                    {activeTab === 'education' && 'Budowanie silnych fundamentów poprzez doskonałość akademicką'}
+                    {activeTab === 'journey' && 'Oś czasu ról, odpowiedzialności i rozwoju'}
+                    {activeTab === 'experience' && 'Szczegółowy przegląd doświadczeń zawodowych'}
                 </p>
             </motion.div>
 

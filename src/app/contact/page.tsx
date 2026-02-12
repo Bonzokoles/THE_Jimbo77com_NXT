@@ -86,7 +86,7 @@ function SocialCard({ item }: { item: any }) {
 
             <div className="relative z-10 flex items-center justify-between mt-auto pt-4 border-t border-border">
                 <span className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground/60 group-hover:text-foreground/70 transition-colors">
-                    Connect
+                    Połącz się
                 </span>
                 <ExternalLink className="w-3 h-3 text-muted-foreground group-hover:text-primary opacity-50 group-hover:opacity-100 transition-all -translate-x-2 group-hover:translate-x-0" />
             </div>
@@ -223,7 +223,7 @@ function FAQSection() {
         <div className="w-full max-w-6xl mx-auto py-20 px-4 md:px-8">
             <div className="flex flex-col items-center mb-16 relative z-10 text-center">
 
-                <h2 className="text-4xl md:text-6xl font-black tracking-tighter mb-4">Frequently Asked Questions</h2>
+                <h2 className="text-4xl md:text-6xl font-black tracking-tighter mb-4">Często Zadawane Pytania</h2>
                 <div className="h-1 w-20 bg-primary/20 rounded-full" />
             </div>
 
@@ -273,18 +273,18 @@ function FAQSection() {
 }
 
 const socialDescriptions: Record<string, string> = {
-    GitHub: "Open Source",
-    'GitHub Projects': "Projects & Code",
-    LinkedIn: "Professional",
-    Twitter: "Thoughts",
-    Facebook: "Social",
-    Reddit: "Community",
-    'Dev.to': "Blog & Articles",
+    GitHub: "Otwarte Oprogramowanie",
+    'GitHub Projects': "Projekty i Kod",
+    LinkedIn: "Profesjonalnie",
+    Twitter: "Myśli",
+    Facebook: "Społecznie",
+    Reddit: "Społeczność",
+    'Dev.to': "Blog i Artykuły",
     Email: "Yahoo Mail",
-    ProtonMail: "Secure Mail",
-    Instagram: "Lifestyle",
-    Discord: "Community",
-    Spotify: "Music"
+    ProtonMail: "Bezpieczna Poczta",
+    Instagram: "Styl Życia",
+    Discord: "Społeczność",
+    Spotify: "Muzyka"
 };
 
 export default function ContactPage() {

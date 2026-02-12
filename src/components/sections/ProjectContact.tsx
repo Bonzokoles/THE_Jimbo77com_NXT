@@ -17,16 +17,16 @@ export const ProjectContact = () => {
 
             <div className="relative z-10">
                 <BlockInTextCard
-                    tag="/ Let's Connect"
+                    tag="/ Skontaktuj się"
                     text={
                         <>
-                            <strong>Ready to build something extra ordinary?</strong> wether it's AI, Blockchain, or a wild 3D web experience. I'm always open to discussing new ideas.
+                            <strong>Gotowy, żeby zbudować coś niezwykłego?</strong> Niezależnie czy to AI, Blockchain, czy immersyjne doświadczenie 3D web — zawsze chętnie rozmawiam o nowych pomysłach.
                         </>
                     }
                     examples={[
-                        "Looking for a Software & AI Engineer?",
-                        "Need an AI solution for your business?",
-                        "Just want to say hi?",
+                        "Szukasz Inżyniera AI & Full Stack?",
+                        "Potrzebujesz rozwiązania AI dla biznesu?",
+                        "Chcesz po prostu powiedzieć cześć?",
                     ]}
                 />
             </div>
@@ -94,7 +94,7 @@ const BlockInTextCard = ({
                         className="w-full group relative flex items-center justify-between py-6 transition-all hover:px-2 border-none ring-0 outline-none"
                     >
                         <span className="text-xl md:text-2xl font-black uppercase tracking-tighter text-foreground group-hover:text-emerald-500 transition-colors">
-                            Send Message
+                            Wyślij Wiadomość
                         </span>
                         <div className="relative flex h-10 w-10 items-center justify-center overflow-hidden rounded-full bg-foreground text-background transition-transform duration-300 group-hover:-rotate-45 group-hover:bg-emerald-500 group-hover:text-white">
                             <ArrowUpRight className="h-5 w-5" />
@@ -129,7 +129,7 @@ const Typewrite = ({ examples }: { examples: string[] }) => {
             <span className="mt-1.5 shrink-0 size-2 rounded-full bg-emerald-500 animate-pulse" />
             <div className="flex-1">
                 <p className="text-xs font-mono text-muted-foreground mb-2 uppercase tracking-widest">
-                    DISCUSSION TOPIC:
+                    TEMAT ROZMOWY:
                 </p>
                 <div className="min-h-[3rem] text-lg font-medium text-foreground">
                     {examples[exampleIndex].split("").map((l, i) => (

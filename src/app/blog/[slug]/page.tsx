@@ -89,29 +89,17 @@ export default function BlogPostPage({ params }: { params: Promise<{ slug: strin
                             {post.excerpt}
                         </div>
 
-                        <div className="space-y-8 text-foreground/80 text-lg leading-loose font-medium">
-                            {/* In a real app, this would be markdown content */}
-                            <p>
-                                This is a placeholder for the full blog post content. The architecture demonstrates a clean separation of concerns, leveraging Next.js dynamic routing and high-performance image optimization.
-                            </p>
-                            <p>
-                                We utilize <span className="text-primary font-black italic">Framer Motion</span> for complex transitions and <span className="text-primary font-black italic">Next-Intl</span> for seamless bilingual support. The design system is strictly aligned with the "Technical Archive" aesthetic, ensuring visual continuity across the entire portfolio.
-                            </p>
-
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-16">
-                                <div className="p-8 bg-secondary/5 border-l-4 border-primary/40 rounded-r-xl">
-                                    <h4 className="text-primary font-black uppercase tracking-[0.2em] text-xs mb-4">Core Implementation</h4>
-                                    <p className="text-sm font-mono opacity-70">
-                                        The 3x3 grid system ensures optimal information density while maintaining readability on all devices.
-                                    </p>
-                                </div>
-                                <div className="p-8 bg-secondary/5 border-l-4 border-secondary/40 rounded-r-xl">
-                                    <h4 className="text-secondary font-black uppercase tracking-[0.2em] text-xs mb-4">Visual Philosophy</h4>
-                                    <p className="text-sm font-mono opacity-70">
-                                        Cinematic hero headers provide an immediate immersive experience for the reader.
-                                    </p>
-                                </div>
-                            </div>
+                        <div className="space-y-6 text-foreground/80 text-lg leading-loose font-medium">
+                            {post.content.split('. ').reduce((acc: string[][], sentence, i) => {
+                                const paragraphIndex = Math.floor(i / 3);
+                                if (!acc[paragraphIndex]) acc[paragraphIndex] = [];
+                                acc[paragraphIndex].push(sentence);
+                                return acc;
+                            }, []).map((sentences, idx) => (
+                                <p key={idx}>
+                                    {sentences.join('. ')}{sentences[sentences.length - 1]?.endsWith('.') ? '' : '.'}
+                                </p>
+                            ))}
                         </div>
                     </div>
 
@@ -128,10 +116,10 @@ export default function BlogPostPage({ params }: { params: Promise<{ slug: strin
                     <div className="mt-12 flex items-center justify-between">
                         <div className="flex gap-4">
                             <button className="flex items-center gap-2 px-6 py-3 bg-primary/10 hover:bg-primary/20 text-primary border border-primary/20 rounded-xl transition-all font-black text-[10px] uppercase tracking-widest">
-                                <Share2 className="w-4 h-4" /> Share
+                                <Share2 className="w-4 h-4" /> Udostępnij
                             </button>
                             <button className="flex items-center gap-2 px-6 py-3 bg-secondary/10 hover:bg-secondary/20 text-muted-foreground border border-border/40 rounded-xl transition-all font-black text-[10px] uppercase tracking-widest">
-                                <Bookmark className="w-4 h-4" /> Save
+                                <Bookmark className="w-4 h-4" /> Zapisz
                             </button>
                         </div>
 

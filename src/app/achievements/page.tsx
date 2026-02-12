@@ -538,7 +538,7 @@ export default function AchievementsPage() {
                                     <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground group-focus-within:text-foreground transition-colors" />
                                     <input
                                         type="text"
-                                        placeholder="Search..."
+                                        placeholder="Szukaj..."
                                         value={searchQuery}
                                         onChange={e => setSearchQuery(e.target.value)}
                                         className="w-full bg-secondary/20 border border-border/40 focus:border-foreground/30 rounded-xl pl-10 pr-8 py-2.5 text-sm outline-none transition-all placeholder:text-muted-foreground/40"
