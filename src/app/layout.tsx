@@ -7,13 +7,13 @@ import { BackToTop } from '@/components/ui/BackToTop';
 import '@/styles/globals.css';
 
 const inter = Inter({
-    subsets: ['latin'],
+    subsets: ['latin', 'latin-ext'],
     variable: '--font-inter',
     display: 'swap',
 });
 
 const jetbrainsMono = JetBrains_Mono({
-    subsets: ['latin'],
+    subsets: ['latin', 'latin-ext'],
     variable: '--font-jetbrains',
     display: 'swap',
 });

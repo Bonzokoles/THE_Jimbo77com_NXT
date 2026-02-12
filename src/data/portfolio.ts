@@ -1,10 +1,10 @@
 ﻿import { PortfolioData } from '@/types';
 export const portfolioData: PortfolioData = {
     personal: {
-        name: 'Karol Lissoń„',
+        name: 'Karol Lissoń',
         title: 'Tech Explorer & AI Architect',
-        subtitle: 'AI Engineer u{2022} Full Stack Developer u{2022} AI Architect | Tworzu{0119} innowacyjne rozwiu{0105}zania cyfrowe',
-        bio: 'Pasjonat technologii z polskich lasu{00f3}w, specjalizuju{0105}cy siu{0119} w AI, automatyzacji i Edge Computing. Tworzu{0119} zaawansowane rozwiu{0105}zania u{0142}u{0105}czu{0105}ce AI Agents, Cloudflare Workers i nowoczesny web development. Eksploruju{0119} granice mou{017c}liwou{015b}ci Multi-Agent Systems i produkcyjnych platform AI.',
+        subtitle: 'AI Engineer • Full Stack Developer • AI Architect | Tworzę innowacyjne rozwiązania cyfrowe',
+        bio: 'Pasjonat technologii z polskich lasów, specjalizujący się w AI, automatyzacji i Edge Computing. Tworzę zaawansowane rozwiązania łączące AI Agents, Cloudflare Workers i nowoczesny web development. Eksploruję granice możliwości Multi-Agent Systems i produkcyjnych platform AI.',
         avatar: '/about/apple-touch-icon.png',
         location: 'Polska, W lesie',
         email: 'karol.bonzo@yahoo.com',
