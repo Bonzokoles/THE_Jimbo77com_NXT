@@ -5,7 +5,7 @@ export const portfolioData: PortfolioData = {
         title: 'Tech Explorer & AI Architect',
         subtitle: 'AI Engineer â€˘ Full Stack Developer â€˘ Blockchain Enthusiast | TworzÄ™ innowacyjne rozwiÄ…zania cyfrowe',
         bio: 'Pasjonat technologii z Polskich lasĂłw, specjalizujÄ…cy siÄ™ w Sztucznej Inteligencji, Full Stack Development i technologiach Web3. TworzÄ™ zaawansowane rozwiÄ…zania Ĺ‚Ä…czÄ…ce AI, blockchain i nowoczesny web development. EksplorujÄ™ granice moĹĽliwoĹ›ci AI Agents i zdecentralizowanych aplikacji.',
-        avatar: '/about/karol-lisson.jpeg',
+        avatar: '/about/apple-touch-icon.png',
         location: 'Polska, W lesie',
         email: 'karol.bonzo@yahoo.com',
         phone: '',
@@ -674,7 +674,7 @@ WAKATIME_API_KEY=your_wakatime_key`
             date: '2025-01-15',
             category: 'ai',
             tags: ['AI', 'Agents', 'Enterprise'],
-            author: { name: 'Karol LissoĹ„', avatar: '/about/karol-lisson.jpeg' },
+            author: { name: 'Karol LissoĹ„', avatar: '/about/apple-touch-icon.png' },
             readTime: '5'
         },
         {
@@ -687,7 +687,7 @@ WAKATIME_API_KEY=your_wakatime_key`
             date: '2025-01-10',
             category: 'web3',
             tags: ['Web3', 'Blockchain', 'UX'],
-            author: { name: 'Karol LissoĹ„', avatar: '/about/karol-lisson.jpeg' },
+            author: { name: 'Karol LissoĹ„', avatar: '/about/apple-touch-icon.png' },
             readTime: '4'
         },
         {
@@ -700,7 +700,7 @@ WAKATIME_API_KEY=your_wakatime_key`
             date: '2025-01-05',
             category: 'coding',
             tags: ['Next.js', 'React', 'Performance'],
-            author: { name: 'Karol LissoĹ„', avatar: '/about/karol-lisson.jpeg' },
+            author: { name: 'Karol LissoĹ„', avatar: '/about/apple-touch-icon.png' },
             readTime: '6'
         },
         {
@@ -713,7 +713,7 @@ WAKATIME_API_KEY=your_wakatime_key`
             date: '2024-12-20',
             category: 'ai',
             tags: ['AI', 'Security', 'Deep Learning'],
-            author: { name: 'Karol LissoĹ„', avatar: '/about/karol-lisson.jpeg' },
+            author: { name: 'Karol LissoĹ„', avatar: '/about/apple-touch-icon.png' },
             readTime: '7'
         },
         {
@@ -726,7 +726,7 @@ WAKATIME_API_KEY=your_wakatime_key`
             date: '2024-12-15',
             category: 'ai',
             tags: ['LLM', 'Python', 'Ollama'],
-            author: { name: 'Karol LissoĹ„', avatar: '/about/karol-lisson.jpeg' },
+            author: { name: 'Karol LissoĹ„', avatar: '/about/apple-touch-icon.png' },
             readTime: '8'
         },
         {
@@ -739,7 +739,7 @@ WAKATIME_API_KEY=your_wakatime_key`
             date: '2024-12-10',
             category: 'web3',
             tags: ['Solidity', 'Ethereum', 'Security'],
-            author: { name: 'Karol LissoĹ„', avatar: '/about/karol-lisson.jpeg' },
+            author: { name: 'Karol LissoĹ„', avatar: '/about/apple-touch-icon.png' },
             readTime: '5'
         },
         {
@@ -752,7 +752,7 @@ WAKATIME_API_KEY=your_wakatime_key`
             date: '2024-12-05',
             category: 'coding',
             tags: ['React', 'Zustand', 'Architecture'],
-            author: { name: 'Karol LissoĹ„', avatar: '/about/karol-lisson.jpeg' },
+            author: { name: 'Karol LissoĹ„', avatar: '/about/apple-touch-icon.png' },
             readTime: '4'
         },
         {
@@ -765,7 +765,7 @@ WAKATIME_API_KEY=your_wakatime_key`
             date: '2024-11-25',
             category: 'coding',
             tags: ['IoT', 'ESP32', 'Edge'],
-            author: { name: 'Karol LissoĹ„', avatar: '/about/karol-lisson.jpeg' },
+            author: { name: 'Karol LissoĹ„', avatar: '/about/apple-touch-icon.png' },
             readTime: '6'
         },
         {
@@ -778,7 +778,7 @@ WAKATIME_API_KEY=your_wakatime_key`
             date: '2024-11-20',
             category: 'ai',
             tags: ['Healthcare', 'AI', 'Ethics'],
-            author: { name: 'Karol LissoĹ„', avatar: '/about/karol-lisson.jpeg' },
+            author: { name: 'Karol LissoĹ„', avatar: '/about/apple-touch-icon.png' },
             readTime: '7'
         }
     ],

@@ -11,7 +11,6 @@ import {
     useAnimationFrame
 } from "framer-motion"; // Changed to framer-motion as motion/react usage might be inconsistent in this codebase
 import { wrap } from "framer-motion";
-import Image from "next/image";
 import { portfolioData } from "@/data/portfolio";
 import { Experience } from "@/types";
 
@@ -70,18 +69,13 @@ function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
 }
 
 const GalleryItem = ({ exp, index }: { exp: Experience; index: number }) => {
-    const logoSrc = exp.logo || '/assets/placeholder.png';
-
     return (
         <div className="relative shrink-0 w-[200px] h-[120px] md:w-[280px] md:h-[160px] flex items-center justify-center group cursor-pointer">
-            <Image
-                src={logoSrc}
-                alt={exp.company}
-                fill
-                sizes="280px"
-                priority
-                className="object-contain p-2 grayscale hover:grayscale-0 opacity-70 group-hover:opacity-100 transition-all duration-300"
-            />
+            <div className="w-full h-full flex items-center justify-center bg-zinc-800/30 rounded-lg border border-white/5 group-hover:border-white/20 transition-all duration-300">
+                <span className="text-lg md:text-xl font-bold text-white/40 group-hover:text-white/80 transition-all duration-300">
+                    {exp.company}
+                </span>
+            </div>
         </div>
     );
 };
@@ -90,12 +84,11 @@ export default function ExperienceMarquee() {
     // Select specific experiences matching the 10 uploaded logos
     const experiences = portfolioData.experiences;
 
-    // Explicitly filtering by ID or Company to match the 10 logos we have
-    // Top 5: CPS, HUMIC, ASE, IF LAB, DICODING
-    const topIds = ['exp-1', 'exp-2', 'exp-3', 'exp-4', 'exp-5'];
+    // Top row: first 3 experiences
+    const topIds = ['exp-1', 'exp-2', 'exp-3'];
 
-    // Bottom 5: DIGISTAR, GDSC, AIESEC, HMIT (TelU Logo), CODING CAMP (Microsoft Logo)
-    const bottomIds = ['exp-7', 'exp-10', 'exp-12', 'exp-14', 'exp-9'];
+    // Bottom row: next 3 experiences
+    const bottomIds = ['exp-4', 'exp-5', 'exp-6'];
 
     const row1 = experiences.filter((exp: Experience) => topIds.includes(exp.id));
     const row2 = experiences.filter((exp: Experience) => bottomIds.includes(exp.id));

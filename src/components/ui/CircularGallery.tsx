@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useCallback } from 'react';
+import { useEffect, useRef, useCallback, useState } from 'react';
 import { Camera, Mesh, Plane, Program, Renderer, Texture, Transform } from 'ogl';
 
 interface CircularGalleryProps {
@@ -451,10 +451,15 @@ class GalleryApp {
     }
 
     createRenderer() {
-        this.renderer = new Renderer({ alpha: true });
-        this.gl = this.renderer.gl;
-        this.gl.clearColor(0, 0, 0, 0);
-        this.container.appendChild(this.renderer.gl.canvas as HTMLCanvasElement);
+        try {
+            this.renderer = new Renderer({ alpha: true });
+            this.gl = this.renderer.gl;
+            this.gl.clearColor(0, 0, 0, 0);
+            this.container.appendChild(this.renderer.gl.canvas as HTMLCanvasElement);
+        } catch (e) {
+            console.warn('[CircularGallery] WebGL not available:', e);
+            throw new Error('WebGL not supported');
+        }
     }
 
     createCamera() {
@@ -637,6 +642,8 @@ export function CircularGallery({
     const containerRef = useRef<HTMLDivElement>(null);
     const appRef = useRef<GalleryApp | null>(null);
 
+    const [webglError, setWebglError] = useState(false);
+
     const initGallery = useCallback(() => {
         if (!containerRef.current) return;
 
@@ -644,15 +651,20 @@ export function CircularGallery({
             appRef.current.destroy();
         }
 
-        appRef.current = new GalleryApp(containerRef.current, {
-            items,
-            bend,
-            textColor,
-            borderRadius,
-            font,
-            scrollSpeed,
-            scrollEase
-        });
+        try {
+            appRef.current = new GalleryApp(containerRef.current, {
+                items,
+                bend,
+                textColor,
+                borderRadius,
+                font,
+                scrollSpeed,
+                scrollEase
+            });
+        } catch (e) {
+            console.warn('[CircularGallery] Failed to initialize:', e);
+            setWebglError(true);
+        }
     }, [items, bend, textColor, borderRadius, font, scrollSpeed, scrollEase]);
 
     useEffect(() => {
@@ -686,6 +698,21 @@ export function CircularGallery({
             }
         };
     }, [initGallery]);
+
+    if (webglError) {
+        return (
+            <div className={`w-full h-full flex items-center justify-center ${className}`}>
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 p-4 max-w-2xl">
+                    {(items ?? []).slice(0, 6).map((item, i) => (
+                        <div key={i} className="rounded-lg overflow-hidden border border-white/10">
+                            <img src={item.image} alt={item.text || ''} className="w-full h-32 object-cover" />
+                            {item.text && <p className="text-xs text-center p-2 text-white/70">{item.text}</p>}
+                        </div>
+                    ))}
+                </div>
+            </div>
+        );
+    }
 
     return (
         <div
