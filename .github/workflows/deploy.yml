@@ -1,9 +1,13 @@
 name: Deploy to Cloudflare Workers
 
-on:
-    push:
-        branches: [main]
-    workflow_dispatch:
+# WYŁĄCZONE - deploy ręcznie przez: cd U:\WWW_Jimbo77_com; npm run deploy
+# Odkomentuj 'on:' żeby włączyć automatyczny CI/CD
+# on:
+#     push:
+#         branches: [main]
+#     workflow_dispatch:
+
+on: workflow_dispatch
 
 jobs:
     deploy:
