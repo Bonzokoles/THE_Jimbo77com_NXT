@@ -3,7 +3,7 @@
 import { useState, useRef } from 'react';
 import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion';
 import { useTranslations } from 'next-intl';
-import { Send, CheckCircle, AlertCircle, Loader2, Disc, Music, ArrowUpRight, Sparkles, HelpCircle, MessageSquare, ExternalLink, Github, Linkedin, Twitter, Instagram, Facebook, ChevronDown } from 'lucide-react';
+import { Send, CheckCircle, AlertCircle, Loader2, Disc, Music, ArrowUpRight, Sparkles, HelpCircle, MessageSquare, ExternalLink, Github, Linkedin, Twitter, Instagram, Facebook, Mail, ChevronDown } from 'lucide-react';
 import { SiReddit, SiDevdotto } from 'react-icons/si';
 import { cn } from '@/lib/utils';
 import { portfolioData } from '@/data/portfolio';
@@ -47,6 +47,7 @@ function SocialTicker({ items, direction = 'left', speed = 30 }: { items: any[],
 
 const socialIconsMap: Record<string, React.ElementType> = {
     github: Github,
+    'github projects': Github,
     linkedin: Linkedin,
     twitter: Twitter,
     instagram: Instagram,
@@ -54,6 +55,8 @@ const socialIconsMap: Record<string, React.ElementType> = {
     reddit: SiReddit,
     'dev.to': SiDevdotto,
     devto: SiDevdotto,
+    email: Mail,
+    protonmail: Mail,
     discord: Disc,
     spotify: Music
 };
@@ -271,11 +274,14 @@ function FAQSection() {
 
 const socialDescriptions: Record<string, string> = {
     GitHub: "Open Source",
+    'GitHub Projects': "Projects & Code",
     LinkedIn: "Professional",
     Twitter: "Thoughts",
     Facebook: "Social",
     Reddit: "Community",
     'Dev.to': "Blog & Articles",
+    Email: "Yahoo Mail",
+    ProtonMail: "Secure Mail",
     Instagram: "Lifestyle",
     Discord: "Community",
     Spotify: "Music"
@@ -296,8 +302,8 @@ export default function ContactPage() {
         };
     };
 
-    const row1Real = ['github', 'twitter', 'facebook'].map(getSocialItem);
-    const row2Real = ['reddit', 'dev.to', 'email'].map(getSocialItem);
+    const row1Real = ['github', 'github projects', 'twitter', 'facebook'].map(getSocialItem);
+    const row2Real = ['reddit', 'dev.to', 'email', 'protonmail'].map(getSocialItem);
 
     const containerRef = useRef<HTMLDivElement>(null);
     const { scrollYProgress } = useScroll({

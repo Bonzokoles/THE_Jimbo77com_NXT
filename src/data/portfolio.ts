@@ -23,6 +23,12 @@ export const portfolioData: PortfolioData = {
                 username: 'Bonzokoles',
             },
             {
+                platform: 'GitHub Projects',
+                url: 'https://github.com/77Jimbo77',
+                icon: 'github',
+                username: '77Jimbo77',
+            },
+            {
                 platform: 'Twitter',
                 url: 'https://x.com/KarolLisson',
                 icon: 'twitter',
@@ -48,6 +54,12 @@ export const portfolioData: PortfolioData = {
             },
             {
                 platform: 'Email',
+                url: 'mailto:karol.bonzo@yahoo.com',
+                icon: 'email',
+                username: 'karol.bonzo@yahoo.com',
+            },
+            {
+                platform: 'ProtonMail',
                 url: 'mailto:JimBoZen@proton.me',
                 icon: 'email',
                 username: 'JimBoZen@proton.me',
