@@ -120,8 +120,8 @@ export function Navbar() {
     }, []);
 
     const toggleLocale = useCallback(() => {
-        // Cykl: pl -> en -> id -> pl
-        const locales = { 'pl': 'en', 'en': 'id', 'id': 'pl' };
+        // Cykl: pl -> en -> pl
+        const locales = { 'pl': 'en', 'en': 'pl' };
         const newLocale = locales[currentLocale as keyof typeof locales] || 'pl';
         document.cookie = `locale=${newLocale};path=/;max-age=31536000`;
         setCurrentLocale(newLocale);
@@ -299,7 +299,7 @@ export function Navbar() {
                                     onClick={toggleLocale}
                                     className="px-6 py-3 rounded-full glass-card text-sm font-medium hover:bg-muted/50 transition-colors"
                                 >
-                                    {currentLocale === 'pl' ? '🇵🇱 Polski' : currentLocale === 'en' ? '🇬🇧 English' : '🇮🇩 Indonesia'}
+                                    {currentLocale === 'pl' ? '🇵🇱 Polski' : '🇬🇧 English'}
                                 </button>
                                 {mounted && (
                                     <AnimatedThemeToggler

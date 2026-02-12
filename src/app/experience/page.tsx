@@ -30,19 +30,19 @@ type TabType = 'education' | 'journey' | 'experience';
 
 const highlightContent = {
     education: {
-        title: "Building the Future",
-        highlight: "Through Knowledge",
-        description: "Every line of code starts with understanding. My academic journey at Telkom University shapes how I approach complex problems with systematic thinking."
+        title: "Budowanie Przyszłości",
+        highlight: "Przez Wiedzę",
+        description: "Każda linia kodu zaczyna się od zrozumienia. Ciągłe samokształcenie i praktyka budują moje podejście do złożonych problemów z myśleniem systemowym."
     },
     journey: {
-        title: "Crafting Experiences",
-        highlight: "That Matter",
-        description: "From internships to leadership roles, each step has been a lesson in collaboration, innovation, and pushing boundaries."
+        title: "Tworzenie Doświadczeń",
+        highlight: "Które Mają Znaczenie",
+        description: "Od pierwszych projektów po budowę platform AI — każdy krok to lekcja innowacji, automatyzacji i przekraczania granic."
     },
     experience: {
-        title: "Turning Ideas",
-        highlight: "Into Reality",
-        description: "Real-world projects that solve real problems. Building solutions that make a difference, one commit at a time."
+        title: "Zamieniam Pomysły",
+        highlight: "W Rzeczywistość",
+        description: "Production-ready projekty, które rozwiązują realne problemy. 30+ AI Workers, 500K+ requestów dziennie, jeden commit na raz."
     }
 };
 
@@ -104,9 +104,9 @@ function ExperienceTabSlider() {
     const [activeTab, setActiveTab] = useState<number>(1);
 
     const tabs: TabItem[] = [
-        { id: 'education', label: 'Education', description: 'Building strong foundations through academic excellence at Telkom University and SMAN 88 Jakarta.' },
-        { id: 'journey', label: 'Journey', description: 'A timeline of roles, responsibilities, and professional growth across various organizations.' },
-        { id: 'experience', label: 'Experience', description: 'Detailed breakdown of work experiences with project highlights and achievements.' },
+        { id: 'education', label: 'Rozwój', description: 'Ciągły rozwój przez samokształcenie, kursy online i budowanie produkcyjnych platform od zera.' },
+        { id: 'journey', label: 'Podróż', description: 'Oś czasu ról, odpowiedzialności i rozwoju zawodowego — od freelance do własnej firmy.' },
+        { id: 'experience', label: 'Doświadczenie', description: 'Szczegółowy przegląd doświadczeń z projektami AI, automatyzacją i edge computing.' },
     ];
 
     const heightFix = () => {
