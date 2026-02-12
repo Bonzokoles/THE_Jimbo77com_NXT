@@ -115,7 +115,7 @@ export function GitHubHeatmap({ username }: { username: string }) {
             </div>
 
             <div className="mt-6 flex items-center justify-between text-[10px] font-mono text-muted-foreground uppercase tracking-[0.3em] font-bold">
-                <span>Data Source: GitHub Arfazrll</span>
+                <span>Data Source: GitHub Bonzokoles</span>
                 <div className="flex gap-1">
                     {cyberpunkTheme.dark.map((c, i) => (
                         <div key={i} className="w-2 h-2 rounded-full shadow-[0_0_5px_rgba(0,0,0,0.2)]" style={{ backgroundColor: c }} />

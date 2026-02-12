@@ -182,7 +182,7 @@ export function LoadingScreen({ onComplete, duration = 3000 }: LoadingScreenProp
                                 <div className="w-3 h-3 rounded-full bg-red-500" />
                                 <div className="w-3 h-3 rounded-full bg-yellow-500" />
                                 <div className="w-3 h-3 rounded-full bg-green-500" />
-                                <span className="ml-2 text-xs text-muted-foreground font-mono">arfazrll@portfolio:~</span>
+                                <span className="ml-2 text-xs text-muted-foreground font-mono">bonzo@jimbo77:~</span>
                             </div>
 
                             {/* Terminal Body */}

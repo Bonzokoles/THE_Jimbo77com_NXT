@@ -14,7 +14,7 @@ export default function StatsSection() {
     const t = useTranslations('stats');
     const githubUsername = process.env.NEXT_PUBLIC_GITHUB_USERNAME ||
         portfolioData.personal.socialLinks.find(s => s.platform === 'GitHub')?.username ||
-        "Arfazrll";
+        "Bonzokoles";
 
     const { summary: gSummary } = useGitHubData(githubUsername);
 
