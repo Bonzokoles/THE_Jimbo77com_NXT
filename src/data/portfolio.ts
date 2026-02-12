@@ -2,8 +2,8 @@
 export const portfolioData: PortfolioData = {
     personal: {
         name: 'Karol Lissoń',
-        title: 'Tech Explorer & AI Architect',
-        subtitle: 'AI Engineer • Full Stack Developer • AI Architect | Tworzę innowacyjne rozwiązania cyfrowe',
+        title: 'Eksplorator Technologii & Architekt AI',
+        subtitle: 'Inżynier AI • Full Stack Developer • Architekt AI | Tworzę innowacyjne rozwiązania cyfrowe',
         bio: 'Pasjonat technologii z polskich lasów, specjalizujący się w AI, automatyzacji i Edge Computing. Tworzę zaawansowane rozwiązania łączące AI Agents, Cloudflare Workers i nowoczesny web development. Eksploruję granice możliwości Multi-Agent Systems i produkcyjnych platform AI.',
         avatar: '/about/apple-touch-icon.png',
         location: 'Polska, W lesie',
