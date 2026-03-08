@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useMemo } from 'react';
 import { useTheme } from 'next-themes';
 
 interface Scene3DProps {
@@ -15,6 +15,15 @@ export function Scene3D({ className = '' }: Scene3DProps) {
     useEffect(() => {
         setMounted(true);
     }, []);
+
+    const particles = useMemo(() => Array.from({ length: 25 }, () => ({
+        width: Math.random() * 4 + 2,
+        height: Math.random() * 4 + 2,
+        left: Math.random() * 100,
+        top: Math.random() * 100,
+        delay: Math.random() * 3,
+        duration: 2 + Math.random() * 3,
+    })), []);
 
     if (!mounted) {
         return <div className={`absolute inset-0 -z-10 ${className}`} />;
@@ -31,18 +40,18 @@ export function Scene3D({ className = '' }: Scene3DProps) {
                 }}
             />
             <div className="absolute inset-0 overflow-hidden">
-                {[...Array(25)].map((_, i) => (
+                {particles.map((p, i) => (
                     <div
                         key={i}
                         className="absolute rounded-full animate-pulse"
                         style={{
-                            width: `${Math.random() * 4 + 2}px`,
-                            height: `${Math.random() * 4 + 2}px`,
-                            left: `${Math.random() * 100}%`,
-                            top: `${Math.random() * 100}%`,
+                            width: `${p.width}px`,
+                            height: `${p.height}px`,
+                            left: `${p.left}%`,
+                            top: `${p.top}%`,
                             backgroundColor: isDark ? 'rgba(255,255,255,0.3)' : 'rgba(59,130,246,0.4)',
-                            animationDelay: `${Math.random() * 3}s`,
-                            animationDuration: `${2 + Math.random() * 3}s`,
+                            animationDelay: `${p.delay}s`,
+                            animationDuration: `${p.duration}s`,
                         }}
                     />
                 ))}

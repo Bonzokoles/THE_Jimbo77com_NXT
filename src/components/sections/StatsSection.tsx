@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useTranslations } from 'next-intl';
 import { motion } from "framer-motion";
 import { Boxes } from "@/components/ui/background-boxes";
@@ -17,6 +17,10 @@ export default function StatsSection() {
         "Bonzokoles";
 
     const { summary: gSummary } = useGitHubData(githubUsername);
+    const [sessionToken, setSessionToken] = useState('');
+    useEffect(() => {
+        setSessionToken(Math.random().toString(36).substring(7).toUpperCase());
+    }, []);
 
     return (
         <section className="relative py-24 lg:py-32 overflow-hidden bg-background">
@@ -173,7 +177,7 @@ export default function StatsSection() {
                             <span className="hidden md:inline border-l border-black/10 dark:border-white/10 pl-6">{t('system')}</span>
                         </div>
                         <div className="flex items-center gap-10">
-                            <span className="font-medium">SESSION_TOKEN: {Math.random().toString(36).substring(7).toUpperCase()}</span>
+                            <span className="font-medium">SESSION_TOKEN: {sessionToken}</span>
                             <div className="flex items-center gap-2 text-primary font-bold">
                                 <Search className="w-3 h-3" /> [{t('scanning')}]
                             </div>

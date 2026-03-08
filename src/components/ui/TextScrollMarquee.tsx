@@ -1,6 +1,6 @@
 'use client';
 
-import { useRef, useEffect } from 'react';
+import { useRef, useEffect, useState } from 'react';
 import {
     motion,
     useScroll,
@@ -37,6 +37,7 @@ export default function TextScrollMarquee({
 }: TextScrollMarqueeProps) {
     const baseX = useMotionValue(0);
     const { scrollY } = useScroll();
+    const [repeatCount, setRepeatCount] = useState(4);
     const scrollVelocity = useVelocity(scrollY);
     const smoothVelocity = useSpring(scrollVelocity, {
         damping: 50,
@@ -51,6 +52,10 @@ export default function TextScrollMarquee({
 
     const directionFactor = useRef<number>(direction === 'left' ? 1 : -1);
     const hasStarted = useRef(false);
+
+    useEffect(() => {
+        setRepeatCount(window.innerWidth < 768 ? 2 : 4);
+    }, []);
 
     useEffect(() => {
         const timer = setTimeout(() => {
@@ -88,7 +93,7 @@ export default function TextScrollMarquee({
                 className="flex whitespace-nowrap gap-10 flex-nowrap"
                 style={{ x }}
             >
-                {[...Array(typeof window !== 'undefined' && window.innerWidth < 768 ? 2 : 4)].map((_, index) => (
+                {[...Array(repeatCount)].map((_, index) => (
                     <span key={index} className={cn('block text-[5vw]', className)}>
                         {children}
                     </span>
