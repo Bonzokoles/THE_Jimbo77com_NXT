@@ -189,7 +189,7 @@ export function LoadingScreen({ onComplete, duration = 3000 }: LoadingScreenProp
                             <div className="p-6 space-y-4">
                                 <div className="flex items-center gap-3 text-primary mb-6">
                                     <Terminal className="w-5 h-5" />
-                                    <span className="text-sm font-semibold font-mono">System Initialization</span>
+                                    <span className="text-sm font-semibold font-mono">Inicjalizacja Systemu</span>
                                 </div>
 
                                 {/* Steps */}
@@ -227,7 +227,7 @@ export function LoadingScreen({ onComplete, duration = 3000 }: LoadingScreenProp
                                 {/* Progress Bar */}
                                 <div className="mt-8 font-mono">
                                     <div className="flex justify-between text-xs text-muted-foreground mb-2">
-                                        <span>PROGRESS</span>
+                                        <span>POSTĘP</span>
                                         <span>{progress}%</span>
                                     </div>
                                     <div className="h-1 bg-muted rounded-full overflow-hidden">

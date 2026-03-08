@@ -9,11 +9,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-// Particles removed for performance
 import { useIsMobile } from "@/hooks/useIsMobile";
-import type { ISourceOptions } from '@tsparticles/engine';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 import { Sparkles, ChevronDown, Mail, ArrowRight } from 'lucide-react';
 import { LoadingScreen } from '@/components/layout';
 import { TextPressure } from '@/components/ui/TextPressure';
@@ -38,33 +34,6 @@ const ExpertiseSection = dynamic(() => import("@/components/sections/ExpertiseSe
     loading: () => <div className="h-[500px] w-full animate-pulse bg-zinc-100/5 dark:bg-zinc-800/5" />
 });
 
-// ==================== PARTICLES CONFIG ====================
-const particlesOptions: ISourceOptions = {
-    background: { color: { value: 'transparent' } },
-    fpsLimit: 60,
-    particles: {
-        color: { value: ['#3b82f6', '#8b5cf6', '#06b6d4'] },
-        links: {
-            color: '#ffffff',
-            distance: 150,
-            enable: true,
-            opacity: 0.1,
-            width: 1,
-        },
-        move: {
-            enable: true,
-            speed: 1,
-            direction: 'none',
-            random: true,
-            straight: false,
-            outModes: { default: 'out' },
-        },
-        number: { density: { enable: true }, value: 25 }, // Optimized count
-        opacity: { value: { min: 0.1, max: 0.4 } },
-        size: { value: { min: 1, max: 3 } },
-    },
-    detectRetina: true,
-};
 // ==================== ANIMATED BACKGROUND ====================
 function AnimatedBackground() {
     const isMobile = useIsMobile();
@@ -412,24 +381,10 @@ export default function HomePage() {
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
-        // Initialize AOS with more options
-        AOS.init({
-            duration: 1000,
-            easing: 'ease-out-cubic',
-            once: false, // Allow animations to replay
-            offset: 100,
-            mirror: true, // Animate out when scrolling past
-        });
-
         const hasLoaded = sessionStorage.getItem('portfolioLoaded');
         if (hasLoaded) {
             setIsLoading(false);
         }
-
-        // Refresh AOS on route change
-        return () => {
-            AOS.refresh();
-        };
     }, []);
 
     const handleLoadingComplete = () => {

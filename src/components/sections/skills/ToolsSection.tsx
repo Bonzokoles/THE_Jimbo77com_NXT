@@ -65,10 +65,10 @@ export const ToolsSection = () => {
                     transition={{ duration: 0.8, delay: 0.2 }}
                     className="text-[10px] font-mono uppercase tracking-[0.6em] text-white/50 block mb-4 animate-pulse-slow"
                 >
-                    Domain // 03
+                    Domena // 03
                 </motion.span>
                 <h2 className="text-4xl md:text-7xl font-sans font-thin text-white/90 tracking-[0.2em] uppercase transition-all duration-700">
-                    Technical <span className="font-serif italic text-white/40">TOOLS</span>
+                    Technical <span className="font-serif italic text-white/40">NARZĘDZIA</span>
                 </h2>
             </motion.div>
 
@@ -92,7 +92,7 @@ export const ToolsSection = () => {
 
             <div className="absolute bottom-12 text-center w-full pointer-events-none opacity-30 text-white/50">
                 <p className="text-[10px] font-mono uppercase tracking-[0.4em]">
-                    [ Daily Arsenal ]
+                    [ Codzienny Arsenał ]
                 </p>
             </div>
         </section>

@@ -24,12 +24,12 @@ export default function ExpertiseSection() {
     }, []);
 
     const galleryItems = [
-        { image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=600&fit=crop', text: 'AI & Machine Learning' },
+        { image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=600&fit=crop', text: 'AI i Uczenie Maszynowe' },
         { image: 'https://images.unsplash.com/photo-1627398242454-45a1465c2479?w=800&h=600&fit=crop', text: 'Full Stack Development' },
-        { image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop', text: 'Data Science' },
-        { image: 'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=800&h=600&fit=crop', text: 'Web3 & Blockchain' },
-        { image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=600&fit=crop', text: 'Cloud Computing' },
-        { image: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=600&fit=crop', text: 'Cybersecurity' },
+        { image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop', text: 'Analiza Danych' },
+        { image: 'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=800&h=600&fit=crop', text: 'Web3 i Blockchain' },
+        { image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=600&fit=crop', text: 'Chmura Obliczeniowa' },
+        { image: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=600&fit=crop', text: 'Cyberbezpieczeństwo' },
     ];
 
     return (
@@ -70,12 +70,12 @@ export default function ExpertiseSection() {
 
                     <div className="mb-12 w-full overflow-hidden">
                         <TextScrollMarquee baseVelocity={-2} className="text-3xl md:text-7xl lg:text-8xl font-black tracking-tight">
-                            <span className="text-foreground">Creative</span>
+                            <span className="text-foreground">Kreatywna</span>
                             <span
                                 className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-violet-500 to-fuchsia-500 ml-4 bg-[length:200%_auto]"
                                 style={{ animation: 'gradient-flow 4s ease infinite' }}
                             >
-                                Engineering
+                                Inżynieria
                             </span>
                         </TextScrollMarquee>
                     </div>

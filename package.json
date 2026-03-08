@@ -23,10 +23,7 @@
         "@react-three/rapier": "^2.0.0",
         "@splinetool/react-spline": "^4.1.0",
         "@splinetool/runtime": "^1.12.47",
-        "@tsparticles/react": "^3.0.0",
-        "@tsparticles/slim": "^3.0.0",
         "@types/matter-js": "^0.20.2",
-        "aos": "^2.3.4",
         "class-variance-authority": "^0.7.1",
         "clsx": "^2.1.1",
         "framer-motion": "^11.0.0",
@@ -36,7 +33,6 @@
         "matter-js": "^0.20.0",
         "meshline": "^3.3.1",
         "mini-svg-data-uri": "^1.4.4",
-        "motion": "^12.29.2",
         "next": "16.1.6",
         "next-intl": "^4.8.0",
         "next-themes": "^0.2.1",
@@ -50,11 +46,9 @@
         "shiki": "^3.21.0",
         "tailwind-merge": "^3.4.0",
         "tailwindcss-animate": "^1.0.7",
-        "three": "^0.170.0",
-        "tsparticles": "^3.9.1"
+        "three": "^0.170.0"
     },
     "devDependencies": {
-        "@types/aos": "^3.0.7",
         "@types/node": "^20.10.0",
         "@types/react": "^19.0.0",
         "@types/react-dom": "^19.0.0",

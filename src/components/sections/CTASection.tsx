@@ -54,7 +54,7 @@ export default function CTASection() {
                     Next.js • TypeScript • Tailwind • React • Node.js • Three.js •
                 </InfiniteRibbon>
                 <InfiniteRibbon rotation={-6} reverse={true} className="z-20 py-5 border-y border-white/20 dark:border-zinc-700 shadow-2xl" background="bg-blue-600 dark:bg-black" textColor="text-white dark:text-white font-bold tracking-widest uppercase">
-                    Creative Developer • UI/UX Design • Full Stack Engineering • System Architecture •
+                    Kreatywny Developer • Projektowanie UI/UX • Full Stack • Architektura Systemów •
                 </InfiniteRibbon>
             </div>
 

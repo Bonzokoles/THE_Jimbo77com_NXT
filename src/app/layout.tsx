@@ -20,26 +20,26 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
     title: {
-        default: 'Karol Lissoń | Full Stack Developer & AI Engineer',
+        default: 'Karol Lissoń | Full Stack Developer & Inżynier AI',
         template: '%s | Karol Lissoń',
     },
-    description: 'Pasjonat technologii specjalizujący się w AI, Full Stack Development i Web3. Tworzę innowacyjne rozwiązania cyfrowe.',
-    keywords: ['AI Engineer', 'Full Stack Developer', 'Web3', 'Blockchain', 'React', 'Next.js', 'Python', 'Machine Learning'],
+    description: 'Architekt systemów AI i automatyzacji. Edge Computing, Multi-Agent Systems i nowoczesny web development.',
+    keywords: ['Inżynier AI', 'Full Stack Developer', 'Edge Computing', 'Multi-Agent Systems', 'React', 'Next.js', 'Python', 'Cloudflare Workers', 'Automatyzacja'],
     authors: [{ name: 'Karol Lissoń' }],
     creator: 'Karol Lissoń',
-    metadataBase: new URL('https://jimbo77.org'),
+    metadataBase: new URL('https://jimbo77.com'),
     openGraph: {
         type: 'website',
         locale: 'pl_PL',
-        url: 'https://jimbo77.org',
-        title: 'Karol Lissoń | Full Stack Developer & AI Engineer',
-        description: 'Pasjonat technologii specjalizujący się w AI, Full Stack Development i Web3.',
+        url: 'https://jimbo77.com',
+        title: 'Karol Lissoń | Full Stack Developer & Inżynier AI',
+        description: 'Architekt systemów AI i automatyzacji. Edge Computing, Multi-Agent Systems i nowoczesny web development.',
         siteName: 'Karol Lissoń Portfolio',
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Karol Lissoń | Full Stack Developer & AI Engineer',
-        description: 'Pasjonat technologii specjalizujący się w AI, Full Stack Development i Web3.',
+        title: 'Karol Lissoń | Full Stack Developer & Inżynier AI',
+        description: 'Architekt systemów AI i automatyzacji. Edge Computing, Multi-Agent Systems i nowoczesny web development.',
         creator: '@Bonzokoles',
     },
     robots: {

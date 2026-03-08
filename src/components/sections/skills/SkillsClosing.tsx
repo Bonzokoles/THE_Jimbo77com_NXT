@@ -33,8 +33,8 @@ export const SkillsClosing = () => {
                     transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
                     className="flex whitespace-nowrap gap-24 text-[12vw] font-black uppercase leading-none text-foreground"
                 >
-                    <span>System Architecture</span>
-                    <span>System Architecture</span>
+                    <span>Architektura Systemów</span>
+                    <span>Architektura Systemów</span>
                 </motion.div>
             </div>
 
@@ -44,8 +44,8 @@ export const SkillsClosing = () => {
                     transition={{ duration: 35, repeat: Infinity, ease: "linear" }}
                     className="flex whitespace-nowrap gap-24 text-[12vw] font-black uppercase leading-none text-foreground"
                 >
-                    <span>Creative Engineering</span>
-                    <span>Creative Engineering</span>
+                    <span>Kreatywna Inżynieria</span>
+                    <span>Kreatywna Inżynieria</span>
                 </motion.div>
             </div>
 
@@ -70,9 +70,9 @@ export const SkillsClosing = () => {
                     />
 
                     <h2 className="text-6xl md:text-8xl font-black uppercase tracking-tighter text-foreground leading-[0.85]">
-                        Forge <br />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-foreground/80">The</span> <br />
-                        Future
+                        Kształtuj <br />
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-foreground/80">Swój</span> <br />
+                        Jutrzejszy Świat
                     </h2>
 
                     <motion.p
@@ -82,8 +82,8 @@ export const SkillsClosing = () => {
                         transition={{ duration: 0.6, delay: 0.4 }}
                         className="max-w-md text-muted-foreground text-lg md:text-xl font-mono leading-relaxed"
                     >
-                        Precision engineering meets <span className="text-foreground font-semibold">unbound imagination</span>.
-                        <br /> Let's construct a legacy.
+                        Precyzyjna inżynieria spotyka <span className="text-foreground font-semibold">nieograniczoną wyobraźnię</span>.
+                        <br /> Zbudujmy razem coś wyjątkowego.
                     </motion.p>
                 </motion.div>
 

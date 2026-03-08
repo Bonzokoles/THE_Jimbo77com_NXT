@@ -8,27 +8,27 @@ import { useMemo } from 'react';
 
 // Grouping logic helper
 const GROUP_MAPPING: Record<string, string[]> = {
-    'Artificial Intelligence': ['ai', 'machine learning', 'deep learning', 'nlp', 'computer vision'],
-    'Software Architecture': ['software', 'backend', 'system', 'cloud'],
+    'Sztuczna Inteligencja': ['ai', 'machine learning', 'deep learning', 'nlp', 'computer vision'],
+    'Architektura Oprogramowania': ['software', 'backend', 'system', 'cloud'],
 };
 
 export const HardSkills = () => {
     // Categorize hard skills
     const categorizedSkills = useMemo(() => {
         const groups: Record<string, typeof portfolioData.hardSkills> = {
-            'Artificial Intelligence': [],
-            'Software Engineering': [],
-            'Other': []
+            'Sztuczna Inteligencja': [],
+            'Inżynieria Oprogramowania': [],
+            'Inne': []
         };
 
         portfolioData.hardSkills.forEach(skill => {
             const cat = skill.category.toLowerCase();
-            if (GROUP_MAPPING['Artificial Intelligence'].some(k => cat.includes(k))) {
-                groups['Artificial Intelligence'].push(skill);
-            } else if (GROUP_MAPPING['Software Architecture'].some(k => cat.includes(k))) {
-                groups['Software Engineering'].push(skill);
+            if (GROUP_MAPPING['Sztuczna Inteligencja'].some(k => cat.includes(k))) {
+                groups['Sztuczna Inteligencja'].push(skill);
+            } else if (GROUP_MAPPING['Architektura Oprogramowania'].some(k => cat.includes(k))) {
+                groups['Inżynieria Oprogramowania'].push(skill);
             } else {
-                groups['Other'].push(skill);
+                groups['Inne'].push(skill);
             }
         });
 

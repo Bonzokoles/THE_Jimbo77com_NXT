@@ -112,7 +112,7 @@ const CenterImage = ({ scrollY }: { scrollY: MotionValue<number> }) => {
                     }}
                     className="text-5xl md:text-9xl font-black text-white tracking-tighter text-center mb-6 mix-blend-exclusion"
                 >
-                    EXPERIENCE
+                    DOŚWIADCZENIE
                 </motion.h1>
                 <motion.p
                     style={{
@@ -121,7 +121,7 @@ const CenterImage = ({ scrollY }: { scrollY: MotionValue<number> }) => {
                     }}
                     className="w-full max-w-[90vw] md:max-w-6xl text-center text-lg md:text-2xl text-zinc-600 dark:text-zinc-200 font-medium tracking-wide leading-relaxed"
                 >
-                    Merging technical precision with creative vision. A curated timeline of my professional journey, from foundational code to advanced AI solutions.
+                    Połączenie precyzji technicznej z kreatywną wizją. Moja droga zawodowa — od pierwszych linii kodu po zaawansowane rozwiązania AI.
                 </motion.p>
             </motion.div>
         </div>

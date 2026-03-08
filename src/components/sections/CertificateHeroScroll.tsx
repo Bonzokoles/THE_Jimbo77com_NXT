@@ -36,32 +36,32 @@ const CERTIFICATES: ImageItem[] = [
     {
         id: "cert1",
         src: "https://images.unsplash.com/photo-1544531586-fde5298cdd40?w=800&q=85",
-        alt: "Professional Certification",
+        alt: "Certyfikat Profesjonalny",
     },
     {
         id: "cert2",
         src: "https://images.unsplash.com/photo-1589330694653-4a8b243e3d27?w=800&q=85",
-        alt: "Award Recognition",
+        alt: "Wyróżnienie",
     },
     {
         id: "cert3",
         src: "https://images.unsplash.com/photo-1606326608606-aa0b62935f2b?w=800&q=85",
-        alt: "Course Completion",
+        alt: "Ukończenie Kursu",
     },
     {
         id: "cert4",
         src: "https://images.unsplash.com/photo-1635350736475-c8cef4b21906?w=800&q=85",
-        alt: "Technical Achievement",
+        alt: "Osiągnięcie Techniczne",
     },
     {
         id: "cert5",
         src: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=85",
-        alt: "Project Milestone",
+        alt: "Kamień Milowy Projektu",
     },
     {
         id: "cert6",
         src: "https://images.unsplash.com/photo-1523289333742-be1143f6b766?w=800&q=85",
-        alt: "Academic Excellence",
+        alt: "Doskonałość Akademicka",
     },
 ];
 

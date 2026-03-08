@@ -61,7 +61,7 @@ function EducationContent() {
                         <div className="w-1 h-8 bg-primary rounded-full" />
                         <div>
                             <p className="text-xs font-mono text-muted-foreground tracking-widest uppercase">
-                                — Higher Education • {education.isOngoing ? 'Current' : 'Completed'}
+                                — Wykształcenie Wyższe • {education.isOngoing ? 'W trakcie' : 'Ukończone'}
                             </p>
                         </div>
                     </div>
@@ -73,7 +73,7 @@ function EducationContent() {
                     </h2>
 
                     <p className="text-muted-foreground leading-relaxed max-w-md">
-                        {education.major} major with a GPA of {education.gpa}. Focused on AI Engineering and Systems Research. Active in multiple high-impact research laboratories and national competitions.
+                        Kierunek {education.major}, średnia {education.gpa}. Specjalizacja w Inżynierii AI i Badaniach Systemowych. Aktywny udział w laboratoriach badawczych i ogólnopolskich konkursach.
                     </p>
                 </div>
 
@@ -97,15 +97,15 @@ function EducationContent() {
                                 GPA {education.gpa}
                             </span>
                             <span className="px-3 py-1.5 rounded-full text-xs font-medium bg-secondary/50 text-foreground border border-secondary/30">
-                                AI Researcher
+                                Badacz AI
                             </span>
                             <span className="px-3 py-1.5 rounded-full text-xs font-medium bg-secondary/50 text-foreground border border-secondary/30">
-                                IT Major
+                                Kierunek IT
                             </span>
                         </div>
 
                         <p className="text-xs font-mono text-muted-foreground tracking-widest uppercase">
-                            Digital Innovation Hub
+                            Centrum Innowacji Cyfrowych
                         </p>
                     </div>
                 </motion.div>
@@ -149,7 +149,7 @@ function EducationContent() {
                                         <h4 className="font-semibold text-foreground">{edu.institution}</h4>
                                         <p className="text-sm text-muted-foreground">{edu.degree} - {edu.major}</p>
                                         <p className="text-xs text-muted-foreground mt-1">
-                                            {formatDate(edu.startDate)} - {edu.endDate ? formatDate(edu.endDate) : 'Present'}
+                                            {formatDate(edu.startDate)} - {edu.endDate ? formatDate(edu.endDate) : 'Obecnie'}
                                         </p>
                                     </div>
                                     {edu.gpa && (
@@ -242,7 +242,7 @@ function JourneyContent() {
                                                 </p>
                                             </div>
                                             <span className="text-xs font-mono text-muted-foreground bg-secondary/50 px-2 py-1 rounded whitespace-nowrap">
-                                                {formatDate(exp.startDate)} - {exp.endDate ? formatDate(exp.endDate) : 'Present'}
+                                                {formatDate(exp.startDate)} - {exp.endDate ? formatDate(exp.endDate) : 'Obecnie'}
                                             </span>
                                         </div>
 

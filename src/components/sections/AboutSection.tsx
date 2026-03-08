@@ -123,8 +123,8 @@ export default function AboutSection() {
                                     <div className="glass-card backdrop-blur-md px-4 py-2 border-l-2 border-blue-500 rounded-r-xl flex items-center gap-3 shadow-[0_0_20px_rgba(59,130,246,0.2)] hover:scale-110 transition-transform cursor-default">
                                         <Activity className="w-4 h-4 text-blue-500" />
                                         <div>
-                                            <div className="text-[10px] text-blue-600 dark:text-blue-200/70 tracking-wider">UPTIME</div>
-                                            <div className="font-mono text-sm font-bold text-foreground">3+ YEARS</div>
+                                            <div className="text-[10px] text-blue-600 dark:text-blue-200/70 tracking-wider">AKTYWNOŚĆ</div>
+                                            <div className="font-mono text-sm font-bold text-foreground">3+ LATA</div>
                                         </div>
                                     </div>
                                 </motion.div>
@@ -139,8 +139,8 @@ export default function AboutSection() {
                                     <div className="glass-card backdrop-blur-md px-4 py-2 border-l-2 border-purple-500 rounded-r-xl flex items-center gap-3 shadow-[0_0_20px_rgba(139,92,246,0.2)] hover:scale-110 transition-transform cursor-default">
                                         <Database className="w-4 h-4 text-purple-500" />
                                         <div>
-                                            <div className="text-[10px] text-purple-600 dark:text-purple-200/70 tracking-wider">PROJECTS</div>
-                                            <div className="font-mono text-sm font-bold text-foreground">10+ SHIPPED</div>
+                                            <div className="text-[10px] text-purple-600 dark:text-purple-200/70 tracking-wider">PROJEKTY</div>
+                                            <div className="font-mono text-sm font-bold text-foreground">10+ WYKONANYCH</div>
                                         </div>
                                     </div>
                                 </motion.div>
@@ -155,8 +155,8 @@ export default function AboutSection() {
                                     <div className="glass-card backdrop-blur-md px-4 py-2 border-r-2 border-emerald-500 rounded-l-xl flex flex-row-reverse items-center gap-3 shadow-[0_0_20px_rgba(16,185,129,0.2)] hover:scale-110 transition-transform cursor-default text-right">
                                         <Award className="w-4 h-4 text-emerald-500" />
                                         <div>
-                                            <div className="text-[10px] text-emerald-600 dark:text-emerald-200/70 tracking-wider">SKILLS</div>
-                                            <div className="font-mono text-sm font-bold text-foreground">CERTIFIED</div>
+                                            <div className="text-[10px] text-emerald-600 dark:text-emerald-200/70 tracking-wider">UMIEJĘTNOŚCI</div>
+                                            <div className="font-mono text-sm font-bold text-foreground">CERTYFIKOWANE</div>
                                         </div>
                                     </div>
                                 </motion.div>
