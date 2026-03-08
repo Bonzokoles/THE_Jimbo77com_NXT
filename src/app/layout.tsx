@@ -23,8 +23,13 @@ export const metadata: Metadata = {
         default: 'Karol Lissoń | Full Stack Developer & Inżynier AI',
         template: '%s | Karol Lissoń',
     },
-    description: 'Architekt systemów AI i automatyzacji. Edge Computing, Multi-Agent Systems i nowoczesny web development.',
-    keywords: ['Inżynier AI', 'Full Stack Developer', 'Edge Computing', 'Multi-Agent Systems', 'React', 'Next.js', 'Python', 'Cloudflare Workers', 'Automatyzacja'],
+    description: 'Karol Lissoń — Architekt systemów AI i automatyzacji z Polski. Edge Computing, Multi-Agent Systems, projektowanie 3D i nowoczesny web development.',
+    keywords: [
+        'Inżynier AI', 'Full Stack Developer', 'Edge Computing', 'Multi-Agent Systems',
+        'React', 'Next.js', 'Python', 'Cloudflare Workers', 'Automatyzacja',
+        'programista Polska', 'developer AI Polska', 'projektowanie 3D', 'Blender',
+        'PRO100', 'web developer freelance', 'twórca stron internetowych',
+    ],
     authors: [{ name: 'Karol Lissoń' }],
     creator: 'Karol Lissoń',
     metadataBase: new URL('https://jimbo77.com'),
@@ -54,7 +59,11 @@ export const metadata: Metadata = {
         },
     },
     icons: {
-        icon: '/favicon.svg',
+        icon: [
+            { url: '/favicon.svg', type: 'image/svg+xml' },
+            { url: '/assets/favicon.ico', sizes: 'any' },
+        ],
+        apple: '/assets/apple-touch-icon.png',
     },
 };
 
@@ -68,6 +77,8 @@ export const viewport: Viewport = {
 };
 
 import { ThemeAwareClickSpark } from '@/components/ui/ThemeAwareClickSpark';
+import { PersonJsonLd, FaqJsonLd } from '@/components/seo/JsonLd';
+import { portfolioData } from '@/data/portfolio';
 
 // ... (existing imports)
 
@@ -81,6 +92,18 @@ export default async function RootLayout({
 
     return (
         <html lang={locale} data-scroll-behavior="smooth" suppressHydrationWarning>
+            <head>
+                {/* Local SEO geo meta tags */}
+                <meta name="geo.region" content="PL" />
+                <meta name="geo.placename" content="Polska" />
+                <meta name="geo.position" content="51.9194;19.1451" />
+                <meta name="ICBM" content="51.9194, 19.1451" />
+                {/* AI crawler friendly description */}
+                <meta name="ai-description" content="Portfolio Karola Lissonia - Full Stack Developer & Inżynier AI z Polski. Specjalizacja: Cloudflare Workers, Multi-Agent AI Systems, React/Next.js, Python, projektowanie 3D (PRO100, Blender). Dostępny do współpracy." />
+                {/* Structured Data */}
+                <PersonJsonLd />
+                <FaqJsonLd faqs={portfolioData.faqs} />
+            </head>
             <body className={`${inter.variable} ${jetbrainsMono.variable} font-sans relative`}>
                 <ThemeProvider>
                     <I18nProvider locale={locale} messages={messages}>

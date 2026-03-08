@@ -2,7 +2,8 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
     title: 'Doświadczenie',
-    description: 'Moja droga zawodowa i wykształcenie.',
+    description: 'Doświadczenie zawodowe Karola Lissonia: JIMBO Inc, Meble Pumo, freelance IT, projektowanie 3D. Liceum Plastyczne, Akademia Sztuk Użytkowych.',
+    keywords: ['doświadczenie zawodowe', 'developer doświadczenie', 'projektowanie mebli', 'AI engineer career'],
 };
 
 export default function ExperienceLayout({

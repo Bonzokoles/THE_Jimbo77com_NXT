@@ -40,7 +40,7 @@ export default function ExperienceStickyScroll() {
         {
             label: "Pasja & Rzemiosło",
             title: "Projektowanie & 3D",
-            description: "PRO100 — projektowanie mebli z automatyzacjami AI. SketchUp — modele 3D konstrukcji drewnianych. Blender & TwinMotion — photorealistic renders. Połączenie tradycyjnego rzemiosła z nowoczesnymi narzędziami.",
+            description: "PRO100 — projektowanie mebli z automatyzacjami AI. SketchUp — modele 3D konstrukcji drewnianych. Blender & TwinMotion — photorealistic renders i wizualizacje przestrzenne. Photoshop & Lightroom — obróbka graficzna i postprodukcja. Liceum plastyczne + Akademia Sztuk Użytkowych jako fundament.",
             content: (
                 <div className="h-full w-full flex items-center justify-center p-8 bg-gradient-to-br from-orange-600/20 via-rose-600/10 to-transparent relative group overflow-hidden">
                     <div className="absolute inset-0 opacity-10 pointer-events-none">
@@ -54,7 +54,7 @@ export default function ExperienceStickyScroll() {
                         </div>
 
                         <div className="flex flex-wrap gap-2 justify-center mb-4">
-                            {["PRO100", "3D Design", "Drewno"].map(s => (
+                            {["PRO100", "Blender", "Photoshop", "3D Design"].map(s => (
                                 <span key={s} className="px-3 py-1 rounded-full text-[10px] bg-orange-500/10 text-orange-600 dark:text-orange-400 border border-orange-500/20 font-mono font-bold backdrop-blur-md">
                                     {s}
                                 </span>

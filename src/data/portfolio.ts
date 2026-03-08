@@ -149,7 +149,7 @@ WAKATIME_API_KEY=your_wakatime_key`
             ],
             galleryImages: [
                 '/assets/ProjectPage1.jpeg',
-                '/assets/ProjectPage2.jpeg',
+                '/assets/ProjectPage2.jpg',
                 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2670&auto=format&fit=crop'
             ]
         },
@@ -420,12 +420,13 @@ WAKATIME_API_KEY=your_wakatime_key`
             description: 'Projektowanie mebli w PRO100, wizualizacje 3D, web development dla klientow.',
             responsibilities: [
                 'PRO100 - profesjonalne projektowanie mebli z automatyzacjami MCP',
-                'SketchUp - modele 3D konstrukcji drewnianych z dokladnymi wymiarami',
-                'TwinMotion/Blender - photorealistic renders dla klientow',
+                'SketchUp - modele 3D konstrukcji drewnianych z dokładnymi wymiarami',
+                'Blender & TwinMotion - photorealistic renders i wizualizacje przestrzenne',
+                'Photoshop & Lightroom - obróbka graficzna, retusz, postprodukcja renderów',
                 'Python scripting w Blenderze - batch operations, procedural textures',
                 'Strony internetowe - Next.js, React, Cloudflare Pages deployment',
             ],
-            skills: ['PRO100', 'SketchUp', 'Blender', 'Next.js', 'React', 'Python'],
+            skills: ['PRO100', 'SketchUp', 'Blender', 'Photoshop', 'Lightroom', 'Next.js', 'React', 'Python'],
             startDate: '2020-01-01',
             isOngoing: true,
             location: 'Polska',
@@ -435,8 +436,36 @@ WAKATIME_API_KEY=your_wakatime_key`
     education: [
         {
             id: 'edu-1',
-            institution: 'Samoksztalcenie & Kursy Online',
-            degree: 'Ciagly Rozwoj',
+            institution: 'Akademia Sztuk Użytkowych',
+            degree: 'Studia',
+            major: 'Projektowanie Graficzne & Wizualizacje Przestrzenne',
+            startDate: '2010-01-01',
+            endDate: '2013-06-01',
+            isOngoing: false,
+            activities: ['Grafika projektowa', 'Typografia', 'Wizualizacje 3D', 'Fotografia'],
+            achievements: [
+                'Zaawansowane techniki kompozycji i koloru',
+                'Projekty wizualizacji przestrzennych',
+            ],
+        },
+        {
+            id: 'edu-2',
+            institution: 'Liceum Plastyczne',
+            degree: 'Matura',
+            major: 'Sztuki Plastyczne',
+            startDate: '2006-01-01',
+            endDate: '2010-06-01',
+            isOngoing: false,
+            activities: ['Rysunek', 'Malarstwo', 'Rzeźba', 'Historia sztuki'],
+            achievements: [
+                'Ukończone z wyróżnieniem kierunkowym',
+                'Solidne podstawy kompozycji, formy i perspektywy',
+            ],
+        },
+        {
+            id: 'edu-3',
+            institution: 'Samokształcenie & Kursy Online',
+            degree: 'Ciągły Rozwój',
             major: 'AI Engineering, Full Stack Development, Cloud Architecture',
             startDate: '2018-01-01',
             isOngoing: true,
@@ -444,7 +473,7 @@ WAKATIME_API_KEY=your_wakatime_key`
             achievements: [
                 'Budowa production platform mybonzo.com od zera',
                 '30+ Cloudflare Workers w produkcji',
-                'Wlasne systemy Multi-Agent AI',
+                'Własne systemy Multi-Agent AI',
             ],
         },
     ],
@@ -532,6 +561,10 @@ WAKATIME_API_KEY=your_wakatime_key`
         { name: 'Edge Computing (Cloudflare)', level: 'ekspert', category: 'software' },
         { name: 'DevOps i CI/CD', level: 'zaawansowany', category: 'software' },
         { name: 'Analiza Systemów', level: 'ekspert', category: 'software' },
+        { name: 'Blender & Wizualizacje 3D', level: 'średniozaawansowany', category: 'other' },
+        { name: 'Photoshop & Obróbka Graficzna', level: 'średniozaawansowany', category: 'other' },
+        { name: 'Wizualizacje Przestrzenne', level: 'średniozaawansowany', category: 'other' },
+        { name: 'Lightroom & Postprodukcja', level: 'średniozaawansowany', category: 'other' },
     ],
     softSkills: [
         { name: 'Przywództwo', description: 'Zarządzanie zespołami AI workerów i koordynacja złożonych projektów' },
@@ -554,6 +587,9 @@ WAKATIME_API_KEY=your_wakatime_key`
         { name: 'Conda', icon: 'https://cdn.simpleicons.org/anaconda', category: 'devops' },
         { name: 'Linux', icon: 'https://cdn.simpleicons.org/linux', category: 'devops' },
         { name: 'Postman', icon: 'https://cdn.simpleicons.org/postman', category: 'devops' },
+        { name: 'Blender', icon: 'https://cdn.simpleicons.org/blender', category: 'design' },
+        { name: 'Photoshop', icon: 'https://cdn.simpleicons.org/adobephotoshop', category: 'design' },
+        { name: 'Lightroom', icon: 'https://cdn.simpleicons.org/adobelightroom', category: 'design' },
     ],
     faqs: [
         {

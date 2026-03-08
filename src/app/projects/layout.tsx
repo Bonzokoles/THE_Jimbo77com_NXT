@@ -2,7 +2,8 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
     title: 'Projekty',
-    description: 'Portfolio moich projektów i prac technicznych.',
+    description: 'Portfolio projektów Karola Lissonia: AI Workers, automatyzacja, web development, Cloudflare Edge, React/Next.js. Polska.',
+    keywords: ['projekty AI', 'portfolio developer', 'Cloudflare Workers projekty', 'React projekty', 'automatyzacja AI'],
 };
 
 export default function ProjectsLayout({
