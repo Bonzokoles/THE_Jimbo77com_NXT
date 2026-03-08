@@ -233,9 +233,9 @@ function ExperienceTabSlider() {
                                 <div className="p-4 rounded-2xl bg-primary/10">
                                     <Rocket className="w-12 h-12 text-primary" />
                                 </div>
-                                <h3 className="text-2xl font-bold text-foreground">Coming Soon</h3>
+                                <h3 className="text-2xl font-bold text-foreground">Wkrótce Dostępne</h3>
                                 <p className="text-muted-foreground max-w-md">
-                                    Detailed experience breakdown with project highlights and achievements will be available here soon.
+                                    Szczegółowy przegląd doświadczenia z wyróżnionymi projektami i osiągnięciami będzie tu wkrótce dostępny.
                                 </p>
                             </div>
                             <ExperienceHighlightSection type="experience" />
@@ -326,7 +326,7 @@ function ExperienceTimeline() {
                                 </p>
                             </div>
                             <span className="text-sm font-mono text-neutral-500 dark:text-neutral-400 bg-neutral-100 dark:bg-neutral-900 px-2 py-1 rounded">
-                                {formatDate(exp.startDate)} - {exp.endDate ? formatDate(exp.endDate) : 'Present'}
+                                {formatDate(exp.startDate)} - {exp.endDate ? formatDate(exp.endDate) : 'Obecnie'}
                             </span>
                         </div>
 
@@ -356,14 +356,14 @@ function ExperienceTimeline() {
                         <div className="grid grid-cols-2 gap-4">
                             <Image
                                 src={`https://assets.aceternity.com/templates/startup-${(idx % 4) + 1}.webp`}
-                                alt="work environment"
+                                alt="środowisko pracy"
                                 width={500}
                                 height={500}
                                 className="rounded-lg object-cover h-24 md:h-32 w-full shadow-sm hover:shadow-md transition-shadow duration-200"
                             />
                             <Image
                                 src={`https://assets.aceternity.com/templates/startup-${((idx + 1) % 4) + 1}.webp`}
-                                alt="project showcase"
+                                alt="prezentacja projektu"
                                 width={500}
                                 height={500}
                                 className="rounded-lg object-cover h-24 md:h-32 w-full shadow-sm hover:shadow-md transition-shadow duration-200"

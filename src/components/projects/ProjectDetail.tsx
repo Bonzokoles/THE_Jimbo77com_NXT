@@ -93,7 +93,7 @@ const ProjectGallery = ({
                     {/* Real Image Tag - Floating with deep shadow */}
                     <img
                         src={img}
-                        alt={`Gallery Image ${idx + 1}`}
+                        alt={`Obraz galerii ${idx + 1}`}
                         className="w-full h-auto object-contain block rounded-lg shadow-2xl shadow-black/20 dark:shadow-black/60 transition-transform duration-500 group-hover:scale-[1.01]"
                     />
 
@@ -117,7 +117,7 @@ const ProjectGallery = ({
                         className="group flex items-center gap-3 px-6 py-3 rounded-full bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-white/10 hover:border-emerald-500/50 transition-all text-zinc-600 dark:text-zinc-400 hover:text-emerald-500"
                     >
                         <Github className="w-5 h-5" />
-                        <span className="text-sm font-medium">View Source</span>
+                        <span className="text-sm font-medium">Zobacz Źródło</span>
                     </a>
                 </div>
             )}
@@ -171,6 +171,14 @@ export function ProjectDetail({ project, onClose }: { project: Project; onClose:
     const [activeSection, setActiveSection] = useState<'overview' | 'tech' | 'features' | 'gallery' | 'install'>('overview');
     const [selectedFeature, setSelectedFeature] = useState<number | null>(null);
     const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
+    const sectionLabels: Record<string, string> = {
+        overview: 'Przegląd',
+        tech: 'Technologie',
+        features: 'Funkcje',
+        gallery: 'Galeria',
+        install: 'Instalacja'
+    };
 
     // Parallax & Scroll Animations for Hero
     const heroRef = useRef<HTMLDivElement>(null);
@@ -279,7 +287,7 @@ export function ProjectDetail({ project, onClose }: { project: Project; onClose:
                         {/* Expand hint */}
                         <div className="absolute top-4 left-4 z-20 opacity-0 group-hover:opacity-100 transition-opacity bg-black/40 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/10 text-xs font-medium text-white flex items-center gap-2">
                             <Maximize2 className="w-3.5 h-3.5" />
-                            Expand Cover
+                            Powiększ Okładkę
                         </div>
                     </div>
 
@@ -316,7 +324,7 @@ export function ProjectDetail({ project, onClose }: { project: Project; onClose:
                                     ? "border-emerald-500/30 bg-emerald-500/10 text-emerald-400"
                                     : "border-blue-500/30 bg-blue-500/10 text-blue-400"
                             )}>
-                                {isOngoing ? 'Development' : 'Released'}
+                                {isOngoing ? 'W Rozwoju' : 'Wydany'}
                             </span>
                             <span className="flex items-center gap-2">
                                 <Calendar className="w-3.5 h-3.5" />
@@ -340,7 +348,7 @@ export function ProjectDetail({ project, onClose }: { project: Project; onClose:
                                     whileHover={{ scale: 1.02 }}
                                     whileTap={{ scale: 0.98 }}
                                 >
-                                    <span>Live Demo</span>
+                                    <span>Demo na Żywo</span>
                                     <ExternalLink className="w-4 h-4" />
                                 </motion.a>
                             )}
@@ -381,7 +389,7 @@ export function ProjectDetail({ project, onClose }: { project: Project; onClose:
                                                 : "text-muted-foreground hover:text-foreground hover:bg-black/5 dark:hover:bg-white/5"
                                         )}
                                     >
-                                        <span className="relative z-10">{section}</span>
+                                        <span className="relative z-10">{sectionLabels[section] || section}</span>
                                         {activeSection === section && (
                                             <motion.div
                                                 layoutId="activeTabPill"
@@ -416,8 +424,8 @@ export function ProjectDetail({ project, onClose }: { project: Project; onClose:
                                                     <Box className="w-5 h-5" />
                                                 </div>
                                                 <div>
-                                                    <h3 className="text-xl font-bold text-foreground">Mission Brief</h3>
-                                                    <p className="text-xs text-muted-foreground uppercase tracking-wider">Project Overview</p>
+                                                    <h3 className="text-xl font-bold text-foreground">Opis Projektu</h3>
+                                                    <p className="text-xs text-muted-foreground uppercase tracking-wider">Przegląd</p>
                                                 </div>
                                             </div>
                                             <p className="text-base md:text-lg leading-relaxed text-muted-foreground font-light tracking-wide border-l-2 border-black/10 dark:border-white/10 pl-6">
@@ -428,10 +436,10 @@ export function ProjectDetail({ project, onClose }: { project: Project; onClose:
                                         {/* Metadata Strip */}
                                         <motion.div variants={itemVariants} className="flex flex-wrap justify-center gap-x-16 gap-y-8 py-10 border-y border-black/5 dark:border-white/5">
                                             {[
-                                                { label: 'Role', value: 'Full Stack Dev', icon: Code },
-                                                { label: 'Timeline', value: '3 Months', icon: Calendar },
-                                                { label: 'Team', value: 'Individual', icon: Award },
-                                                { label: 'Status', value: isOngoing ? 'Active' : 'Completed', icon: CheckCircle2 }
+                                                { label: 'Rola', value: 'Programista Full Stack', icon: Code },
+                                                { label: 'Harmonogram', value: '3 Miesiące', icon: Calendar },
+                                                { label: 'Zespół', value: 'Indywidualny', icon: Award },
+                                                { label: 'Status', value: isOngoing ? 'Aktywny' : 'Ukończony', icon: CheckCircle2 }
                                             ].map((item, i) => (
                                                 <div key={i} className="flex flex-col items-center text-center gap-4">
                                                     <div className="flex items-center gap-2 text-muted-foreground/80 text-[10px] uppercase tracking-wider font-bold">
@@ -449,7 +457,7 @@ export function ProjectDetail({ project, onClose }: { project: Project; onClose:
                                         <motion.div variants={itemVariants} className="space-y-8">
                                             <h3 className="text-xl font-bold flex items-center gap-3 text-foreground/90">
                                                 <Terminal className="w-5 h-5 text-amber-500" />
-                                                Engineering Chronicles
+                                                Kroniki Inżynieryjne
                                             </h3>
 
                                             <div className="relative border-l border-black/10 dark:border-white/10 ml-3 space-y-12 pl-8 pb-4">
@@ -463,7 +471,7 @@ export function ProjectDetail({ project, onClose }: { project: Project; onClose:
                                                                 {item.problem}
                                                             </h4>
                                                             <div className="text-sm text-muted-foreground leading-relaxed pl-4 border-l border-black/5 dark:border-white/5 group-hover:border-emerald-500/50 transition-colors">
-                                                                <span className="text-emerald-600 dark:text-emerald-500 font-bold text-xs uppercase tracking-wider block mb-1">Solved With</span>
+                                                                <span className="text-emerald-600 dark:text-emerald-500 font-bold text-xs uppercase tracking-wider block mb-1">Rozwiązanie</span>
                                                                 {item.solution}
                                                             </div>
                                                         </div>
@@ -477,12 +485,12 @@ export function ProjectDetail({ project, onClose }: { project: Project; onClose:
                                     <motion.div variants={itemVariants} className="pt-12 border-t border-black/5 dark:border-white/5">
                                         <div className="flex flex-col items-center text-center space-y-8">
                                             <div className="max-w-xl space-y-4">
-                                                <h3 className="text-2xl md:text-3xl font-bold text-foreground">Interested in the code?</h3>
+                                                <h3 className="text-2xl md:text-3xl font-bold text-foreground">Zainteresowany kodem?</h3>
                                                 <div className="h-6 flex items-center justify-center">
                                                     <Typewriter examples={[
-                                                        "Check out the repo on GitHub...",
-                                                        "Open an issue for features...",
-                                                        "Contact me for collaboration..."
+                                                        "Sprawdź repozytorium na GitHub...",
+                                                        "Zgłoś propozycję funkcji...",
+                                                        "Skontaktuj się w sprawie współpracy..."
                                                     ]} />
                                                 </div>
                                             </div>
@@ -495,14 +503,14 @@ export function ProjectDetail({ project, onClose }: { project: Project; onClose:
                                                     className="px-8 py-3 rounded-full bg-foreground text-background font-bold hover:opacity-90 transition-all flex items-center gap-2"
                                                 >
                                                     <Github className="w-4 h-4" />
-                                                    GitHub Repo
+                                                    Repozytorium
                                                 </a>
                                                 <a
                                                     href="/contact"
                                                     className="px-8 py-3 rounded-full bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 hover:bg-black/10 dark:hover:bg-white/10 text-foreground font-medium transition-all flex items-center gap-2"
                                                 >
                                                     <Share2 className="w-4 h-4" />
-                                                    Contact
+                                                    Kontakt
                                                 </a>
                                             </div>
                                         </div>
@@ -640,7 +648,7 @@ export function ProjectDetail({ project, onClose }: { project: Project; onClose:
                                         ))
                                     ) : (
                                         <TerminalBlock
-                                            title="Quick Start"
+                                            title="Szybki Start"
                                             code={`git clone ${project.repoUrl}\ncd project\nnpm install\nnpm run dev`}
                                         />
                                     )}
@@ -664,7 +672,7 @@ export function ProjectDetail({ project, onClose }: { project: Project; onClose:
                         <motion.img
                             layoutId={`project-img-${selectedImage}`}
                             src={selectedImage}
-                            alt="Lightbox View"
+                            alt="Podgląd"
                             className="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl"
                         />
                         <button className="absolute top-4 right-4 p-3 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors">

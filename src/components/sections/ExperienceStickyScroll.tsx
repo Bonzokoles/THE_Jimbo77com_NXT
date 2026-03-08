@@ -23,13 +23,13 @@ export default function ExperienceStickyScroll() {
                         </div>
 
                         <div className="flex flex-wrap gap-2 justify-center mb-4">
-                            {["CEO", "AI Architect", "30+ Workers"].map(s => (
+                            {["CEO", "Architekt AI", "30+ Workers"].map(s => (
                                 <span key={s} className="px-3 py-1 rounded-full text-[10px] bg-primary/10 text-primary border border-primary/20 font-mono font-bold backdrop-blur-md">
                                     {s}
                                 </span>
                             ))}
                         </div>
-                        <p className="text-[10px] font-mono text-muted-foreground uppercase tracking-widest">Edge Computing Platform</p>
+                        <p className="text-[10px] font-mono text-muted-foreground uppercase tracking-widest">Platforma Edge Computing</p>
                     </div>
 
                     {/* Holographic Scan Effect */}

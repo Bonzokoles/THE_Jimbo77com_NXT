@@ -974,7 +974,7 @@ export default function ProjectsPage() {
                                                 ? "bg-zinc-800 text-white shadow-sm"
                                                 : "text-muted-foreground hover:text-white hover:bg-white/5"
                                         )}
-                                        title="List View"
+                                        title="Widok Listy"
                                     >
                                         <List className="w-4 h-4" />
                                     </button>
@@ -986,7 +986,7 @@ export default function ProjectsPage() {
                                                 ? "bg-zinc-800 text-white shadow-sm"
                                                 : "text-muted-foreground hover:text-white hover:bg-white/5"
                                         )}
-                                        title="Grid View"
+                                        title="Widok Siatki"
                                     >
                                         <LayoutGrid className="w-4 h-4" />
                                     </button>

@@ -25,9 +25,13 @@ export const SkillRadar = ({ skills, size = 400, className }: SkillRadarProps) =
         if (typeof level === 'number') return level / 100;
         const map: Record<string, number> = {
             'beginner': 0.3,
+            'początkujący': 0.3,
             'intermediate': 0.5,
+            'średniozaawansowany': 0.5,
             'advanced': 0.8,
-            'expert': 1.0
+            'zaawansowany': 0.8,
+            'expert': 1.0,
+            'ekspert': 1.0
         };
         return map[level.toLowerCase()] || 0.5;
     };

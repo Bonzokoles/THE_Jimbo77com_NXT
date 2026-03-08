@@ -26,7 +26,7 @@ interface LogoTimelineProps {
 export function LogoTimeline({
   items,
   title,
-  subtitle = "The technologies and tools I use to build amazing projects",
+  subtitle = "Technologie i narzędzia, których używam do budowania projektów",
   height = "h-[280px] sm:h-[350px] md:h-[400px] lg:h-[480px]",
   className,
   iconSize = 16,

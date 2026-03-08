@@ -28,26 +28,26 @@ interface PhysicsBody {
 
 // --- Tech Descriptions Database ---
 const TECH_DESCRIPTIONS: Record<string, string> = {
-    "Next.js": "The React Framework for the Web. Chosen for its superior server-side rendering, SEO capabilities, and robust routing system that enables high-performance web applications.",
-    "React": "The library for web and native user interfaces. Provides the component-based architecture effectively managing the complex UI state and interactive elements.",
-    "TypeScript": "JavaScript with syntax for types. Ensures type safety and code robustness, reducing runtime errors and improving developer productivity in large-scale applications.",
-    "Tailwind CSS": "A utility-first CSS framework. Enables rapid UI development and consistent design capability without leaving your HTML, perfect for modern responsive designs.",
-    "Three.js": "JavaScript 3D Library. Powers the immersive 3D experiences, from the physics-based ID card to the particle systems, bringing the web to life.",
-    "Framer Motion": "Production-ready motion library for React. Orchestrates the complex animations, page transitions, and fluid interactions that define the premium feel.",
-    "Node.js": "JavaScript runtime built on Chrome's V8 engine. Handles the backend logic and API services with non-blocking I/O for scalable performance.",
-    "Go": "Open source programming language supported by Google. Selected for backend microservices due to its brutally efficient concurrency and performance.",
-    "Python": "Versatile programming language. The backbone of the AI/ML pipelines, handling data processing, model inference, and scientific computing tasks.",
-    "TensorFlow": "End-to-end open source platform for machine learning. Used to build and deploy the custom deep learning models.",
-    "Docker": "OS-level virtualization. Ensures consistent environments across development and production, containerizing applications for easy deployment.",
-    "PostgreSQL": "Advanced open source relational database. Provides reliability and data integrity for complex structured data requirements.",
-    "MongoDB": "NoSQL database program. Offers flexibility for unstructured data and rapid schema iteration during development.",
-    "Solidity": "Contract-oriented programming language. Used for writing smart contracts on the Ethereum blockchain.",
-    "Figma": "Interface design tool. utilized for all UI/UX prototyping and design systems before implementation.",
-    "VS Code": "Code editor redefined. The primary development environment, customized with extensions for maximum efficiency.",
-    "GitHub": "Software development platform. Hosts the source code and manages CI/CD pipelines and version control.",
+    "Next.js": "Framework React do budowy aplikacji webowych. Wybrany za zaawansowane renderowanie po stronie serwera, możliwości SEO i solidny system routingu umożliwiający tworzenie wydajnych aplikacji.",
+    "React": "Biblioteka do budowy interfejsów użytkownika. Zapewnia architekturę komponentową efektywnie zarządzającą złożonymi stanami UI i elementami interaktywnymi.",
+    "TypeScript": "JavaScript z typowaniem statycznym. Zapewnia bezpieczeństwo typów i solidność kodu, redukując błędy runtime i poprawiając produktywność w dużych projektach.",
+    "Tailwind CSS": "Framework CSS oparty na klasach użytkowych. Umożliwia szybkie tworzenie UI i spójny design bez opuszczania HTML, idealny do nowoczesnych responsywnych projektów.",
+    "Three.js": "Biblioteka JavaScript do grafiki 3D. Napędza immersyjne doświadczenia 3D, od fizycznych kart ID po systemy cząsteczek, ożywiając stronę.",
+    "Framer Motion": "Biblioteka animacji dla React. Orkiestruje złożone animacje, przejścia stron i płynne interakcje definiujące premiumowe doświadczenie.",
+    "Node.js": "Runtime JavaScript oparty na silniku V8. Obsługuje logikę backendową i serwisy API z nieblokującym I/O dla skalowalnej wydajności.",
+    "Go": "Język programowania open source wspierany przez Google. Wybrany do mikroserwisów backendowych dzięki niezwykle wydajnej obsłudze równoległości.",
+    "Python": "Wszechstronny język programowania. Fundament pipeline’ów AI/ML, obsługujący przetwarzanie danych, inferencję modeli i obliczenia naukowe.",
+    "TensorFlow": "Platforma open source do uczenia maszynowego. Używana do budowy i wdrażania niestandardowych modeli deep learning.",
+    "Docker": "Wirtualizacja na poziomie systemu operacyjnego. Zapewnia spójne środowiska między developmentem a produkcją, konteneryzując aplikacje.",
+    "PostgreSQL": "Zaawansowana relacyjna baza danych open source. Zapewnia niezawodność i integralność danych dla złożonych wymagań.",
+    "MongoDB": "Nierelacyjna baza danych. Oferuje elastyczność dla danych nieustrukturyzowanych i szybką iterację schematu.",
+    "Solidity": "Język programowania zorientowany na kontrakty. Używany do pisania smart kontraktów na blockchainie Ethereum.",
+    "Figma": "Narzędzie do projektowania interfejsów. Wykorzystywane do prototypowania UI/UX i systemów designu przed implementacją.",
+    "VS Code": "Edytor kodu nowej generacji. Główne środowisko deweloperskie, dostosowane rozszerzeniami dla maksymalnej wydajności.",
+    "GitHub": "Platforma do rozwoju oprogramowania. Hostuje kod źródłowy i zarządza pipeline’ami CI/CD oraz kontrolą wersji.",
 };
 
-const DEFAULT_DESCRIPTION = "A key technology in this project's ecosystem, selected for its efficiency, reliability, and specific capability to solve core engineering challenges.";
+const DEFAULT_DESCRIPTION = "Kluczowa technologia w ekosystemie tego projektu, wybrana ze względu na wydajność, niezawodność i zdolność do rozwiązywania kluczowych wyzwań inżynieryjnych.";
 
 // Physics Constants
 const MAGNETIC_FORCE = 0.8;
@@ -279,7 +279,7 @@ export function TechStack({ techStack, tools }: TechStackProps) {
                 <div className="max-w-3xl mx-auto space-y-6">
                     {/* Section Header */}
                     <div className="text-center space-y-2 mb-12 opacity-80">
-                        <h2 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-emerald-400 to-cyan-400">Tech Breakdown</h2>
+                        <h2 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-emerald-400 to-cyan-400">Rozkład Technologii</h2>
                         <div className="h-1 w-20 bg-gradient-to-r from-emerald-500 to-cyan-500 mx-auto rounded-full blur-[2px]" />
                     </div>
 
@@ -335,7 +335,7 @@ export function TechStack({ techStack, tools }: TechStackProps) {
                         >
                             <div className="flex items-center gap-4 mb-8">
                                 <div className="h-[1px] flex-1 bg-black/10 dark:bg-white/10" />
-                                <h3 className="text-xs font-mono text-emerald-600 dark:text-emerald-400 font-bold tracking-widest uppercase">Creative Arsenal</h3>
+                                <h3 className="text-xs font-mono text-emerald-600 dark:text-emerald-400 font-bold tracking-widest uppercase">Kreatywny Arsenał</h3>
                                 <div className="h-[1px] flex-1 bg-black/10 dark:bg-white/10" />
                             </div>
 

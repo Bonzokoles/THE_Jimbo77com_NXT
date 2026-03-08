@@ -10,6 +10,14 @@ import { Achievement } from '@/types';
 import FallingText from '@/components/effects/FallingText';
 import CertificateHeroScroll from '@/components/sections/CertificateHeroScroll';
 
+const categoryTranslations: Record<string, string> = {
+    certification: 'Certyfikat',
+    award: 'Nagroda',
+    recognition: 'Wyróżnienie',
+    publication: 'Publikacja',
+    competition: 'Konkurs'
+};
+
 const staggerContainer = {
     hidden: { opacity: 0 },
     show: {
@@ -128,7 +136,7 @@ const AchievementCard = React.forwardRef<HTMLDivElement, {
 
                         <div className="absolute top-3 left-3">
                             <span className="px-2 py-0.5 rounded-full text-[8px] font-bold uppercase tracking-wider bg-black/30 backdrop-blur-md border border-white/20 text-white">
-                                {achievement.category}
+                                {categoryTranslations[achievement.category.toLowerCase()] || achievement.category}
                             </span>
                         </div>
 
@@ -157,7 +165,7 @@ const AchievementCard = React.forwardRef<HTMLDivElement, {
                         <div className="flex items-center justify-between pt-3 border-t border-border/30">
                             <div className="flex items-center gap-1.5">
                                 <Eye className="w-3 h-3 text-muted-foreground/50" />
-                                <span className="text-[9px] text-muted-foreground/60 font-medium">View Details</span>
+                                <span className="text-[9px] text-muted-foreground/60 font-medium">Zobacz Szczegóły</span>
                             </div>
                             <motion.div
                                 className="opacity-0 group-hover:opacity-100 transition-opacity"
@@ -280,7 +288,7 @@ function AchievementModal({ achievement, onClose }: { achievement: Achievement; 
                     <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8">
                         <div className="flex items-center gap-3 mb-3">
                             <span className="px-3 py-1 rounded-full text-[9px] font-bold uppercase tracking-widest bg-white/20 backdrop-blur-md border border-white/30 text-white">
-                                {achievement.category}
+                                {categoryTranslations[achievement.category.toLowerCase()] || achievement.category}
                             </span>
                             <span className="px-2.5 py-1 rounded-full text-[9px] font-medium bg-black/30 backdrop-blur-md text-white/80">
                                 {formatDate(achievement.date)}
@@ -298,28 +306,28 @@ function AchievementModal({ achievement, onClose }: { achievement: Achievement; 
                             <Building2 className="w-5 h-5 text-foreground/70" />
                         </div>
                         <div>
-                            <p className="text-[10px] text-muted-foreground uppercase tracking-wider font-medium">Issued by</p>
+                            <p className="text-[10px] text-muted-foreground uppercase tracking-wider font-medium">Wydany przez</p>
                             <p className="text-base font-bold">{achievement.issuer}</p>
                         </div>
                     </div>
 
                     <div className="mb-6">
-                        <h3 className="text-xs font-bold uppercase tracking-wider text-muted-foreground mb-2">About</h3>
+                        <h3 className="text-xs font-bold uppercase tracking-wider text-muted-foreground mb-2">Opis</h3>
                         <p className="text-foreground/80 leading-relaxed">
-                            {achievement.description || "This achievement represents a significant milestone in my professional journey, demonstrating dedication, expertise, and commitment to excellence."}
+                            {achievement.description || "To osiągnięcie stanowi ważny kamień milowy w mojej drodze zawodowej, demonstrując zaangażowanie, ekspertyzę i dążenie do doskonałości."}
                         </p>
                     </div>
 
                     <div className="grid grid-cols-2 gap-3 mb-6">
                         <div className="p-3 rounded-lg bg-secondary/20 border border-border/30">
                             <Calendar className="w-4 h-4 text-foreground/50 mb-1.5" />
-                            <p className="text-[10px] text-muted-foreground mb-0.5">Date</p>
+                            <p className="text-[10px] text-muted-foreground mb-0.5">Data</p>
                             <p className="text-sm font-bold">{formatDate(achievement.date)}</p>
                         </div>
                         <div className="p-3 rounded-lg bg-secondary/20 border border-border/30">
                             <Trophy className="w-4 h-4 text-foreground/50 mb-1.5" />
-                            <p className="text-[10px] text-muted-foreground mb-0.5">Category</p>
-                            <p className="text-sm font-bold capitalize">{achievement.category}</p>
+                            <p className="text-[10px] text-muted-foreground mb-0.5">Kategoria</p>
+                            <p className="text-sm font-bold capitalize">{categoryTranslations[achievement.category.toLowerCase()] || achievement.category}</p>
                         </div>
                     </div>
 
@@ -337,7 +345,7 @@ function AchievementModal({ achievement, onClose }: { achievement: Achievement; 
                                 animate={{ x: ['-100%', '100%'] }}
                                 transition={{ duration: 2, repeat: Infinity, repeatDelay: 1 }}
                             />
-                            <span className="relative">View Credential</span>
+                            <span className="relative">Zobacz Certyfikat</span>
                             <ExternalLink className="w-4 h-4 relative" />
                         </motion.a>
                     )}
@@ -459,7 +467,7 @@ export default function AchievementsPage() {
                             <div className="flex items-center gap-3 mb-2">
                                 <div className="w-2 h-2 rounded-full bg-foreground" />
                                 <h1 className="text-[10px] font-bold uppercase tracking-[0.3em] text-muted-foreground">
-                                    The Archive
+                                    Archiwum
                                 </h1>
                             </div>
                             <div className="h-px w-12 bg-gradient-to-r from-foreground/50 to-transparent" />
@@ -473,16 +481,16 @@ export default function AchievementsPage() {
                             animate="show"
                         >
                             <motion.div variants={staggerItem}>
-                                <NavItem label="All Entries" active={activeCategory === 'all'} onClick={() => setActiveCategory('all')} count={getCategoryCount('all')} />
+                                <NavItem label="Wszystkie" active={activeCategory === 'all'} onClick={() => setActiveCategory('all')} count={getCategoryCount('all')} />
                             </motion.div>
                             <motion.div variants={staggerItem}>
-                                <NavItem label="Certifications" active={activeCategory === 'certification'} onClick={() => setActiveCategory('certification')} count={getCategoryCount('certification')} />
+                                <NavItem label="Certyfikaty" active={activeCategory === 'certification'} onClick={() => setActiveCategory('certification')} count={getCategoryCount('certification')} />
                             </motion.div>
                             <motion.div variants={staggerItem}>
-                                <NavItem label="Awards" active={activeCategory === 'award'} onClick={() => setActiveCategory('award')} count={getCategoryCount('award')} />
+                                <NavItem label="Nagrody" active={activeCategory === 'award'} onClick={() => setActiveCategory('award')} count={getCategoryCount('award')} />
                             </motion.div>
                             <motion.div variants={staggerItem}>
-                                <NavItem label="Competitions" active={activeCategory === 'competition'} onClick={() => setActiveCategory('competition')} count={getCategoryCount('competition')} />
+                                <NavItem label="Konkursy" active={activeCategory === 'competition'} onClick={() => setActiveCategory('competition')} count={getCategoryCount('competition')} />
                             </motion.div>
                         </motion.nav>
 
@@ -500,7 +508,7 @@ export default function AchievementsPage() {
                             </motion.div>
                             <div className="text-[10px] font-bold text-muted-foreground/50 uppercase tracking-widest flex items-center gap-2 -mt-4">
                                 <Award className="w-3 h-3" />
-                                Achievements
+                                Osiągnięcia
                             </div>
                         </motion.div>
                     </div>
@@ -609,7 +617,7 @@ export default function AchievementsPage() {
                                     <motion.div animate={{ y: [0, -8, 0] }} transition={{ duration: 2, repeat: Infinity }}>
                                         <Award className="w-16 h-16 text-muted-foreground/20 mb-4" />
                                     </motion.div>
-                                    <p className="text-sm font-medium text-muted-foreground/50">No achievements found</p>
+                                    <p className="text-sm font-medium text-muted-foreground/50">Nie znaleziono osiągnięć</p>
                                 </motion.div>
                             )}
                         </div>
@@ -632,10 +640,10 @@ export default function AchievementsPage() {
                             className="text-center mb-8"
                         >
                             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black mb-3">
-                                Technical Universe
+                                Techniczny Wszechświat
                             </h2>
                             <p className="text-sm text-muted-foreground/60 max-w-lg mx-auto leading-relaxed">
-                                Interact with the core technologies and values that drive my research and development journey.
+                                Poznaj kluczowe technologie i wartości napędzające moją drogę badawczą i deweloperską.
                             </p>
                         </motion.div>
 
@@ -647,8 +655,8 @@ export default function AchievementsPage() {
                             className="relative w-full mx-auto h-[300px] md:h-[400px]"
                         >
                             <FallingText
-                                text="Cognition Perception Autonomy Immutable Synapse Velocity Convergence Architecture Algorithm Vanguard Insight Nexus"
-                                highlightWords={['Cognition', 'Autonomy', 'Immutable', 'Convergence', 'Vanguard']}
+                                text="Kognicja Percepcja Autonomia Synaps Prędkość Konwergencja Architektura Algorytm Awangarda Wgląd Nexus"
+                                highlightWords={['Kognicja', 'Autonomia', 'Konwergencja', 'Awangarda']}
                                 trigger="scroll"
                                 gravity={0.8}
                                 mouseConstraintStiffness={0.2}

@@ -203,7 +203,7 @@ export function Navbar() {
                                 whileTap={{ scale: 0.95 }}
                                 onClick={toggleLocale}
                                 className="p-2 md:p-2.5 rounded-full bg-muted/80 hover:bg-muted transition-colors"
-                                aria-label="Toggle language"
+                                aria-label="Przełącz język"
                             >
                                 <Globe className="w-4 h-4" />
                             </motion.button>
@@ -217,7 +217,7 @@ export function Navbar() {
                                 whileTap={{ scale: 0.95 }}
                                 onClick={toggleMenu}
                                 className="p-2 md:p-2.5 rounded-full bg-muted/80 hover:bg-muted transition-colors lg:hidden"
-                                aria-label="Toggle menu"
+                                aria-label="Przełącz menu"
                             >
                                 <AnimatePresence mode="wait" initial={false}>
                                     <motion.div

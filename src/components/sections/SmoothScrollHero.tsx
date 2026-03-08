@@ -142,7 +142,7 @@ const ParallaxImages = ({ scrollY }: { scrollY: MotionValue<number> }) => {
                 <ParallaxImg
                     scrollY={scrollY}
                     src="https://images.unsplash.com/photo-1484600899469-230e8d1d59c0?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    alt="Space launch"
+                    alt="Start rakiety"
                     start={800}
                     end={-1500}
                     className="w-full shadow-2xl rounded-2xl border border-white/10 aspect-[4/3] object-cover"
@@ -154,7 +154,7 @@ const ParallaxImages = ({ scrollY }: { scrollY: MotionValue<number> }) => {
                 <ParallaxImg
                     scrollY={scrollY}
                     src="https://images.unsplash.com/photo-1446776709462-d6b525c57bd3?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    alt="Space launch"
+                    alt="Start rakiety"
                     start={1000}
                     end={-1500}
                     className="w-full shadow-2xl rounded-2xl border border-white/10 aspect-square object-cover"
@@ -166,7 +166,7 @@ const ParallaxImages = ({ scrollY }: { scrollY: MotionValue<number> }) => {
                 <ParallaxImg
                     scrollY={scrollY}
                     src="https://images.unsplash.com/photo-1541185933-ef5d8ed016c2?q=80&w=2370&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    alt="Satellite view"
+                    alt="Widok satelitarny"
                     start={900}
                     end={-1800}
                     className="w-full shadow-2xl rounded-2xl border border-white/10 aspect-video object-cover"
@@ -178,7 +178,7 @@ const ParallaxImages = ({ scrollY }: { scrollY: MotionValue<number> }) => {
                 <ParallaxImg
                     scrollY={scrollY}
                     src="https://images.unsplash.com/photo-1517976487492-5750f3195933?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    alt="Space texture"
+                    alt="Tekstura kosmiczna"
                     start={1200}
                     end={-2000}
                     className="w-full shadow-2xl rounded-2xl border border-white/10 aspect-[3/4] object-cover"
@@ -190,7 +190,7 @@ const ParallaxImages = ({ scrollY }: { scrollY: MotionValue<number> }) => {
                 <ParallaxImg
                     scrollY={scrollY}
                     src="https://images.unsplash.com/photo-1494022299300-899b96e49893?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    alt="Orbiting satellite"
+                    alt="Satelita na orbicie"
                     start={1100}
                     end={-2000}
                     className="w-full shadow-2xl rounded-2xl border border-white/10 aspect-video object-cover"

@@ -98,7 +98,7 @@ export default function AboutSection() {
                                 <Lens zoomFactor={2} lensSize={200} isStatic={false} className="w-full h-full">
                                     <Image
                                         src={portfolioData.personal.avatar}
-                                        alt="Holographic Identity"
+                                        alt="Tożsamość Holograficzna"
                                         fill
                                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                         className="object-cover object-top transition-all duration-700 hover:scale-105 hover:sepia-[.2] z-10"

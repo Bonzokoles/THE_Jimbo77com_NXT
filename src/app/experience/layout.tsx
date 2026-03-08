@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'Experience',
-    description: 'My professional journey and educational background.',
+    title: 'Doświadczenie',
+    description: 'Moja droga zawodowa i wykształcenie.',
 };
 
 export default function ExperienceLayout({

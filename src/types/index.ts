@@ -64,7 +64,7 @@ export interface Achievement {
 
 export interface Skill {
     name: string;
-    level?: 'beginner' | 'intermediate' | 'advanced' | 'expert';
+    level?: 'beginner' | 'intermediate' | 'advanced' | 'expert' | 'początkujący' | 'średniozaawansowany' | 'zaawansowany' | 'ekspert';
     category: 'frontend' | 'backend' | 'database' | 'devops' | 'mobile' | 'ai' | 'data' | 'blockchain' | 'software' | 'other';
 }
 
@@ -97,7 +97,7 @@ export interface SocialLink {
 
 export interface Language {
     name: string;
-    level: 'Native' | 'Fluent' | 'Professional' | 'Limited Working' | 'Elementary';
+    level: 'Native' | 'Fluent' | 'Professional' | 'Limited Working' | 'Elementary' | 'Ojczysty' | 'Biegły' | 'Profesjonalny' | 'Ograniczony' | 'Podstawowy';
 }
 
 export interface FAQ {
