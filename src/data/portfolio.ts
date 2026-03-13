@@ -6,8 +6,8 @@ export const portfolioData: PortfolioData = {
         subtitle: 'Inżynier AI • Full Stack Developer • Architekt AI | Tworzę innowacyjne rozwiązania cyfrowe',
         bio: 'Jako architekt systemów AI i automatyzacji, pracujący z dala od miejskiego zgiełku, projektuję zaawansowane rozwiązania oparte na Edge Computing i produkcyjnych platformach Multi-Agent Systems. Nieustannie śledzę rozwój sztucznej inteligencji, na bieżąco adaptując najnowsze technologie do swojego workflow i tworząc nowoczesne aplikacje webowe.',
         avatar: '/about/apple-touch-icon.png',
-        location: 'Polska, W lesie',
-        email: 'karol.bonzo@yahoo.com',
+        location: 'Polska (Remote)',
+        email: 'JimBoZen@proton.me',
         phone: '',
         resumeUrl: '/resume.pdf',
         website: 'https://jimbo77.com',
@@ -16,6 +16,12 @@ export const portfolioData: PortfolioData = {
             { name: 'Angielski', level: 'Profesjonalny' },
         ],
         socialLinks: [
+            {
+                platform: 'LinkedIn',
+                url: 'https://www.linkedin.com/in/karol-bonzo-lisson-543664229/',
+                icon: 'linkedin',
+                username: 'karol-bonzo-lisson',
+            },
             {
                 platform: 'GitHub',
                 url: 'https://github.com/Bonzokoles',
@@ -54,15 +60,15 @@ export const portfolioData: PortfolioData = {
             },
             {
                 platform: 'Email',
-                url: 'mailto:karol.bonzo@yahoo.com',
-                icon: 'email',
-                username: 'karol.bonzo@yahoo.com',
-            },
-            {
-                platform: 'ProtonMail',
                 url: 'mailto:JimBoZen@proton.me',
                 icon: 'email',
                 username: 'JimBoZen@proton.me',
+            },
+            {
+                platform: 'Email (Yahoo)',
+                url: 'mailto:karol.bonzo@yahoo.com',
+                icon: 'email',
+                username: 'karol.bonzo@yahoo.com',
             },
         ],
     },
@@ -365,7 +371,7 @@ WAKATIME_API_KEY=your_wakatime_key`
             position: 'AI Content Generation Engineer',
             description: 'Generowanie tresci AI dla branzy meblarskiej z wykorzystaniem RAG i polskich modeli jezykowych.',
             responsibilities: [
-                'Production RAG: 5000+ dokumentow produktowych w ChromaDB',
+                'WHITECAT MOA System: 3-warstwowy pipeline (DeepSeek R1 + Claude Sonnet + GPT-4o), 63 przewodniki zakupowe AI, 54x ROI w ciągu 3 miesięcy',
                 'Semantic search + GPT-4 synthesis z cytowaniami, <2s latency',
                 'Fine-tuning Bielik-7B na furniture domain (10k examples)',
                 'Integracja z PRO100 - automatyzacja wycen, optymalizacja materialow',
