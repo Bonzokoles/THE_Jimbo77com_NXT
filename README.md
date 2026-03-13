@@ -72,6 +72,22 @@ AI chatbot dla branży przemysłowej — RAG + Google Gemini + Cloudflare Worker
 
 ---
 
+## 🧑‍💻 Nowe praktyki jakościowe
+
+- **Automatyczne lintowanie/formatowanie:**
+  - ESLint + Prettier (reguły Next.js, React, accessibility, import, hooks)
+  - Kod formatowany i lintowany automatycznie przy commitach
+- **Accessibility review:**
+  - Web-design-reviewer, accessibility.agent.md
+  - Alt-text, aria, kontrast, keyboard navigation
+- **Optymalizacja obrazów:**
+  - next/image, lazy loading, blur placeholders
+  - Responsywność, szybkie ładowanie, SEO
+- **Backup tasków:**
+  - Workflow archiwizacji History/ToDo
+
+---
+
 ## 📊 To repozytorium
 
 Kod źródłowy **[jimbo77.com](https://jimbo77.com)** — portfolio zbudowane na:
