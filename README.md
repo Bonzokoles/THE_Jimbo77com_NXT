@@ -31,7 +31,7 @@ Buduję produkcyjne systemy AI — od multi-agent orchestration przez RAG pipeli
 | WHITECAT MOA (Meble Pumo) | **54x ROI** w 3 miesiące, 63 AI buying guides |
 | mybonzo.com Platform | **30+ Workers**, 500K+ req/day, 99.97% uptime |
 | RAG System (Meble Pumo) | **5000+ dokumentów** w ChromaDB, <2s latency |
-| Fine-tuning Bielik-7B | **10K examples**, 87% → 92% accuracy |
+| AI Models | Claude · GPT-4o · DeepSeek R1 · Bielik · Gemini · Ollama |
 | Multi-Agent MOA | Claude + GPT-4o + DeepSeek R1 — intelligent routing |
 
 ---
