@@ -1,5 +1,5 @@
 # 🤖 Karol Lissoń — AI Agent Engineer & Full Stack Developer
-
+...existing code...
 <p align="center">
   <a href="https://jimbo77.com"><strong>🌐 Portfolio</strong></a> •
   <a href="https://linkedin.com/in/karol-bonzo-lisson-543664229"><strong>💼 LinkedIn</strong></a> •
@@ -45,15 +45,6 @@ Buduję produkcyjne systemy AI — od multi-agent orchestration przez RAG pipeli
 **Frontend:** Next.js 15 · React 19 · Astro · Tailwind CSS · Three.js · Framer Motion · GSAP
 
 **Cloud/Edge:** Cloudflare Workers · D1 · R2 · KV · Wrangler · Cloudflare Pages · Vercel
-
-**Tools:** VS Code · GitHub · Postman · Podman · Figma · Blender · PRO100
-
----
-
-## 🚀 Projekty
-
-### 🤖 ZENON Browser
-Przeglądarka Electron z wbudowanym AI copilot — integracja MCP, Gemini, Claude, web scraping automation.
 
 ### ☁️ [MyBonzo.com Platform](https://mybonzo.com)
 AI-native platforma na Cloudflare Edge: 30+ Workers, SOA architecture, RAG pipeline, AI Agent orchestrator. 500K+ req/day, 99.97% uptime.
@@ -118,5 +109,41 @@ npm run dev   # http://localhost:3000
 - **LinkedIn:** [karol-bonzo-lisson](https://linkedin.com/in/karol-bonzo-lisson-543664229)
 - **GitHub:** [@Bonzokoles](https://github.com/Bonzokoles) · [@77Jimbo77](https://github.com/77Jimbo77)
 - **Portfolio:** [jimbo77.com](https://jimbo77.com)
+
+## R2 integration (Cloudflare Object Storage)
+
+Aby serwować, uploadować i listować pliki w R2 bucket:
+1. Dodaj binding do wrangler.toml:
+
+```
+[[r2_buckets]]
+binding = "MY_R2"
+bucket_name = "jimbo77com-assets"
+preview_bucket_name = "jimbo77com-assets"
+```
+
+2. Utwórz API routes:
+- `/api/r2/upload` (POST): upload pliku do R2
+- `/api/r2/list` (GET): lista plików w R2
+- `/api/r2/[key]` (GET): pobieranie pliku z R2
+
+Przykład uploadu przez frontend:
+```js
+const formData = new FormData();
+formData.append("file", fileInput.files[0]);
+fetch("/api/r2/upload", { method: "POST", body: formData });
+```
+
+Przykład pobierania:
+```html
+<img src="/api/r2/ProjectPage1.webp" alt="ProjectPage1" />
+```
+
+Przykład listowania:
+```js
+fetch("/api/r2/list").then(res => res.json()).then(files => console.log(files));
+```
+
+Możesz przenieść większość ciężkich assetów do R2 i serwować je przez te endpointy.
 
 <p align="right">(<a href="#-karol-lissoń--ai-agent-engineer--full-stack-developer">Powrót do góry</a>)</p>
