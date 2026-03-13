@@ -25,6 +25,9 @@ export async function GET(
     pdf: "application/pdf",
   };
 
+  // Logowanie operacji download do audytu
+  console.log(`[R2 AUDIT] download | key=${key} | time=${new Date().toISOString()}`);
+
   return new Response(object.body as ReadableStream, {
     headers: {
       "Content-Type": mimeMap[ext] ?? "application/octet-stream",

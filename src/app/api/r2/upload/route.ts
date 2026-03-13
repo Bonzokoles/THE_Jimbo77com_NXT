@@ -2,7 +2,16 @@ import type { NextRequest } from "next/server";
 import { getCloudflareContext } from "@opennextjs/cloudflare";
 
 export async function POST(request: NextRequest) {
+  // Autoryzacja: wymagaj nagłówka x-admin-key lub env ADMIN_KEY
   const { env } = await getCloudflareContext();
+  const adminKey = (env as any).ADMIN_KEY || process.env.ADMIN_KEY;
+  if (adminKey) {
+    const provided = request.headers.get("x-admin-key");
+    if (provided !== adminKey) {
+      return new Response("Unauthorized", { status: 401 });
+    }
+  }
+
   const r2 = (env as any).MY_R2;
   if (!r2) return new Response("R2 not configured", { status: 503 });
 
@@ -25,6 +34,9 @@ export async function POST(request: NextRequest) {
   await r2.put(file.name, file.stream(), {
     httpMetadata: { contentType: file.type },
   });
+
+  // Logowanie operacji upload do audytu
+  console.log(`[R2 AUDIT] upload | file=${file.name} | size=${file.size} | time=${new Date().toISOString()}`);
 
   return new Response(
     JSON.stringify({ key: file.name, url: `/api/r2/${file.name}` }),

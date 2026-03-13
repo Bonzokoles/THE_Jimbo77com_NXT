@@ -13,6 +13,9 @@ export async function GET() {
     url: `/api/r2/${obj.key}`,
   }));
 
+  // Logowanie operacji list do audytu
+  console.log(`[R2 AUDIT] list | count=${files.length} | time=${new Date().toISOString()}`);
+
   return new Response(JSON.stringify(files), {
     headers: {
       "Content-Type": "application/json",
