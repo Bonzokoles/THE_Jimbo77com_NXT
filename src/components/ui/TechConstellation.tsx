@@ -49,6 +49,8 @@ export const TechConstellation = ({ items, className }: TechConstellationProps) 
     <div
       ref={containerRef}
       className={`relative w-full aspect-square md:aspect-video overflow-hidden ${className}`}
+      role="region"
+      aria-label="TechConstellation interaktywna mapa technologii"
     >
       <svg className="absolute inset-0 w-full h-full pointer-events-none opacity-20">
         {connections.map((line, i) => (
@@ -78,6 +80,8 @@ export const TechConstellation = ({ items, className }: TechConstellationProps) 
             transform: 'translate(-50%, -50%)',
           }}
           whileHover={{ scale: 1.2, zIndex: 50 }}
+          tabIndex={0}
+          aria-label={`Tech node: ${node.name}`}
         >
           <div className="relative">
             <motion.div

@@ -21,7 +21,11 @@ export const VoidWorkbench = ({ tools, className }: VoidWorkbenchProps) => {
     <div
       ref={containerRef}
       className={`relative min-h-[150vh] py-64 flex flex-col items-center bg-black overflow-hidden ${className}`}
+      role="main"
+      aria-label="Void Workbench główna sekcja portfolio"
     >
+      {/* Skip link */}
+      <a href="#main-content" className="skip-link absolute left-2 top-2 z-50 bg-primary text-white px-4 py-2 rounded focus:outline-none focus:ring" tabIndex={0} aria-label="Przejdź do głównej treści">Skip to content</a>
       {/* Shadow Smoke & Light Beams */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         {/* Volumetric Rays */}
@@ -34,11 +38,11 @@ export const VoidWorkbench = ({ tools, className }: VoidWorkbenchProps) => {
       </div>
 
       {/* Header Transition */}
-      <div className="relative z-10 text-center mb-48">
-        <span className="text-[8px] font-black uppercase tracking-[2em] text-white/10">
+      <div className="relative z-10 text-center mb-48" id="main-content">
+        <span className="text-[8px] font-black uppercase tracking-[2em] text-white/60">
           Void_Artifacts
         </span>
-        <h2 className="text-8xl md:text-[12rem] font-black italic uppercase tracking-tighter mt-4 text-white/[0.03] select-none">
+        <h2 className="text-8xl md:text-[12rem] font-black italic uppercase tracking-tighter mt-4 text-white/[0.08] select-none">
           Workbench
         </h2>
       </div>
@@ -85,6 +89,9 @@ const VoidArtifact = ({ tool, index }: { tool: ToolItem; index: number }) => {
         filter: `blur(${blur.get()})`,
       }}
       className="group relative flex flex-col items-center justify-center py-12"
+      tabIndex={0}
+      aria-label={`Void Artifact: ${tool.name}`}
+      role="region"
     >
       {/* Materialization Aura */}
       <div className="absolute inset-0 bg-primary/5 rounded-full blur-[80px] opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
@@ -102,7 +109,7 @@ const VoidArtifact = ({ tool, index }: { tool: ToolItem; index: number }) => {
 
       {/* Label emerging from smoke */}
       <div className="text-center overflow-hidden">
-        <motion.span className="block text-[10px] font-black uppercase tracking-[0.8em] text-white/20 group-hover:text-primary transition-colors duration-700">
+        <motion.span className="block text-[10px] font-black uppercase tracking-[0.8em] text-white/60 group-hover:text-primary transition-colors duration-700">
           {tool.name}
         </motion.span>
         <div className="h-px w-0 group-hover:w-full bg-primary/20 mt-2 transition-all duration-1000 mx-auto" />
