@@ -30,8 +30,8 @@ Buduję produkcyjne systemy AI — od multi-agent orchestration przez RAG pipeli
 |---|---|
 | WHITECAT MOA (Meble Pumo) | **54x ROI** w 3 miesiące, 63 AI buying guides |
 | mybonzo.com Platform | **30+ Workers**, 500K+ req/day, 99.97% uptime |
-| RAG System (Meble Pumo) | **5000+ dokumentów** w ChromaDB, <2s latency, 95% accuracy |
-| Fine-tuning Bielik-7B | **10K examples**, 87% → 92% accuracy benchmark |
+| RAG System (Meble Pumo) | **5000+ dokumentów** w ChromaDB, <2s latency |
+| Fine-tuning Bielik-7B | **10K examples**, 87% → 92% accuracy |
 | Multi-Agent MOA | Claude + GPT-4o + DeepSeek R1 — intelligent routing |
 
 ---
@@ -42,11 +42,11 @@ Buduję produkcyjne systemy AI — od multi-agent orchestration przez RAG pipeli
 
 **Backend:** Python · FastAPI · Flask · Node.js · TypeScript · Docker · Redis · PostgreSQL
 
-**Frontend:** Next.js 15 · React 19 · Astro · Tailwind CSS · Three.js · Framer Motion
+**Frontend:** Next.js 15 · React 19 · Astro · Tailwind CSS · Three.js · Framer Motion · GSAP
 
-**Cloud/Edge:** Cloudflare Workers · D1 · R2 · KV · Wrangler · Vercel
+**Cloud/Edge:** Cloudflare Workers · D1 · R2 · KV · Wrangler · Cloudflare Pages · Vercel
 
-**Tools:** VS Code · GitHub · Postman · Podman · Figma · Blender
+**Tools:** VS Code · GitHub · Postman · Podman · Figma · Blender · PRO100
 
 ---
 
@@ -56,13 +56,13 @@ Buduję produkcyjne systemy AI — od multi-agent orchestration przez RAG pipeli
 Przeglądarka Electron z wbudowanym AI copilot — integracja MCP, Gemini, Claude, web scraping automation.
 
 ### ☁️ [MyBonzo.com Platform](https://mybonzo.com)
-AI-native platforma na Cloudflare Edge: 30+ Workers, SOA architecture, RAG pipeline, AI Agent orchestrator.
+AI-native platforma na Cloudflare Edge: 30+ Workers, SOA architecture, RAG pipeline, AI Agent orchestrator. 500K+ req/day, 99.97% uptime.
 
-### 🧠 Bonzo AI Agents
-Ekosystem autonomicznych agentów w Dockerze: cost-optimizer, guardian-agent, deployment-coordinator, health-monitor.
+### 🧠 WHITECAT MOA System
+3-warstwowy multi-agent pipeline (DeepSeek R1 + Claude Sonnet + GPT-4o). 63 AI buying guides, **54x ROI** w 3 miesiące dla klienta e-commerce.
 
 ### 🔌 MCP Node System v2
-TypeScript MCP server — tools, resources i prompts dla agentów AI. Direct workspace/DB/API access.
+TypeScript MCP server — tools, resources i prompts dla agentów AI. Direct workspace/DB/API access przez protokół MCP.
 
 ### 🎨 TH_e_ART_h_MAN
 Offline AI Art Copilot — Flask + baza 902 artystów + Ollama local AI + Stable Diffusion prompt generation.
@@ -72,15 +72,15 @@ AI chatbot dla branży przemysłowej — RAG + Google Gemini + Cloudflare Worker
 
 ---
 
-## 📊 To portfolio
+## 📊 To repozytorium
 
-Kod źródłowy **[jimbo77.com](https://jimbo77.com)** — zbudowane na:
+Kod źródłowy **[jimbo77.com](https://jimbo77.com)** — portfolio zbudowane na:
 
 - **Next.js 15** (App Router + Server Components)
 - **TypeScript** strict mode
 - **Tailwind CSS** + shadcn/ui
-- **Three.js** / React Three Fiber — animacje 3D
-- **GSAP** + Framer Motion — scroll effects
+- **Three.js** / React Three Fiber — animacje 3D, fizyczny lanyar
+- **GSAP** + Framer Motion — scroll effects, layout transitions
 - **Cloudflare Pages** + Workers — deployment
 - **i18n** (PL/EN) via `next-intl`
 
@@ -88,7 +88,7 @@ Kod źródłowy **[jimbo77.com](https://jimbo77.com)** — zbudowane na:
 git clone https://github.com/Bonzokoles/THE_Jimbo77com_NXT.git
 cd THE_Jimbo77com_NXT
 npm install
-cp .env.local.example .env.local
+cp .env.local.example .env.local  # NEXT_PUBLIC_GITHUB_USERNAME, WAKATIME_API_KEY
 npm run dev   # http://localhost:3000
 ```
 
