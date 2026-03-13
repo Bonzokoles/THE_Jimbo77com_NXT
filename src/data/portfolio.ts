@@ -10,7 +10,7 @@ export const portfolioData: PortfolioData = {
     location: 'Polska (Remote)',
     email: 'JimBoZen@proton.me',
     phone: '',
-    resumeUrl: '/resume.pdf',
+    resumeUrl: 'https://www.linkedin.com/in/karol-bonzo-lisson-543664229/',
     website: 'https://jimbo77.com',
     languages: [
       { name: 'Polski', level: 'Ojczysty' },
