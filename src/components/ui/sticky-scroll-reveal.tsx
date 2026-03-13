@@ -1,8 +1,8 @@
-"use client";
-import React, { useRef, useEffect } from "react";
-import { useMotionValueEvent, useScroll } from "framer-motion";
-import { motion, AnimatePresence } from "framer-motion";
-import { cn } from "@/lib/utils";
+'use client';
+import React, { useRef, useEffect } from 'react';
+import { useMotionValueEvent, useScroll } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
+import { cn } from '@/lib/utils';
 
 export const StickyScroll = ({
   content,
@@ -20,22 +20,19 @@ export const StickyScroll = ({
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     container: ref,
-    offset: ["start start", "end start"],
+    offset: ['start start', 'end start'],
   });
   const cardLength = content.length;
 
-  useMotionValueEvent(scrollYProgress, "change", (latest) => {
+  useMotionValueEvent(scrollYProgress, 'change', (latest) => {
     const cardsBreakpoints = content.map((_, index) => index / cardLength);
-    const closestBreakpointIndex = cardsBreakpoints.reduce(
-      (acc, breakpoint, index) => {
-        const distance = Math.abs(latest - breakpoint);
-        if (distance < Math.abs(latest - cardsBreakpoints[acc])) {
-          return index;
-        }
-        return acc;
-      },
-      0,
-    );
+    const closestBreakpointIndex = cardsBreakpoints.reduce((acc, breakpoint, index) => {
+      const distance = Math.abs(latest - breakpoint);
+      if (distance < Math.abs(latest - cardsBreakpoints[acc])) {
+        return index;
+      }
+      return acc;
+    }, 0);
     setActiveCard(closestBreakpointIndex);
   });
 
@@ -63,7 +60,6 @@ export const StickyScroll = ({
 
   return (
     <div className="relative group">
-
       <motion.div
         className="relative flex h-[35rem] justify-center lg:justify-between space-x-0 lg:space-x-10 overflow-y-scroll custom-scrollbar rounded-[2.5rem] p-6 md:p-12 bg-transparent transition-all duration-700"
         ref={ref}
@@ -75,7 +71,7 @@ export const StickyScroll = ({
             <motion.div
               className="w-1 h-8 -ml-[1.5px] rounded-full bg-primary shadow-[0_0_15px_rgba(var(--primary),0.5)]"
               animate={{ y: activeCard * 120 }} // Approximate visual sync
-              transition={{ type: "spring", stiffness: 100 }}
+              transition={{ type: 'spring', stiffness: 100 }}
             />
           </div>
 
@@ -88,7 +84,7 @@ export const StickyScroll = ({
                       initial={{ opacity: 0, x: -10 }}
                       animate={{
                         opacity: activeCard === index ? 1 : 0.2,
-                        x: 0
+                        x: 0,
                       }}
                       className="flex items-center gap-3 mb-4"
                     >
@@ -139,19 +135,19 @@ export const StickyScroll = ({
         <div className="sticky top-0 hidden lg:flex h-full items-center justify-center w-2/5">
           <div
             className={cn(
-              "h-[24rem] w-full overflow-hidden rounded-[2.5rem] bg-card/40 backdrop-blur-2xl border border-white/10 dark:border-white/5 shadow-[0_20px_50px_rgba(0,0,0,0.3)] transition-all duration-700 hover:scale-[1.02]",
+              'h-[24rem] w-full overflow-hidden rounded-[2.5rem] bg-card/40 backdrop-blur-2xl border border-white/10 dark:border-white/5 shadow-[0_20px_50px_rgba(0,0,0,0.3)] transition-all duration-700 hover:scale-[1.02]',
               contentClassName
             )}
           >
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeCard}
-                initial={{ opacity: 0, scale: 0.95, y: 20, filter: "blur(10px)" }}
-                animate={{ opacity: 1, scale: 1, y: 0, filter: "blur(0px)" }}
-                exit={{ opacity: 0, scale: 1.05, y: -20, filter: "blur(10px)" }}
+                initial={{ opacity: 0, scale: 0.95, y: 20, filter: 'blur(10px)' }}
+                animate={{ opacity: 1, scale: 1, y: 0, filter: 'blur(0px)' }}
+                exit={{ opacity: 0, scale: 1.05, y: -20, filter: 'blur(10px)' }}
                 transition={{
                   duration: 0.6,
-                  ease: [0.22, 1, 0.36, 1]
+                  ease: [0.22, 1, 0.36, 1],
                 }}
                 className="w-full h-full"
               >

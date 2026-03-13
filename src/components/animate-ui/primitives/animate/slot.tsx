@@ -19,9 +19,7 @@ type SlotProps<T extends HTMLElement = HTMLElement> = {
   children?: React.ReactNode;
 } & DOMMotionProps<T>;
 
-function mergeRefs<T>(
-  ...refs: (React.Ref<T> | undefined)[]
-): React.RefCallback<T> {
+function mergeRefs<T>(...refs: (React.Ref<T> | undefined)[]): React.RefCallback<T> {
   return (node) => {
     refs.forEach((ref) => {
       if (!ref) return;
@@ -36,15 +34,12 @@ function mergeRefs<T>(
 
 function mergeProps<T extends HTMLElement>(
   childProps: AnyProps,
-  slotProps: DOMMotionProps<T>,
+  slotProps: DOMMotionProps<T>
 ): AnyProps {
   const merged: AnyProps = { ...childProps, ...slotProps };
 
   if (childProps.className || slotProps.className) {
-    merged.className = cn(
-      childProps.className as string,
-      slotProps.className as string,
-    );
+    merged.className = cn(childProps.className as string, slotProps.className as string);
   }
 
   if (childProps.style || slotProps.style) {
@@ -57,11 +52,7 @@ function mergeProps<T extends HTMLElement>(
   return merged;
 }
 
-function Slot<T extends HTMLElement = HTMLElement>({
-  children,
-  ref,
-  ...props
-}: SlotProps<T>) {
+function Slot<T extends HTMLElement = HTMLElement>({ children, ref, ...props }: SlotProps<T>) {
   if (!React.isValidElement(children)) return null;
 
   const childType = children.type;
@@ -73,33 +64,22 @@ function Slot<T extends HTMLElement = HTMLElement>({
     ('render' in childType || '_payload' in childType);
 
   // For framer-motion, we use motion() factory function
-  const Base = React.useMemo(
-    () => {
-      if (isAlreadyMotion) {
-        return childType as React.ElementType;
-      }
-      // Use motion() for HTML elements, otherwise wrap with motion.div
-      if (typeof childType === 'string') {
-        return (motion as any)[childType] || motion.div;
-      }
-      return motion.div;
-    },
-    [isAlreadyMotion, childType],
-  );
+  const Base = React.useMemo(() => {
+    if (isAlreadyMotion) {
+      return childType as React.ElementType;
+    }
+    // Use motion() for HTML elements, otherwise wrap with motion.div
+    if (typeof childType === 'string') {
+      return (motion as any)[childType] || motion.div;
+    }
+    return motion.div;
+  }, [isAlreadyMotion, childType]);
 
   const { ref: childRef, ...childProps } = children.props as AnyProps;
 
   const mergedProps = mergeProps(childProps, props);
 
-  return (
-    <Base {...mergedProps} ref={mergeRefs(childRef as React.Ref<T>, ref)} />
-  );
+  return <Base {...mergedProps} ref={mergeRefs(childRef as React.Ref<T>, ref)} />;
 }
 
-export {
-  Slot,
-  type SlotProps,
-  type WithAsChild,
-  type DOMMotionProps,
-  type AnyProps,
-};
+export { Slot, type SlotProps, type WithAsChild, type DOMMotionProps, type AnyProps };

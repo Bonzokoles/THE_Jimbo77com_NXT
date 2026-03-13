@@ -1,7 +1,7 @@
-"use client";
-import { useState, useEffect, useRef, useCallback } from "react";
-import { motion, useMotionValue, useMotionTemplate, animate } from "framer-motion";
-import { cn } from "@/lib/utils";
+'use client';
+import { useState, useEffect, useRef, useCallback } from 'react';
+import { motion, useMotionValue, useMotionTemplate, animate } from 'framer-motion';
+import { cn } from '@/lib/utils';
 
 export const MaskContainer = ({
   children,
@@ -29,7 +29,7 @@ export const MaskContainer = ({
   useEffect(() => {
     animate(maskSize, isHovered ? revealSize : size, {
       duration: 0.2,
-      ease: "easeOut",
+      ease: 'easeOut',
     });
   }, [isHovered, revealSize, size, maskSize]);
 
@@ -41,11 +41,14 @@ export const MaskContainer = ({
   };
 
   // Update mouse position using cached rect
-  const updateMousePosition = useCallback((e: MouseEvent) => {
-    if (!rectRef.current) return;
-    x.set(e.clientX - rectRef.current.left);
-    y.set(e.clientY - rectRef.current.top);
-  }, [x, y]);
+  const updateMousePosition = useCallback(
+    (e: MouseEvent) => {
+      if (!rectRef.current) return;
+      x.set(e.clientX - rectRef.current.left);
+      y.set(e.clientY - rectRef.current.top);
+    },
+    [x, y]
+  );
 
   useEffect(() => {
     // Initial rect calculation
@@ -55,16 +58,16 @@ export const MaskContainer = ({
     if (!container) return;
 
     // Recalculate rect on resize/scroll or mouse enter to ensure accuracy
-    window.addEventListener("resize", updateRect);
-    window.addEventListener("scroll", updateRect); // Handle scrolling affecting fixed/relative pos
-    container.addEventListener("mouseenter", updateRect);
-    container.addEventListener("mousemove", updateMousePosition);
+    window.addEventListener('resize', updateRect);
+    window.addEventListener('scroll', updateRect); // Handle scrolling affecting fixed/relative pos
+    container.addEventListener('mouseenter', updateRect);
+    container.addEventListener('mousemove', updateMousePosition);
 
     return () => {
-      window.removeEventListener("resize", updateRect);
-      window.removeEventListener("scroll", updateRect);
-      container.removeEventListener("mouseenter", updateRect);
-      container.removeEventListener("mousemove", updateMousePosition);
+      window.removeEventListener('resize', updateRect);
+      window.removeEventListener('scroll', updateRect);
+      container.removeEventListener('mouseenter', updateRect);
+      container.removeEventListener('mousemove', updateMousePosition);
     };
   }, [updateMousePosition]);
 
@@ -75,7 +78,7 @@ export const MaskContainer = ({
   return (
     <div
       ref={containerRef}
-      className={cn("relative h-[20rem] overflow-hidden rounded-2xl", className)}
+      className={cn('relative h-[20rem] overflow-hidden rounded-2xl', className)}
     >
       <motion.div
         className="absolute flex h-full w-full items-center justify-center bg-background text-6xl [mask-image:url(/mask.svg)] [mask-repeat:no-repeat]"
@@ -84,7 +87,7 @@ export const MaskContainer = ({
           WebkitMaskPosition: maskPosition, // Safari/Chrome support
           maskSize: maskSizeStyle,
           WebkitMaskSize: maskSizeStyle,
-          willChange: "mask-position, mask-size", // Hint browser for optimization
+          willChange: 'mask-position, mask-size', // Hint browser for optimization
         }}
       >
         {/* Revealed Content (Foreground) */}

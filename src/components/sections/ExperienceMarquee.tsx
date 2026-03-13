@@ -1,122 +1,122 @@
-"use client";
+'use client';
 
-import React, { useRef } from "react";
+import React, { useRef } from 'react';
 import {
-    motion,
-    useScroll,
-    useSpring,
-    useTransform,
-    useMotionValue,
-    useVelocity,
-    useAnimationFrame
-} from "framer-motion"; // Changed to framer-motion as motion/react usage might be inconsistent in this codebase
-import { wrap } from "framer-motion";
-import { portfolioData } from "@/data/portfolio";
-import { Experience } from "@/types";
+  motion,
+  useScroll,
+  useSpring,
+  useTransform,
+  useMotionValue,
+  useVelocity,
+  useAnimationFrame,
+} from 'framer-motion'; // Changed to framer-motion as motion/react usage might be inconsistent in this codebase
+import { wrap } from 'framer-motion';
+import { portfolioData } from '@/data/portfolio';
+import { Experience } from '@/types';
 
 interface ParallaxProps {
-    children: React.ReactNode;
-    baseVelocity: number;
+  children: React.ReactNode;
+  baseVelocity: number;
 }
 
 function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
-    const baseX = useMotionValue(0);
-    const { scrollY } = useScroll();
-    const scrollVelocity = useVelocity(scrollY);
-    const smoothVelocity = useSpring(scrollVelocity, {
-        damping: 50,
-        stiffness: 400
-    });
-    const velocityFactor = useTransform(smoothVelocity, [0, 1000], [0, 5], {
-        clamp: false
-    });
+  const baseX = useMotionValue(0);
+  const { scrollY } = useScroll();
+  const scrollVelocity = useVelocity(scrollY);
+  const smoothVelocity = useSpring(scrollVelocity, {
+    damping: 50,
+    stiffness: 400,
+  });
+  const velocityFactor = useTransform(smoothVelocity, [0, 1000], [0, 5], {
+    clamp: false,
+  });
 
-    const x = useTransform(baseX, (v) => `${wrap(-20, -45, v)}%`);
+  const x = useTransform(baseX, (v) => `${wrap(-20, -45, v)}%`);
 
-    const directionFactor = useRef<number>(1);
-    const isHovered = useRef(false);
+  const directionFactor = useRef<number>(1);
+  const isHovered = useRef(false);
 
-    useAnimationFrame((t, delta) => {
-        if (isHovered.current) return;
+  useAnimationFrame((t, delta) => {
+    if (isHovered.current) return;
 
-        let moveBy = directionFactor.current * baseVelocity * (delta / 1000);
+    let moveBy = directionFactor.current * baseVelocity * (delta / 1000);
 
-        if (velocityFactor.get() < 0) {
-            directionFactor.current = -1;
-        } else if (velocityFactor.get() > 0) {
-            directionFactor.current = 1;
-        }
+    if (velocityFactor.get() < 0) {
+      directionFactor.current = -1;
+    } else if (velocityFactor.get() > 0) {
+      directionFactor.current = 1;
+    }
 
-        moveBy += directionFactor.current * moveBy * velocityFactor.get() * 0.5;
+    moveBy += directionFactor.current * moveBy * velocityFactor.get() * 0.5;
 
-        baseX.set(baseX.get() + moveBy);
-    });
+    baseX.set(baseX.get() + moveBy);
+  });
 
-    return (
-        <div
-            className="overflow-hidden whitespace-nowrap w-full py-1"
-            onMouseEnter={() => isHovered.current = true}
-            onMouseLeave={() => isHovered.current = false}
-        >
-            <motion.div className="flex gap-4" style={{ x, willChange: "transform" }}>
-                {children}
-                {children}
-                {children}
-                {children}
-            </motion.div>
-        </div>
-    );
+  return (
+    <div
+      className="overflow-hidden whitespace-nowrap w-full py-1"
+      onMouseEnter={() => (isHovered.current = true)}
+      onMouseLeave={() => (isHovered.current = false)}
+    >
+      <motion.div className="flex gap-4" style={{ x, willChange: 'transform' }}>
+        {children}
+        {children}
+        {children}
+        {children}
+      </motion.div>
+    </div>
+  );
 }
 
 const GalleryItem = ({ exp, index }: { exp: Experience; index: number }) => {
-    return (
-        <div className="relative shrink-0 w-[200px] h-[120px] md:w-[280px] md:h-[160px] flex items-center justify-center group cursor-pointer">
-            <div className="w-full h-full flex items-center justify-center bg-zinc-800/30 rounded-lg border border-white/5 group-hover:border-white/20 transition-all duration-300">
-                <span className="text-lg md:text-xl font-bold text-white/40 group-hover:text-white/80 transition-all duration-300">
-                    {exp.company}
-                </span>
-            </div>
-        </div>
-    );
+  return (
+    <div className="relative shrink-0 w-[200px] h-[120px] md:w-[280px] md:h-[160px] flex items-center justify-center group cursor-pointer">
+      <div className="w-full h-full flex items-center justify-center bg-zinc-800/30 rounded-lg border border-white/5 group-hover:border-white/20 transition-all duration-300">
+        <span className="text-lg md:text-xl font-bold text-white/40 group-hover:text-white/80 transition-all duration-300">
+          {exp.company}
+        </span>
+      </div>
+    </div>
+  );
 };
 
 export default function ExperienceMarquee() {
-    // Select specific experiences matching the 10 uploaded logos
-    const experiences = portfolioData.experiences;
+  // Select specific experiences matching the 10 uploaded logos
+  const experiences = portfolioData.experiences;
 
-    // Top row: first 3 experiences
-    const topIds = ['exp-1', 'exp-2', 'exp-3'];
+  // Top row: first 3 experiences
+  const topIds = ['exp-1', 'exp-2', 'exp-3'];
 
-    // Bottom row: next 3 experiences
-    const bottomIds = ['exp-4', 'exp-5', 'exp-6'];
+  // Bottom row: next 3 experiences
+  const bottomIds = ['exp-4', 'exp-5', 'exp-6'];
 
-    const row1 = experiences.filter((exp: Experience) => topIds.includes(exp.id));
-    const row2 = experiences.filter((exp: Experience) => bottomIds.includes(exp.id));
+  const row1 = experiences.filter((exp: Experience) => topIds.includes(exp.id));
+  const row2 = experiences.filter((exp: Experience) => bottomIds.includes(exp.id));
 
-    const ensureLength = (items: Experience[]) => {
-        if (items.length < 4) return [...items, ...items, ...items];
-        return items;
-    }
+  const ensureLength = (items: Experience[]) => {
+    if (items.length < 4) return [...items, ...items, ...items];
+    return items;
+  };
 
-    return (
-        <section className="py-4 md:py-8 bg-background relative z-10 overflow-hidden">
-            {/* Fog/Blur Blending Effect */}
-            <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-background via-background/80 to-transparent z-20 pointer-events-none" />
-            <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-background via-background/80 to-transparent z-20 pointer-events-none" />
+  return (
+    <section className="py-4 md:py-8 bg-background relative z-10 overflow-hidden">
+      {/* Fog/Blur Blending Effect */}
+      <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-background via-background/80 to-transparent z-20 pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-background via-background/80 to-transparent z-20 pointer-events-none" />
 
-            <div className="flex flex-col gap-2">
-                <ParallaxText baseVelocity={2}>
-                    {ensureLength(row1).map((exp: Experience, idx: number) => (
-                        <GalleryItem key={`r1-${idx}`} exp={exp} index={idx} />
-                    ))}
-                </ParallaxText>
+      <div className="flex flex-col gap-2">
+        <ParallaxText baseVelocity={2}>
+          {ensureLength(row1).map((exp: Experience, idx: number) => (
+            <GalleryItem key={`r1-${idx}`} exp={exp} index={idx} />
+          ))}
+        </ParallaxText>
 
-                <ParallaxText baseVelocity={-2}>
-                    {ensureLength(row2).map((exp: Experience, idx: number) => (
-                        <GalleryItem key={`r2-${idx}`} exp={exp} index={idx + 4} />
-                    ))}
-                </ParallaxText>
-            </div>
-        </section>
-    );
+        <ParallaxText baseVelocity={-2}>
+          {ensureLength(row2).map((exp: Experience, idx: number) => (
+            <GalleryItem key={`r2-${idx}`} exp={exp} index={idx + 4} />
+          ))}
+        </ParallaxText>
+      </div>
+    </section>
+  );
 }

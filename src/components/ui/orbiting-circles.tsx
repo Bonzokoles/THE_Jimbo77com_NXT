@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react';
-import { cn } from "@/lib/utils";
+import { cn } from '@/lib/utils';
 
 export interface OrbitingCirclesProps extends React.HTMLAttributes<HTMLDivElement> {
   className?: string;
@@ -79,7 +79,7 @@ export function OrbitingCircles({
                 animation: `orbit ${calculatedDuration}s linear infinite ${reverse ? 'normal' : 'reverse'}`, // Counter-rotate to keep icon upright
               }}
               className={cn(
-                "flex items-center justify-center rounded-full pointer-events-auto",
+                'flex items-center justify-center rounded-full pointer-events-auto',
                 className
               )}
             >
@@ -108,7 +108,7 @@ export function OrbitingCircles({
           }
         }
         .orbit-container :global(div) {
-           /* Ensure inner animations can still work if needed */
+          /* Ensure inner animations can still work if needed */
         }
       `}</style>
     </div>

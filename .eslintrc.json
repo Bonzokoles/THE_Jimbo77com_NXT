@@ -1,6 +1,18 @@
 {
-    "extends": "next/core-web-vitals",
-    "rules": {
-        "react/no-unescaped-entities": "off"
-    }
+  "extends": ["next/core-web-vitals", "plugin:prettier/recommended"],
+  "plugins": ["prettier", "import", "jsx-a11y", "react", "react-hooks"],
+  "rules": {
+    "react/no-unescaped-entities": "off",
+    "prettier/prettier": "error",
+    "import/order": [
+      "error",
+      {
+        "groups": ["builtin", "external", "internal"],
+        "newlines-between": "always"
+      }
+    ],
+    "jsx-a11y/alt-text": "warn",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn"
+  }
 }

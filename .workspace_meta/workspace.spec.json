@@ -1,0 +1,126 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Workspace Specification",
+  "version": "1.0.0",
+  "lastUpdated": "2026-03-13",
+  "metadata": {
+    "name": "jimbo77-portfolio",
+    "type": "single-repo",
+    "root": "U:\\WWW_Jimbo77_com",
+    "owner": "Bonzokoles",
+    "description": "Portfolio Karol Lissoń — AI Engineer, Full Stack Developer & Tech Explorer. Next.js 16 + Cloudflare Workers edge deployment.",
+    "architecture": "serverless",
+    "primaryTechStack": [
+      "TypeScript",
+      "Next.js 16",
+      "React 19",
+      "Cloudflare Workers",
+      "Three.js",
+      "Framer Motion",
+      "GSAP",
+      "next-intl",
+      "Tailwind CSS",
+      "OpenNext (Cloudflare)"
+    ]
+  },
+  "repositories": {
+    "root": {
+      "path": ".",
+      "type": "application",
+      "remote": "https://github.com/Bonzokoles/THE_Jimbo77com_NXT.git",
+      "branch": "main"
+    },
+    "submodules": []
+  },
+  "services": {
+    "frontend": {
+      "runtime": "node",
+      "entry": "src/app/layout.tsx",
+      "port": 3040,
+      "type": "frontend",
+      "features": [
+        "i18n (pl/en via next-intl)",
+        "Three.js 3D scenes",
+        "Framer Motion animations",
+        "GSAP scroll animations",
+        "Lenis smooth scroll",
+        "React Spring",
+        "Spline 3D",
+        "React Three Fiber / Drei / Rapier",
+        "GitHub Calendar",
+        "Blog (MDX)",
+        "Contact form",
+        "Dark/light theme"
+      ]
+    },
+    "worker": {
+      "runtime": "node",
+      "entry": ".open-next/worker.js",
+      "port": null,
+      "type": "worker",
+      "features": [
+        "Cloudflare Workers edge runtime",
+        "OpenNext adapter",
+        "Static assets via ASSETS binding",
+        "nodejs_compat flag"
+      ]
+    }
+  },
+  "portAllocations": {
+    "range": "3040-3040",
+    "specific": {
+      "dev": 3040
+    },
+    "configFile": null
+  },
+  "deployment": {
+    "platform": "Cloudflare Workers",
+    "workerName": "the-jimbo77com-nxt",
+    "buildCommand": "opennextjs-cloudflare build",
+    "deployCommand": "opennextjs-cloudflare build && wrangler deploy",
+    "previewCommand": "opennextjs-cloudflare preview",
+    "compatibilityDate": "2026-02-10",
+    "compatibilityFlags": ["nodejs_compat"],
+    "configFile": "wrangler.toml"
+  },
+  "mcpServers": {
+    "local": [],
+    "npx": [],
+    "url": [],
+    "configFile": ".workspace_meta/mcp/config.json"
+  },
+  "environmentVariables": {
+    "WORKSPACE_ROOT": "U:\\WWW_Jimbo77_com"
+  },
+  "conventions": {
+    "packageManager": "npm",
+    "commitFormat": "[type] description",
+    "typesOfCommits": ["feat", "fix", "docs", "refactor", "test", "chore", "perf", "style"],
+    "language": {
+      "ui": "pl/en (next-intl, messages/pl.json + messages/en.json)",
+      "code": "TypeScript strict",
+      "comments": "EN"
+    }
+  },
+  "i18n": {
+    "defaultLocale": "pl",
+    "locales": ["pl", "en"],
+    "messagesDir": "messages/"
+  },
+  "documentation": {
+    "root": ".workspace_meta",
+    "primary": [
+      ".workspace_meta/README.md",
+      "README.md"
+    ],
+    "notes": ".workspace_meta/notes",
+    "architecture": ".workspace_meta/notes/decisions.md"
+  },
+  "criticalRules": [
+    "ZAWSZE aktualizuj workspace.spec.json po zmianie architektury",
+    "NIGDY nie commituj secrets do repo",
+    "ZAWSZE dokumentuj decyzje architektoniczne w notes/decisions.md",
+    "Build target: Cloudflare Workers — unikaj Node.js-only API bez sprawdzenia nodejs_compat",
+    "Port dev serwera: 3040 (nie 3000)"
+  ]
+}

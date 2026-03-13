@@ -2,10 +2,7 @@
 
 import * as React from 'react';
 
-import {
-  useIsInView,
-  type UseIsInViewOptions,
-} from '@/hooks/use-is-in-view';
+import { useIsInView, type UseIsInViewOptions } from '@/hooks/use-is-in-view';
 
 type CodeBlockProps = React.ComponentProps<'div'> & {
   code: string;
@@ -40,14 +37,11 @@ function CodeBlock({
   inViewMargin = '0px',
   ...props
 }: CodeBlockProps) {
-  const { ref: localRef, isInView } = useIsInView(
-    ref as React.Ref<HTMLDivElement>,
-    {
-      inView,
-      inViewOnce,
-      inViewMargin,
-    },
-  );
+  const { ref: localRef, isInView } = useIsInView(ref as React.Ref<HTMLDivElement>, {
+    inView,
+    inViewOnce,
+    inViewMargin,
+  });
 
   const [visibleCode, setVisibleCode] = React.useState('');
   const [highlightedCode, setHighlightedCode] = React.useState('');

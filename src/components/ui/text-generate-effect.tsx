@@ -1,8 +1,8 @@
-"use client";
-import { useEffect } from "react";
-import { motion, stagger, useAnimate, useInView } from "framer-motion";
-import { cn } from "@/lib/utils";
-import { useRef } from "react";
+'use client';
+import { useEffect } from 'react';
+import { motion, stagger, useAnimate, useInView } from 'framer-motion';
+import { cn } from '@/lib/utils';
+import { useRef } from 'react';
 
 export const TextGenerateEffect = ({
   words,
@@ -17,15 +17,15 @@ export const TextGenerateEffect = ({
 }) => {
   const [scope, animate] = useAnimate();
   const isInView = useInView(scope);
-  let wordsArray = words.split(" ");
+  let wordsArray = words.split(' ');
 
   useEffect(() => {
     if (isInView) {
       animate(
-        "span",
+        'span',
         {
           opacity: 1,
-          filter: filter ? "blur(0px)" : "none",
+          filter: filter ? 'blur(0px)' : 'none',
         },
         {
           duration: duration ? duration : 1,
@@ -44,11 +44,11 @@ export const TextGenerateEffect = ({
               key={word + idx}
               className="opacity-0 inline-block"
               style={{
-                filter: filter ? "blur(10px)" : "none",
-                paddingRight: "0.15em", // Essential to prevent italic clipping
+                filter: filter ? 'blur(10px)' : 'none',
+                paddingRight: '0.15em', // Essential to prevent italic clipping
               }}
             >
-              {word}{" "}
+              {word}{' '}
             </motion.span>
           );
         })}
@@ -57,10 +57,8 @@ export const TextGenerateEffect = ({
   };
 
   return (
-    <div className={cn(className, "overflow-visible")}>
-      <div className="leading-snug overflow-visible">
-        {renderWords()}
-      </div>
+    <div className={cn(className, 'overflow-visible')}>
+      <div className="leading-snug overflow-visible">{renderWords()}</div>
     </div>
   );
 };

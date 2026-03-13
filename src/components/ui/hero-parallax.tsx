@@ -1,15 +1,9 @@
-"use client";
-import React from "react";
-import {
-  motion,
-  useScroll,
-  useTransform,
-  useSpring,
-  MotionValue,
-} from "framer-motion";
+'use client';
+import React from 'react';
+import { motion, useScroll, useTransform, useSpring, MotionValue } from 'framer-motion';
 
 import { useTranslations } from 'next-intl';
-import Image from "next/image";
+import Image from 'next/image';
 
 export const HeroParallax = ({
   products,
@@ -25,35 +19,20 @@ export const HeroParallax = ({
   const ref = React.useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start start", "end start"],
+    offset: ['start start', 'end start'],
   });
 
   const springConfig = { stiffness: 300, damping: 30, bounce: 100 };
 
-  const translateX = useSpring(
-    useTransform(scrollYProgress, [0, 1], [0, 800]),
-    springConfig
-  );
+  const translateX = useSpring(useTransform(scrollYProgress, [0, 1], [0, 800]), springConfig);
   const translateXReverse = useSpring(
     useTransform(scrollYProgress, [0, 1], [0, -800]),
     springConfig
   );
-  const rotateX = useSpring(
-    useTransform(scrollYProgress, [0, 0.2], [10, 0]),
-    springConfig
-  );
-  const opacity = useSpring(
-    useTransform(scrollYProgress, [0, 0.2], [0.2, 1]),
-    springConfig
-  );
-  const rotateZ = useSpring(
-    useTransform(scrollYProgress, [0, 0.2], [10, 0]),
-    springConfig
-  );
-  const translateY = useSpring(
-    useTransform(scrollYProgress, [0, 0.2], [-500, 500]),
-    springConfig
-  );
+  const rotateX = useSpring(useTransform(scrollYProgress, [0, 0.2], [10, 0]), springConfig);
+  const opacity = useSpring(useTransform(scrollYProgress, [0, 0.2], [0.2, 1]), springConfig);
+  const rotateZ = useSpring(useTransform(scrollYProgress, [0, 0.2], [10, 0]), springConfig);
+  const translateY = useSpring(useTransform(scrollYProgress, [0, 0.2], [-500, 500]), springConfig);
   return (
     <div
       ref={ref}
@@ -71,20 +50,12 @@ export const HeroParallax = ({
       >
         <motion.div className="flex flex-row-reverse space-x-reverse space-x-20 mb-20">
           {firstRow.map((product) => (
-            <ProductCard
-              product={product}
-              translate={translateX}
-              key={product.title}
-            />
+            <ProductCard product={product} translate={translateX} key={product.title} />
           ))}
         </motion.div>
         <motion.div className="flex flex-row mb-20 space-x-20 ">
           {secondRow.map((product) => (
-            <ProductCard
-              product={product}
-              translate={translateXReverse}
-              key={product.title}
-            />
+            <ProductCard product={product} translate={translateXReverse} key={product.title} />
           ))}
         </motion.div>
       </motion.div>
@@ -92,15 +63,13 @@ export const HeroParallax = ({
   );
 };
 
-import { Mouse } from "lucide-react";
+import { Mouse } from 'lucide-react';
 
 export const Header = () => {
   const t = useTranslations('projectHeader');
   return (
     <div className="max-w-7xl relative mx-auto pt-32 md:pt-48 px-4 w-full left-0 top-0">
-      <h1 className="text-2xl md:text-7xl font-bold dark:text-white">
-        {t('title')}
-      </h1>
+      <h1 className="text-2xl md:text-7xl font-bold dark:text-white">{t('title')}</h1>
       <p
         className="max-w-2xl text-base md:text-xl mt-8 dark:text-neutral-200"
         dangerouslySetInnerHTML={{ __html: t.raw('subtitle') }}
@@ -117,7 +86,7 @@ export const Header = () => {
           <motion.div
             className="absolute top-0 w-full h-1/2 bg-white blur-[1px]"
             animate={{ y: [0, 40, 0] }}
-            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+            transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
           />
         </div>
         <span className="text-[9px] uppercase tracking-[0.3em] text-neutral-500 font-medium">
@@ -150,10 +119,7 @@ export const ProductCard = ({
       key={product.title}
       className="group/product h-64 w-[16rem] md:h-96 md:w-[30rem] relative shrink-0"
     >
-      <a
-        href={product.link}
-        className="block group-hover/product:shadow-2xl "
-      >
+      <a href={product.link} className="block group-hover/product:shadow-2xl ">
         <Image
           src={product.thumbnail}
           height={600}

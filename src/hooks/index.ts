@@ -1,8 +1,8 @@
 export {
-    useScrollAnimation,
-    useFadeIn,
-    useSlideIn,
-    useStaggerChildren,
-    useParallax,
-    useScaleOnScroll
+  useScrollAnimation,
+  useFadeIn,
+  useSlideIn,
+  useStaggerChildren,
+  useParallax,
+  useScaleOnScroll,
 } from './useScrollAnimation';

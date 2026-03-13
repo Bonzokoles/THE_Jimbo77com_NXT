@@ -2,103 +2,100 @@
 
 import { useRef, useEffect, useState } from 'react';
 import {
-    motion,
-    useScroll,
-    useSpring,
-    useTransform,
-    useVelocity,
-    useAnimationFrame,
-    useMotionValue,
+  motion,
+  useScroll,
+  useSpring,
+  useTransform,
+  useVelocity,
+  useAnimationFrame,
+  useMotionValue,
 } from 'framer-motion';
 import { cn } from '@/lib/utils';
 
 // Local wrap utility to avoid extra dependency
 const wrap = (min: number, max: number, v: number) => {
-    const rangeSize = max - min;
-    return ((((v - min) % rangeSize) + rangeSize) % rangeSize) + min;
+  const rangeSize = max - min;
+  return ((((v - min) % rangeSize) + rangeSize) % rangeSize) + min;
 };
 
 interface TextScrollMarqueeProps {
-    children: React.ReactNode;
-    baseVelocity: number;
-    className?: string;
-    scrollDependent?: boolean;
-    delay?: number;
-    direction?: 'left' | 'right';
+  children: React.ReactNode;
+  baseVelocity: number;
+  className?: string;
+  scrollDependent?: boolean;
+  delay?: number;
+  direction?: 'left' | 'right';
 }
 
 export default function TextScrollMarquee({
-    children,
-    baseVelocity = 1,
-    className,
-    scrollDependent = false,
-    delay = 0,
-    direction = 'left',
+  children,
+  baseVelocity = 1,
+  className,
+  scrollDependent = false,
+  delay = 0,
+  direction = 'left',
 }: TextScrollMarqueeProps) {
-    const baseX = useMotionValue(0);
-    const { scrollY } = useScroll();
-    const [repeatCount, setRepeatCount] = useState(4);
-    const scrollVelocity = useVelocity(scrollY);
-    const smoothVelocity = useSpring(scrollVelocity, {
-        damping: 50,
-        stiffness: 400,
-    });
-    const velocityFactor = useTransform(smoothVelocity, [0, 1000], [0, 2], {
-        clamp: false,
-    });
+  const baseX = useMotionValue(0);
+  const { scrollY } = useScroll();
+  const [repeatCount, setRepeatCount] = useState(4);
+  const scrollVelocity = useVelocity(scrollY);
+  const smoothVelocity = useSpring(scrollVelocity, {
+    damping: 50,
+    stiffness: 400,
+  });
+  const velocityFactor = useTransform(smoothVelocity, [0, 1000], [0, 2], {
+    clamp: false,
+  });
 
-    // ✅ Use modular wrap from -100% to 0% for seamless loop
-    const x = useTransform(baseX, (v) => `${wrap(-100, 0, v % 100)}%`);
+  // ✅ Use modular wrap from -100% to 0% for seamless loop
+  const x = useTransform(baseX, (v) => `${wrap(-100, 0, v % 100)}%`);
 
-    const directionFactor = useRef<number>(direction === 'left' ? 1 : -1);
-    const hasStarted = useRef(false);
+  const directionFactor = useRef<number>(direction === 'left' ? 1 : -1);
+  const hasStarted = useRef(false);
 
-    useEffect(() => {
-        setRepeatCount(window.innerWidth < 768 ? 2 : 4);
-    }, []);
+  useEffect(() => {
+    setRepeatCount(window.innerWidth < 768 ? 2 : 4);
+  }, []);
 
-    useEffect(() => {
-        const timer = setTimeout(() => {
-            hasStarted.current = true;
-        }, delay);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      hasStarted.current = true;
+    }, delay);
 
-        return () => clearTimeout(timer);
-    }, [delay]);
+    return () => clearTimeout(timer);
+  }, [delay]);
 
-    useEffect(() => {
-        directionFactor.current = direction === 'left' ? 1 : -1;
-    }, [direction]);
+  useEffect(() => {
+    directionFactor.current = direction === 'left' ? 1 : -1;
+  }, [direction]);
 
-    useAnimationFrame((t, delta) => {
-        if (!hasStarted.current) return;
+  useAnimationFrame((t, delta) => {
+    if (!hasStarted.current) return;
 
-        let moveBy = directionFactor.current * baseVelocity * (delta / 1000);
+    let moveBy = directionFactor.current * baseVelocity * (delta / 1000);
 
-        if (scrollDependent) {
-            if (velocityFactor.get() < 0) {
-                directionFactor.current = -1;
-            } else if (velocityFactor.get() > 0) {
-                directionFactor.current = 1;
-            }
-        }
+    if (scrollDependent) {
+      if (velocityFactor.get() < 0) {
+        directionFactor.current = -1;
+      } else if (velocityFactor.get() > 0) {
+        directionFactor.current = 1;
+      }
+    }
 
-        moveBy += directionFactor.current * moveBy * velocityFactor.get();
+    moveBy += directionFactor.current * moveBy * velocityFactor.get();
 
-        baseX.set(baseX.get() + moveBy);
-    });
+    baseX.set(baseX.get() + moveBy);
+  });
 
-    return (
-        <div className="overflow-hidden whitespace-nowrap flex flex-nowrap">
-            <motion.div
-                className="flex whitespace-nowrap gap-10 flex-nowrap"
-                style={{ x }}
-            >
-                {[...Array(repeatCount)].map((_, index) => (
-                    <span key={index} className={cn('block text-[5vw]', className)}>
-                        {children}
-                    </span>
-                ))}
-            </motion.div>
-        </div>
-    );
+  return (
+    <div className="overflow-hidden whitespace-nowrap flex flex-nowrap">
+      <motion.div className="flex whitespace-nowrap gap-10 flex-nowrap" style={{ x }}>
+        {[...Array(repeatCount)].map((_, index) => (
+          <span key={index} className={cn('block text-[5vw]', className)}>
+            {children}
+          </span>
+        ))}
+      </motion.div>
+    </div>
+  );
 }

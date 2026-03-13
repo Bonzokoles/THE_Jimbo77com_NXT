@@ -1,43 +1,43 @@
-"use client"
+'use client';
 
-import { useEffect, useRef, useState } from "react"
-import Image from "next/image"
-import { Transition } from "@headlessui/react"
+import { useEffect, useRef, useState } from 'react';
+import Image from 'next/image';
+import { Transition } from '@headlessui/react';
 
 interface Testimonial {
-  img: string
-  quote: string
-  name: string
-  role: string
+  img: string;
+  quote: string;
+  name: string;
+  role: string;
 }
 
 export default function FancyTestimonialsSlider({
   testimonials,
   autorotateTiming = 7000,
 }: {
-  testimonials: Testimonial[]
-  autorotateTiming?: number
+  testimonials: Testimonial[];
+  autorotateTiming?: number;
 }) {
-  const testimonialsRef = useRef<HTMLDivElement>(null)
-  const [active, setActive] = useState<number>(0)
-  const [autorotate, setAutorotate] = useState<boolean>(true)
+  const testimonialsRef = useRef<HTMLDivElement>(null);
+  const [active, setActive] = useState<number>(0);
+  const [autorotate, setAutorotate] = useState<boolean>(true);
 
   useEffect(() => {
-    if (!autorotate) return
+    if (!autorotate) return;
     const interval = setInterval(() => {
-      setActive(active + 1 === testimonials.length ? 0 : (active) => active + 1)
-    }, autorotateTiming)
-    return () => clearInterval(interval)
-  }, [active, autorotate])
+      setActive(active + 1 === testimonials.length ? 0 : (active) => active + 1);
+    }, autorotateTiming);
+    return () => clearInterval(interval);
+  }, [active, autorotate]);
 
   const heightFix = () => {
     if (testimonialsRef.current && testimonialsRef.current.parentElement)
-      testimonialsRef.current.parentElement.style.height = `${testimonialsRef.current.clientHeight}px`
-  }
+      testimonialsRef.current.parentElement.style.height = `${testimonialsRef.current.clientHeight}px`;
+  };
 
   useEffect(() => {
-    heightFix()
-  }, [])
+    heightFix();
+  }, []);
 
   return (
     <div className="mx-auto w-full max-w-3xl px-4 text-center sm:px-6">
@@ -98,22 +98,18 @@ export default function FancyTestimonialsSlider({
         {testimonials.map((testimonial, index) => (
           <button
             key={index}
-            className={`m-1 inline-flex justify-center rounded-full px-2 py-1 text-xs whitespace-nowrap shadow-sm transition-colors duration-150 focus-visible:ring focus-visible:ring-cyan-300 focus-visible:outline-none sm:px-3 sm:py-1.5 sm:text-xs dark:focus-visible:ring-cyan-600 ${active === index ? "bg-cyan-500 text-white shadow-cyan-950/10" : "bg-white text-cyan-900 hover:bg-cyan-100"}`}
+            className={`m-1 inline-flex justify-center rounded-full px-2 py-1 text-xs whitespace-nowrap shadow-sm transition-colors duration-150 focus-visible:ring focus-visible:ring-cyan-300 focus-visible:outline-none sm:px-3 sm:py-1.5 sm:text-xs dark:focus-visible:ring-cyan-600 ${active === index ? 'bg-cyan-500 text-white shadow-cyan-950/10' : 'bg-white text-cyan-900 hover:bg-cyan-100'}`}
             onClick={() => {
-              setActive(index)
-              setAutorotate(false)
+              setActive(index);
+              setAutorotate(false);
             }}
           >
-            <span className="truncate">{testimonial.name}</span>{" "}
-            <span
-              className={`${active === index ? "text-cyan-200" : "text-cyan-300"}`}
-            >
-              -
-            </span>{" "}
+            <span className="truncate">{testimonial.name}</span>{' '}
+            <span className={`${active === index ? 'text-cyan-200' : 'text-cyan-300'}`}>-</span>{' '}
             <span className="truncate">{testimonial.role}</span>
           </button>
         ))}
       </div>
     </div>
-  )
+  );
 }
