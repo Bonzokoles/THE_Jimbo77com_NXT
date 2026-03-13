@@ -84,7 +84,7 @@ export function GitHubHeatmap({ username }: { username: string }) {
   };
 
   return (
-    <div className="relative w-full h-full flex flex-col justify-center bg-card/80 border border-border rounded-[2.5rem] p-8 backdrop-blur-md overflow-hidden group shadow-xl transition-all duration-500 hover:border-emerald-500/30">
+    <div className="relative w-full h-full flex flex-col justify-center bg-card/80 border border-border rounded-[2.5rem] p-8 backdrop-blur-md overflow-hidden group shadow-xl transition-all duration-500 hover:border-emerald-500/60 hover:shadow-[0_0_40px_rgba(52,211,153,0.12)]">
       <div className="absolute top-0 right-0 p-8 opacity-[0.02] pointer-events-none">
         <Github className="w-64 h-64 rotate-12" />
       </div>
@@ -104,15 +104,15 @@ export function GitHubHeatmap({ username }: { username: string }) {
         </div>
       </div>
 
-      <div className="relative z-10 w-full overflow-hidden flex justify-center items-center py-6 bg-muted/30 rounded-3xl border border-border shadow-inner">
+      <div className="relative z-10 w-full overflow-hidden flex justify-center items-center py-6 bg-muted/40 rounded-3xl border border-border/60 shadow-inner group-hover:border-emerald-500/30 transition-colors duration-500">
         <div className="overflow-x-auto pb-2 custom-scrollbar flex justify-center w-full min-h-[160px]">
           {username ? (
             <GitHubCalendar
               username={username}
               colorScheme={theme === 'dark' ? 'dark' : 'light'}
               theme={cyberpunkTheme}
-              blockMargin={4}
-              blockSize={12}
+              blockMargin={3}
+              blockSize={14}
               fontSize={12}
               showTotalCount={false}
               showColorLegend={false}
@@ -146,11 +146,12 @@ export function StatPod({ label, value, icon, color, delay, suffix = '' }: any) 
     <motion.div
       initial={{ opacity: 0, scale: 0.9 }}
       whileInView={{ opacity: 1, scale: 1 }}
+      whileHover={{ scale: 1.03, y: -2 }}
       transition={{ delay }}
-      className="relative flex flex-col justify-between p-6 bg-card/85 border border-border rounded-[2rem] backdrop-blur-xl group hover:border-emerald-500/40 h-full overflow-hidden shadow-lg transition-all duration-500"
+      className="relative flex flex-col justify-between p-6 bg-card/85 border border-border rounded-[2rem] backdrop-blur-xl group hover:border-white/20 h-full overflow-hidden shadow-lg transition-all duration-300"
     >
       <div
-        className={`absolute top-0 right-0 w-24 h-24 blur-3xl opacity-10 transition-opacity group-hover:opacity-20 ${color.replace('text-', 'bg-')}`}
+        className={`absolute top-0 right-0 w-32 h-32 blur-2xl opacity-15 transition-opacity duration-500 group-hover:opacity-35 ${color.replace('text-', 'bg-')}`}
       />
 
       <div className="flex items-center gap-3 relative z-10">

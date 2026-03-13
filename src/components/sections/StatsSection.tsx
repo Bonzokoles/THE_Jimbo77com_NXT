@@ -33,29 +33,41 @@ export default function StatsSection() {
         <div
           className="absolute inset-0 w-full h-full z-10"
           style={{
-            WebkitMaskImage: `
-                            radial-gradient(circle at 50% 50%, black 0%, transparent 70%)
-                        `,
-            maskImage: `
-                            radial-gradient(circle at 50% 50%, black 0%, transparent 70%)
-                        `,
+            WebkitMaskImage: `radial-gradient(ellipse 100% 90% at 50% 50%, black 0%, transparent 85%)`,
+            maskImage: `radial-gradient(ellipse 100% 90% at 50% 50%, black 0%, transparent 85%)`,
           }}
         >
-          <Boxes className="opacity-30 dark:opacity-40 scale-[1.1]" />
+          <Boxes className="opacity-55 dark:opacity-65 scale-[1.1]" />
         </div>
 
-        {/* Constant Scanning Line */}
+        {/* Primary Scanning Line */}
         <motion.div
           animate={{
-            left: ['-10%', '110%'],
+            left: ['-5%', '105%'],
             opacity: [0, 1, 1, 0],
           }}
           transition={{
-            duration: 8,
+            duration: 6,
             repeat: Infinity,
             ease: 'linear',
           }}
-          className="absolute top-0 bottom-0 w-[2px] bg-gradient-to-b from-transparent via-primary/20 to-transparent z-20 pointer-events-none shadow-[0_0_20px_rgba(var(--primary),0.2)]"
+          className="absolute top-0 bottom-0 w-[3px] bg-gradient-to-b from-transparent via-primary/70 to-transparent z-20 pointer-events-none"
+          style={{ boxShadow: '0 0 18px 4px rgba(99,102,241,0.35), 0 0 40px 8px rgba(99,102,241,0.15)' }}
+        />
+        {/* Secondary counter-scan line */}
+        <motion.div
+          animate={{
+            right: ['-5%', '105%'],
+            opacity: [0, 0.6, 0.6, 0],
+          }}
+          transition={{
+            duration: 10,
+            repeat: Infinity,
+            ease: 'linear',
+            delay: 3,
+          }}
+          className="absolute top-0 bottom-0 w-[2px] bg-gradient-to-b from-transparent via-emerald-400/50 to-transparent z-20 pointer-events-none"
+          style={{ boxShadow: '0 0 12px 3px rgba(52,211,153,0.25)' }}
         />
       </div>
 
