@@ -1,147 +1,106 @@
-
-# 🚀 Karol Lissoń - Portfolio Kreatywne
-### AI Engineer | Full Stack Developer | Tech Explorer
-
-<br>
+# 🤖 Karol Lissoń — AI Agent Engineer & Full Stack Developer
 
 <p align="center">
-  <a href="https://jimbo77.org"><strong>Live Preview</strong></a> |
-  <a href="#-key-features"><strong>Funkcje</strong></a> |
-  <a href="#-tech-stack"><strong>Stack Technologiczny</strong></a> |
-  <a href="#-installation"><strong>Instalacja</strong></a>
+  <a href="https://jimbo77.com"><strong>🌐 Portfolio</strong></a> •
+  <a href="https://linkedin.com/in/karol-bonzo-lisson-543664229"><strong>💼 LinkedIn</strong></a> •
+  <a href="mailto:JimBoZen@proton.me"><strong>📧 Kontakt</strong></a> •
+  <a href="https://github.com/Bonzokoles"><strong>⚡ GitHub</strong></a>
 </p>
 
 <p align="center">
+  <img src="https://img.shields.io/badge/Open%20to%20Work-Remote-brightgreen?style=for-the-badge" alt="Open to Work">
+  <img src="https://img.shields.io/badge/AI%20Agent%20Engineer-Expert-blue?style=for-the-badge" alt="AI Engineer">
+  <img src="https://img.shields.io/badge/Cloudflare%20Workers-30%2B%20in%20Production-orange?style=for-the-badge&logo=cloudflare" alt="Cloudflare">
   <img src="https://img.shields.io/badge/Next.js-15-black?style=for-the-badge&logo=next.js" alt="Next.js">
-  <img src="https://img.shields.io/badge/TypeScript-Ready-blue?style=for-the-badge&logo=typescript" alt="TypeScript">
-  <img src="https://img.shields.io/badge/Three.js-Visuals-lightgrey?style=for-the-badge&logo=three.js" alt="Three.js">
-  <img src="https://img.shields.io/badge/Tailwind-Styling-38B2AC?style=for-the-badge&logo=tailwind-css" alt="Tailwind">
-  <img src="https://img.shields.io/badge/next--intl-i18n-red?style=for-the-badge" alt="i18n">
 </p>
 
 ---
 
-## 🌟 Overview
+## 👤 O mnie
 
-A production-ready, full-stack creative portfolio built to showcase high-level expertise in **Artificial Intelligence**, **Web Development**, and **Blockchain technology**. This isn't just a website; it's a high-performance interactive experience utilizing advanced 3D shaders, physics-based animations, and real-time data integration.
+Buduję produkcyjne systemy AI — od multi-agent orchestration przez RAG pipelines po edge computing na Cloudflare. Founder **JIMBO Inc**, gdzie projektuję i wdrażam autonomiczne systemy AI dla realnych klientów.
 
----
-
-## 🛠 Tech Stack
-
-### Frontend Architecture
-* **Framework**: [Next.js 15](https://nextjs.org/) (App Router & Server Components).
-* **Styling**: [Tailwind CSS](https://tailwindcss.com/) with custom configuration.
-* **Animations**: 
-    * [GSAP](https://gsap.com/) for complex timeline-based scroll effects.
-    * [Framer Motion](https://www.framer.com/motion/) for layout transitions and gesture-based UI.
-* **3D Components**: [React Three Fiber](https://docs.pmnd.rs/react-three-fiber) & [Drei](https://github.com/pmndrs/drei).
-
-### Data & Services
-* **Localization**: `next-intl` dla wsparcia Polski, Angielski i Indonezyjski.
-* **External APIs**: 
-    * **WakaTime API**: Dynamiczna wizualizacja statystyk kodowania.
-    * **GitHub API**: Śledzenie wkładów i projektów w czasie rzeczywistym.
-* **Type Safety**: Strict Mode TypeScript.
+**Szukam zdalnej współpracy** jako AI Agent Engineer / Full Stack Developer.
 
 ---
 
-## 🚀 Key Features
+## 🏆 Kluczowe osiągnięcia
 
-### 🎮 Immersive 3D Experience
-* **Interactive 3D Lanyard**: A physics-simulated 3D ID Card in the hero section that reacts to mouse movements.
-* **Hyperspeed Backgrounds**: Custom shader-based warp effects for a futuristic Web3 aesthetic.
-* **Particle Systems**: Dynamic background particles that enhance depth and interactivity.
-
-### 📊 Professional Insights
-* **Real-time Coding Stats**: Integrated WakaTime cards showing your top languages and coding activity.
-* **Dynamic GitHub Metrics**: Live cards displaying repository stats and contributions.
-* **Interactive Timeline**: A visual journey of your career at CPS Lab, HUMIC, and more.
-
-### ⚡ Performance & UX
-* **Wielojęzyczne (PL/EN/ID)**: Pełne wsparcie internacjonalizacji.
-* **Smooth Scroll**: Płynne przewijanie bazowane na Lenis.
-* **Theme Engine**: Tryb ciemny/jasny z niestandardowym efektem "Click Spark".
-* **Responsive Architecture**: Pixel-perfect layouts dla mobile, tablet i desktop.
+| Projekt | Wynik |
+|---|---|
+| WHITECAT MOA (Meble Pumo) | **54x ROI** w 3 miesiące, 63 AI buying guides |
+| mybonzo.com Platform | **30+ Workers**, 500K+ req/day, 99.97% uptime |
+| RAG System (Meble Pumo) | **5000+ dokumentów** w ChromaDB, <2s latency, 95% accuracy |
+| Fine-tuning Bielik-7B | **10K examples**, 87% → 92% accuracy benchmark |
+| Multi-Agent MOA | Claude + GPT-4o + DeepSeek R1 — intelligent routing |
 
 ---
 
-## 📂 Project Structure
+## 🛠️ Stack
+
+**AI/ML:** LangChain · LangGraph · RAG · ChromaDB · Ollama · Fine-tuning (LoRA) · MCP · Bielik · OpenAI · Claude API
+
+**Backend:** Python · FastAPI · Flask · Node.js · TypeScript · Docker · Redis · PostgreSQL
+
+**Frontend:** Next.js 15 · React 19 · Astro · Tailwind CSS · Three.js · Framer Motion
+
+**Cloud/Edge:** Cloudflare Workers · D1 · R2 · KV · Wrangler · Vercel
+
+**Tools:** VS Code · GitHub · Postman · Podman · Figma · Blender
+
+---
+
+## 🚀 Projekty
+
+### 🤖 ZENON Browser
+Przeglądarka Electron z wbudowanym AI copilot — integracja MCP, Gemini, Claude, web scraping automation.
+
+### ☁️ [MyBonzo.com Platform](https://mybonzo.com)
+AI-native platforma na Cloudflare Edge: 30+ Workers, SOA architecture, RAG pipeline, AI Agent orchestrator.
+
+### 🧠 Bonzo AI Agents
+Ekosystem autonomicznych agentów w Dockerze: cost-optimizer, guardian-agent, deployment-coordinator, health-monitor.
+
+### 🔌 MCP Node System v2
+TypeScript MCP server — tools, resources i prompts dla agentów AI. Direct workspace/DB/API access.
+
+### 🎨 TH_e_ART_h_MAN
+Offline AI Art Copilot — Flask + baza 902 artystów + Ollama local AI + Stable Diffusion prompt generation.
+
+### ⚡ CHUCK Chatbot
+AI chatbot dla branży przemysłowej — RAG + Google Gemini + Cloudflare Workers + schematy techniczne.
+
+---
+
+## 📊 To portfolio
+
+Kod źródłowy **[jimbo77.com](https://jimbo77.com)** — zbudowane na:
+
+- **Next.js 15** (App Router + Server Components)
+- **TypeScript** strict mode
+- **Tailwind CSS** + shadcn/ui
+- **Three.js** / React Three Fiber — animacje 3D
+- **GSAP** + Framer Motion — scroll effects
+- **Cloudflare Pages** + Workers — deployment
+- **i18n** (PL/EN) via `next-intl`
 
 ```bash
-src/
-├── app/                  # Next.js App Router (Routes & API)
-├── components/           # UI Component Library
-│   ├── layout/           # Navbar, Footer, and Page Shells
-│   ├── sections/         # Page sections (About, Stats, Experience)
-│   ├── stats/            # GitHub & WakaTime API visualizations
-│   ├── three/            # R3F / Three.js components (Lanyard, Scene3D)
-│   └── ui/               # Reusable UI primitives (Buttons, Cards, Marquees)
-├── data/                 # portfolio.ts (Central source of truth)
-├── hooks/                # Custom React hooks (useScroll, useIsInView)
-├── i18n/                 # Localization configuration
-├── messages/             # Translation JSON files (EN/ID)
-└── styles/               # Global CSS & Tailwind layers
-
-```
-
----
-
-## 💻 Installation
-
-### Prerequisites
-
-* **Node.js**: 18.17.0 or later
-* **npm** or **yarn**
-
-### Local Setup
-
-1. **Clone the Repository**:
-```bash
-git clone https://github.com/Bonzokoles/jimbo77-blog.git
-cd jimbo77-blog
-
-```
-
-
-2. **Install Dependencies**:
-```bash
+git clone https://github.com/Bonzokoles/THE_Jimbo77com_NXT.git
+cd THE_Jimbo77com_NXT
 npm install
-
+cp .env.local.example .env.local
+npm run dev   # http://localhost:3000
 ```
-
-
-3. **Environment Variables**:
-Create a `.env.local` file in the root directory:
-```env
-NEXT_PUBLIC_GITHUB_USERNAME=Bonzokoles
-WAKATIME_API_KEY=your_wakatime_key
-
-```
-
-
-4. **Launch Development Server**:
-```bash
-npm run dev
-
-```
-
-
-Access at `http://localhost:3000`
 
 ---
 
-## 🛡️ License
+## 📬 Kontakt
 
-This project is licensed under the **MIT License**. Feel free to use it as a foundation for your own portfolio!
+**🟢 Otwarty na zdalne projekty i współpracę**
 
----
+- **ProtonMail:** [JimBoZen@proton.me](mailto:JimBoZen@proton.me)
+- **LinkedIn:** [karol-bonzo-lisson](https://linkedin.com/in/karol-bonzo-lisson-543664229)
+- **GitHub:** [@Bonzokoles](https://github.com/Bonzokoles) · [@77Jimbo77](https://github.com/77Jimbo77)
+- **Portfolio:** [jimbo77.com](https://jimbo77.com)
 
-## 🤝 Kontakt
-
-* **Email**: [karol.bonzo@yahoo.com](mailto:karol.bonzo@yahoo.com)
-* **Proton Mail**: [JimBoZen@proton.me](mailto:JimBoZen@proton.me)
-* **GitHub**: [@Bonzokoles](https://github.com/Bonzokoles)
-* **Dev.to**: [karol_81a50ed396508bcffd7](https://dev.to/karol_81a50ed396508bcffd7)
-
-<p align="right">(<a href="#-karol-lissoń---portfolio-kreatywne">Powrót do góry</a>)</p>
+<p align="right">(<a href="#-karol-lissoń--ai-agent-engineer--full-stack-developer">Powrót do góry</a>)</p>
