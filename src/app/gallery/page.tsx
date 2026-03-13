@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
@@ -8,12 +8,56 @@ import { portfolioData } from '@/data/portfolio';
 import { Play, Maximize2, X, ChevronLeft, ChevronRight, ImageIcon, Video } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
+interface GalleryItem {
+  id: string;
+  title: string;
+  description: string;
+  date: string;
+  type: 'image' | 'video';
+  url: string;
+  thumbnail?: string;
+  category: string;
+}
+
+interface R2File {
+  key: string;
+  uploaded: string;
+  url: string;
+}
+
 export default function GalleryPage() {
   const t = useTranslations('gallery');
   const [selectedFilter, setSelectedFilter] = useState('all');
   const [activeMedia, setActiveMedia] = useState<number | null>(null);
+  const [r2Items, setR2Items] = useState<GalleryItem[]>([]);
 
-  const filteredMedia = portfolioData.gallery.filter(
+  // Ładuj zdjęcia z R2 (prefix "gallery/")
+  useEffect(() => {
+    fetch('/api/r2/list')
+      .then((res) => res.json())
+      .then((files: R2File[]) => {
+        const galleryFiles = files
+          .filter((f) => f.key.startsWith('gallery/'))
+          .map((f): GalleryItem => {
+            const name = f.key.replace('gallery/', '').replace(/\.[^.]+$/, '').replace(/[-_]/g, ' ');
+            return {
+              id: `r2-${f.key}`,
+              title: name.charAt(0).toUpperCase() + name.slice(1),
+              description: 'Zdjęcie z R2',
+              date: new Date(f.uploaded).toISOString().split('T')[0],
+              type: 'image',
+              url: f.url,
+              category: 'r2',
+            };
+          });
+        setR2Items(galleryFiles);
+      })
+      .catch(() => {/* R2 niedostępne - pokaż tylko statyczne */});
+  }, []);
+
+  const allMedia: GalleryItem[] = [...r2Items, ...portfolioData.gallery];
+
+  const filteredMedia = allMedia.filter(
     (item) => selectedFilter === 'all' || item.type === selectedFilter
   );
 

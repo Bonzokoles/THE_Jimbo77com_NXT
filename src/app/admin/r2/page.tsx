@@ -50,6 +50,10 @@ export default function R2AdminPage() {
           <h2 className="text-sm font-black uppercase tracking-widest mb-4 flex items-center gap-2">
             <Upload className="w-4 h-4" aria-hidden="true" /> Upload
           </h2>
+          <p className="text-[10px] font-mono text-muted-foreground mb-3 bg-primary/5 border border-primary/20 rounded px-3 py-2">
+            💡 Aby zdjęcie pojawiło się w <strong>Galerii</strong>, nazwij plik z prefiksem <code className="text-primary">gallery/</code><br />
+            np. <code className="text-primary">gallery/moje-zdjecie.jpg</code>
+          </p>
           <R2Uploader />
           <button
             onClick={fetchFiles}

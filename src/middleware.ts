@@ -2,7 +2,7 @@
 import type { NextRequest } from 'next/server';
 
 // Session token - must match the value set in /api/admin/login/route.ts
-const ADMIN_SESSION_TOKEN = 'jimbo77-r2-admin-session-v1';
+const ADMIN_SESSION_TOKEN = 'jimbo77-r2-admin-session-v2';
 
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;

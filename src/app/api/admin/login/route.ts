@@ -2,7 +2,7 @@
 import { getCloudflareContext } from '@opennextjs/cloudflare';
 
 // Must match ADMIN_SESSION_TOKEN in src/middleware.ts
-const ADMIN_SESSION_TOKEN = 'jimbo77-r2-admin-session-v1';
+const ADMIN_SESSION_TOKEN = 'jimbo77-r2-admin-session-v2';
 
 export async function POST(req: NextRequest) {
   try {
@@ -14,7 +14,7 @@ export async function POST(req: NextRequest) {
     }
 
     // Get ADMIN_KEY from Cloudflare environment (set in wrangler.toml [vars])
-    let adminKey = 'jimbo77-admin-2025';
+    let adminKey = 'Haos1977';
     try {
       const { env } = await getCloudflareContext();
       const cfEnv = env as Record<string, string | undefined>;

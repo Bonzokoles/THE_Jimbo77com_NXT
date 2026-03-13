@@ -273,6 +273,12 @@ export function Footer() {
                 <p className="text-sm text-muted-foreground">
                   © {currentYear} {portfolioData.personal.name}. {t('copyright')}
                 </p>
+                <Link
+                  href="/admin/login"
+                  className="text-[10px] font-mono uppercase tracking-widest text-muted-foreground/30 hover:text-muted-foreground/60 transition-colors"
+                >
+                  admin
+                </Link>
               </div>
             </div>
           </motion.div>

@@ -4,8 +4,8 @@ compatibility_date = "2026-02-10"
 compatibility_flags = ["nodejs_compat"]
 
 [vars]
-# Admin panel password - change before deploying to production!
-ADMIN_KEY = "jimbo77-admin-2025"
+# Admin panel password
+ADMIN_KEY = "Haos1977"
 
 [assets]
 directory = ".open-next/assets"
