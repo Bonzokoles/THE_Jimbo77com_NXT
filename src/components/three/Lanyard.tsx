@@ -36,11 +36,11 @@ function ResponsiveCamera() {
   useEffect(() => {
     const isMobile = size.width < 768;
     if (isMobile) {
-      camera.position.set(0, 0, 14); // Original mobile dist
-      if (camera instanceof THREE.PerspectiveCamera) camera.fov = 50;
+      camera.position.set(0, 0, 7); // Bliżej na mobile
+      if (camera instanceof THREE.PerspectiveCamera) camera.fov = 44;
     } else {
-      camera.position.set(0, 0, 20); // Original desktop dist
-      if (camera instanceof THREE.PerspectiveCamera) camera.fov = 20; // Original FOV
+      camera.position.set(0, 0, 8); // Bliżej na desktop
+      if (camera instanceof THREE.PerspectiveCamera) camera.fov = 32; // Większy FOV
     }
     camera.updateProjectionMatrix();
   }, [size, camera]);
@@ -58,7 +58,7 @@ function HolographicAvatar({
   size?: number;
 }) {
   const texture = useTexture(url);
-  const sideLength = size * 2;
+  const sideLength = size * 3.2; // Zwiększony rozmiar avatara/data
 
   return (
     <group position={position}>

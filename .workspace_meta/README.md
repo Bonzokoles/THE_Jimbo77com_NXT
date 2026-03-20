@@ -1,3 +1,5 @@
+# Skróty
+- [Admin Page](../src/app/admin/page.tsx)
 # .workspace_meta — Workspace Intelligence Layer
 
 > **Wersja:** 2.0.0 | **Autor:** Bonzokoles  

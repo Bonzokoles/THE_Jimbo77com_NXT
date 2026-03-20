@@ -49,19 +49,29 @@ export default function CardNav({ items, theme = 'dark', pathname = '/' }: CardN
         onClick={() => setIsExpanded(!isExpanded)}
         className={cn(
           'relative px-6 py-2.5 text-sm font-bold transition-all duration-300 rounded-full flex items-center gap-2 group overflow-hidden',
-          theme === 'dark' ? 'text-white/70 hover:text-white' : 'text-black/70 hover:text-black'
+          theme === 'dark' ? 'text-white/80 hover:text-white' : 'text-black/80 hover:text-black',
+          'shadow-xl shadow-black/40 backdrop-blur-none bg-white/10 border border-white/20',
+          'glass-card'
         )}
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
+        style={{
+          background: theme === 'dark'
+            ? 'linear-gradient(135deg, rgba(24,24,27,0.85) 60%, rgba(99,102,241,0.15) 100%)'
+            : 'linear-gradient(135deg, rgba(255,255,255,0.85) 60%, rgba(99,102,241,0.10) 100%)',
+          boxShadow: theme === 'dark'
+            ? '0 8px 32px 0 rgba(0,0,0,0.45), 0 1.5px 8px 0 rgba(99,102,241,0.12)'
+            : '0 8px 32px 0 rgba(0,0,0,0.15), 0 1.5px 8px 0 rgba(99,102,241,0.10)',
+          border: theme === 'dark' ? '1.5px solid rgba(255,255,255,0.12)' : '1.5px solid rgba(0,0,0,0.08)',
+        }}
+        whileHover={{ scale: 1.08, y: -2 }}
+        whileTap={{ scale: 0.97 }}
       >
-        <div className="absolute inset-0 bg-foreground/10 opacity-0 group-hover:opacity-100 transition-opacity" />
         <span className="relative z-10">{aboutItem.label}</span>
         <motion.div
           animate={{ rotate: isExpanded ? 180 : 0 }}
           transition={{ duration: 0.3 }}
           className="relative z-10"
         >
-          <ChevronDown className="w-4 h-4" />
+          <ChevronDown className="w-6 h-6" />
         </motion.div>
       </motion.button>
 
@@ -83,11 +93,21 @@ export default function CardNav({ items, theme = 'dark', pathname = '/' }: CardN
           >
             <div
               className={cn(
-                'relative p-1.5 rounded-[2rem] border shadow-2xl overflow-hidden backdrop-blur-3xl transition-colors duration-500',
+                'relative p-1.5 rounded-[2rem] border shadow-2xl overflow-hidden transition-colors duration-500',
+                'glass-card',
                 theme === 'dark'
-                  ? 'bg-[#18181b]/95 border-white/10 shadow-black/80'
-                  : 'bg-white/95 border-black/5 shadow-black/20'
+                  ? 'bg-[#18181b]/90 border-white/10 shadow-black/80'
+                  : 'bg-white/90 border-black/5 shadow-black/20'
               )}
+              style={{
+                background: theme === 'dark'
+                  ? 'linear-gradient(135deg, rgba(24,24,27,0.85) 60%, rgba(99,102,241,0.15) 100%)'
+                  : 'linear-gradient(135deg, rgba(255,255,255,0.85) 60%, rgba(99,102,241,0.10) 100%)',
+                boxShadow: theme === 'dark'
+                  ? '0 8px 32px 0 rgba(0,0,0,0.45), 0 1.5px 8px 0 rgba(99,102,241,0.12)'
+                  : '0 8px 32px 0 rgba(0,0,0,0.15), 0 1.5px 8px 0 rgba(99,102,241,0.10)',
+                border: theme === 'dark' ? '1.5px solid rgba(255,255,255,0.12)' : '1.5px solid rgba(0,0,0,0.08)',
+              }}
             >
               {/* Inner Content Grid - Balanced Horizontal Row */}
               <div className="grid grid-cols-2 md:grid-cols-5 gap-1.5">
@@ -108,22 +128,39 @@ export default function CardNav({ items, theme = 'dark', pathname = '/' }: CardN
                       href={link.href}
                       onClick={() => setIsExpanded(false)}
                       className={cn(
-                        'group/card flex flex-col h-[180px] md:h-[200px] relative p-5 rounded-[1.5rem] overflow-hidden transition-all duration-500 hover:scale-[1.02] active:scale-[0.98]',
+                        'group/card flex flex-col h-[200px] md:h-[220px] relative p-6 rounded-[1.5rem] overflow-hidden transition-all duration-500 hover:scale-[1.06] hover:-translate-y-1 active:scale-[0.98] shadow-lg shadow-black/30',
+                        'glass-card',
                         pathname === link.href
                           ? theme === 'dark'
                             ? 'bg-white/10 ring-1 ring-white/20'
                             : 'bg-black/5 ring-1 ring-black/10'
                           : theme === 'dark'
-                            ? 'bg-white/[0.03] hover:bg-white/5'
-                            : 'bg-black/[0.02] hover:bg-black/[0.05]'
+                            ? 'bg-white/[0.03] hover:bg-white/7'
+                            : 'bg-black/[0.02] hover:bg-black/[0.07]'
                       )}
+                      style={{
+                        background: theme === 'dark'
+                          ? 'linear-gradient(135deg, rgba(24,24,27,0.85) 60%, rgba(99,102,241,0.15) 100%)'
+                          : 'linear-gradient(135deg, rgba(255,255,255,0.85) 60%, rgba(99,102,241,0.10) 100%)',
+                        boxShadow: theme === 'dark'
+                          ? '0 8px 32px 0 rgba(0,0,0,0.45), 0 1.5px 8px 0 rgba(99,102,241,0.12)'
+                          : '0 8px 32px 0 rgba(0,0,0,0.15), 0 1.5px 8px 0 rgba(99,102,241,0.10)',
+                        border: theme === 'dark' ? '1.5px solid rgba(255,255,255,0.12)' : '1.5px solid rgba(0,0,0,0.08)',
+                      }}
                     >
                       {/* Glow Effect */}
-                      <div className="absolute inset-0 opacity-0 group-hover/card:opacity-100 transition-opacity duration-700 pointer-events-none">
+                      {/* Glassmorphism shine effect */}
+                      <div className="absolute inset-0 pointer-events-none">
                         <div
                           className={cn(
-                            'absolute -top-1/4 -right-1/4 w-full h-full blur-[40px] rounded-full',
-                            theme === 'dark' ? 'bg-primary/10' : 'bg-primary/5'
+                            'absolute top-0 left-0 w-full h-1/3 bg-white/30 rounded-t-[1.5rem] opacity-60',
+                            'glass-shine'
+                          )}
+                        />
+                        <div
+                          className={cn(
+                            'absolute bottom-0 left-0 w-full h-1/4 bg-white/10 rounded-b-[1.5rem] opacity-40',
+                            'glass-glow'
                           )}
                         />
                       </div>
@@ -133,25 +170,25 @@ export default function CardNav({ items, theme = 'dark', pathname = '/' }: CardN
                         <div className="flex items-start justify-between mb-auto">
                           <div
                             className={cn(
-                              'p-2.5 rounded-xl border transition-colors',
+                              'p-3 rounded-xl border transition-colors',
                               theme === 'dark'
-                                ? 'bg-white/[0.05] group-hover/card:bg-white/10 border-white/5'
-                                : 'bg-black/[0.03] group-hover/card:bg-black/[0.06] border-black/5'
+                                ? 'bg-white/[0.08] group-hover/card:bg-white/14 border-white/7'
+                                : 'bg-black/[0.05] group-hover/card:bg-black/0.09] border-black/7'
                             )}
                           >
                             <Icon
                               className={cn(
-                                'w-4 h-4 transition-colors',
+                                'w-8 h-8 transition-colors drop-shadow-lg',
                                 theme === 'dark'
-                                  ? 'text-white/80 group-hover/card:text-white'
-                                  : 'text-black/70 group-hover/card:text-black'
+                                  ? 'text-white/90 group-hover/card:text-white'
+                                  : 'text-black/80 group-hover/card:text-black'
                               )}
                             />
                           </div>
                           <ArrowUpRight
                             className={cn(
-                              'w-4 h-4 opacity-20 group-hover/card:opacity-100 group-hover/card:translate-x-0.5 group-hover/card:-translate-y-0.5 transition-all duration-500 ease-out',
-                              theme === 'dark' ? 'text-white/60' : 'text-black/40'
+                              'w-6 h-6 opacity-30 group-hover/card:opacity-100 group-hover/card:translate-x-1 group-hover/card:-translate-y-1 transition-all duration-500 ease-out',
+                              theme === 'dark' ? 'text-white/70' : 'text-black/50'
                             )}
                           />
                         </div>
