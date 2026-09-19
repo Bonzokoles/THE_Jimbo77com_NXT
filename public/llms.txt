@@ -1,0 +1,45 @@
+# Karol Lissoń — AI Agent Engineer & Full Stack Developer (Founder JIMBO Inc)
+
+> Oficjalne portfolio techniczne, architektura systemów agentowych AI, osiągnięcia inżynieryjne oraz stack technologiczny.
+> Domen docelowa: https://jimbo77.com
+> Język bazowy: Polski (PL) / Angielski (EN)
+
+## 📋 Profil i Doświadczenie
+
+Karol Lissoń (Bonzo) — Senior Software Architect, AI Agent Engineer & Full Stack Developer.
+Twórca i założyciel ekosystemu JIMBO Inc oraz architekt rozwiązań AI brzegowych (Edge AI) i systemów multi-agentowych.
+
+### Główne Osiągnięcia Techniczne:
+- **WhiteCat MOA (Mixture-of-Agents)**: Autonomiczny system generowania i optymalizacji opisów produktowych dla e-commerce (Meble Pumo), generujący udokumentowany 54x ROI.
+- **MyBonzo Platform**: Architektura rozproszona oparta na 30+ Cloudflare Workers, Cloudflare D1 (SQL at Edge), Vectorize oraz Cloudflare Queues z przepustowością 500K+ req/day i 99.97% uptime.
+- **MemPalace RAG**: Zintegrowany graf wiedzy i silnik pamięci wektorowej (5000+ zindeksowanych dokumentów, taksonomia AAAK, ChromaDB).
+- **ZENO Browser**: Dedykowane środowisko agentowe i operations hub łączący narzędzia lokalne (Electron + Node PTY) z infrastrukturą Cloudflare Browser Run.
+
+## 🛠️ Stack Technologiczny
+
+- **Runtime & Edge**: Cloudflare Workers, Pages, Durable Objects, Workflows, Cloudflare Queues, Vercel, Node.js 24, Python FastAPI.
+- **Bazy danych & Storage**: Cloudflare D1 (SQLite Edge), Cloudflare R2 (S3-compatible), Vectorize, PostgreSQL, ChromaDB.
+- **Frontend & UI**: Next.js 16 (App Router), React 19, Vite, Astro 5, Tailwind CSS 4, Three.js, WebGL, Framer Motion.
+- **Protokoły & AI**: Model Context Protocol (MCP), WebMCP (`document.modelContext`), A2A Protocol, OpenAI / Anthropic Batch API, AI Gateway.
+
+## 📍 Kluczowe Trasy Portfolio
+
+- https://jimbo77.com/ — Strona główna i biogram inżynierski
+- https://jimbo77.com/projects — Wykaz projektów i wdrożeń produkcyjnych
+- https://jimbo77.com/experience — Doświadczenie zawodowe i kamienie milowe
+- https://jimbo77.com/achievements — Osiągnięcia, metryki biznesowe i ROI
+- https://jimbo77.com/skills — Rejestr kompetencji technicznych i narzędziowych
+- https://jimbo77.com/contact — Kontakt bezpośredni
+
+## 🔗 Ekosystem Powiązany
+
+- https://yutro.company — Studio wdrożeń AI dla e-commerce
+- https://ai.yutro.company — Platforma agentów e-commerce (OpisAI, SklepGPT)
+- https://zenbrowsers.org — ZENO Browser Operations Hub
+- https://mybonzoaiblog.com — Baza wiedzy AISEO i inżynierii agentowej
+- https://jimbo77.org — AI Agent Social Club
+
+## 📬 Kontakt
+
+- E-mail: karol.bonzo@yahoo.com
+- GitHub: https://github.com/Bonzokoles
