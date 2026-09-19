@@ -5,7 +5,6 @@ import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import { portfolioData } from '@/data/portfolio';
 import { SplineScene } from '@/components/ui/SplineScene';
-import { TextPressure } from '@/components/ui/TextPressure';
 import { KineticTechGrid } from '@/components/ui/KineticTechGrid';
 import { SoftSkills } from '@/components/sections/skills/SoftSkills';
 import { HardSkills } from '@/components/sections/skills/HardSkills';
@@ -123,16 +122,10 @@ export default function SkillsPage() {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1.8, ease: [0.16, 1, 0.3, 1] }}
           >
-            <div className="h-[160px] md:h-[220px] w-full max-w-full mx-auto relative flex items-center justify-center overflow-visible">
-              <TextPressure
-                text={t('title')}
-                flex={false}
-                textColor="hsl(var(--foreground))"
-                strokeWidth={1}
-                minFontSize={80}
-                maxFontSize={220}
-                className="font-black italic"
-              />
+            <div className="w-full max-w-full mx-auto relative flex items-center justify-center py-4">
+              <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black uppercase tracking-tight text-foreground text-center">
+                {t('title')}
+              </h1>
             </div>
             {/* Subtitle - more visible in light mode */}
             <motion.p

@@ -19,7 +19,6 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useIsMobile } from '@/hooks/useIsMobile';
 import { Sparkles, ChevronDown, Mail, ArrowRight } from 'lucide-react';
 import { LoadingScreen } from '@/components/layout';
-import { TextPressure } from '@/components/ui/TextPressure';
 import { portfolioData } from '@/data/portfolio';
 
 // Register GSAP plugins
@@ -248,31 +247,16 @@ function HeroIntro() {
           <Sparkles className="w-4 h-4 text-primary animate-pulse" />
         </motion.div>
 
-        {/* Name - Responsive Switch: Canvas on Desktop, Static Text on Mobile */}
-        <div className="hero-name mb-6 w-full max-w-6xl mx-auto flex items-center justify-center">
-          {/* Mobile: Static Text (Guarantees wrapping) */}
-          <h1 className="block md:hidden text-5xl font-black text-center leading-tight tracking-tighter">
-            <span className="text-foreground">{firstName}</span> <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-accent animate-gradient-x">
+        {/* Name - Precision Responsive Headline (Never clipped) */}
+        <div className="hero-name mb-6 w-full max-w-5xl mx-auto flex items-center justify-center">
+          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-black text-center tracking-tighter leading-none select-none">
+            <span className="text-foreground tracking-tight">
+              {firstName}
+            </span>{' '}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00E6A8] via-[#00e5ff] to-[#d4a574]">
               {lastName}
             </span>
           </h1>
-
-          {/* Desktop: TextPressure Canvas (No wrapping needed) */}
-          <div className="hidden md:flex w-full h-[150px] lg:h-[180px] xl:h-[220px] items-center justify-center">
-            <TextPressure
-              text={portfolioData.personal.name}
-              flex={false}
-              alpha={false}
-              stroke={false}
-              width={true}
-              weight={true}
-              italic={true}
-              textColor={isDarkMode ? '#ffffff' : '#0f172a'}
-              minFontSize={72}
-              className="w-full h-full flex items-center justify-center"
-            />
-          </div>
         </div>
 
         {/* Title */}
