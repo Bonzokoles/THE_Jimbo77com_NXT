@@ -118,7 +118,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         <PersonJsonLd />
         <FaqJsonLd faqs={portfolioData.faqs} />
         {/* Umami Analytics */}
-        <script defer src="https://analytics.mybonzo.com/script.js" data-website-id="ddcd9b63-7ffd-4024-a9b9-a5b02ad9e002" />
+        <script defer src="https://analytics.jimbo77.com/script.js" data-website-id="ddcd9b63-7ffd-4024-a9b9-a5b02ad9e002" />
       </head>
       <body className={`${inter.variable} ${jetbrainsMono.variable} font-sans relative`}>
         <ThemeProvider>
