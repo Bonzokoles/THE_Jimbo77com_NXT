@@ -3,6 +3,11 @@ main = ".open-next/worker.js"
 compatibility_date = "2026-02-10"
 compatibility_flags = ["nodejs_compat"]
 
+routes = [
+  { pattern = "jimbo77.com", custom_domain = true },
+  { pattern = "www.jimbo77.com", custom_domain = true }
+]
+
 [vars]
 # Admin panel password
 ADMIN_KEY = "Haos1977"
@@ -10,7 +15,9 @@ ADMIN_KEY = "Haos1977"
 [assets]
 directory = ".open-next/assets"
 binding = "ASSETS"
-[[r2_buckets]]
-binding = "MY_R2"
-bucket_name = "jimbo77com-assets"
-preview_bucket_name = "jimbo77com-assets"
+
+# [[r2_buckets]]
+# binding = "MY_R2"
+# bucket_name = "jimbo77com-assets"
+# preview_bucket_name = "jimbo77com-assets"
+
